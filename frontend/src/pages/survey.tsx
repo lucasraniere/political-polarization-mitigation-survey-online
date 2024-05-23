@@ -16,16 +16,14 @@ export default function Survey() {
                 }
             </div>
             <div id="text-areas">
-                {/* <div id="text-div-1"> */}
                     <label htmlFor='text-1'>Texto 1:<br />
                         <textarea id='text-1' readOnly value={"Tweet text 1"}/>
                     </label>
-                {/* </div> */}
                 <label htmlFor='text-2'>Texto 2:<br />
                     <textarea id='text-2' readOnly value={"Tweet text 2"}/>
                 </label>
             </div>
-            <Questionnaire />
+            <Questionnaire disabled={showPopup}/>
             <div className="next-button">
                 <button>Próximo Tweet &gt;</button>
             </div>

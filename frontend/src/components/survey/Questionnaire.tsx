@@ -1,4 +1,8 @@
-export default function Questionnaire() {
+interface QuestionnaireProps {
+    disabled: boolean;
+}
+
+export default function Questionnaire(props: QuestionnaireProps) {
     return (
         <div>
             <div className="first-questionnaire">
