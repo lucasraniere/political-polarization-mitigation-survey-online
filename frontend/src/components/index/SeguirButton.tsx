@@ -1,15 +1,11 @@
-// import React from 'react';
-// import { useNavigate } from 'react-router-dom';
+interface SeguirButtonProps {
+    clickHandler: () => void;
+}
 
-export default function SeguirButton() {
-    // const navigate = useNavigate();
-    function handleClick() {
-        alert('Clicou no botão Seguir');
-        // navigate('/survey');
-    }
+export default function SeguirButton(props: SeguirButtonProps) {
     return (
         <div className="next-button">
-            <button onClick={handleClick}>Seguir &gt;</button>
+            <button onClick={props.clickHandler}>Seguir &gt;</button>
         </div>
     )
 }

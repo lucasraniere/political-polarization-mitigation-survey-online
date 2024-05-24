@@ -1,8 +1,36 @@
 import PolarizationDef from "@/components/PolarizationDef";
 import PoliticalLeaning from "@/components/index/PoliticalLeaning";
 import SeguirButton from "@/components/index/SeguirButton";
+import { useEffect, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export default function Home() {
+  const [participantId, setParticipantId] = useState<string>("");
+  const [sessionId, setSessionId] = useState<string>("");
+  const [studyId, setStudyId] = useState<string>("");
+  const [participantLeaning, setParticipantLeaning] = useState<number>(0);
+
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+  const nextButtonHandler = () => {
+    if (participantLeaning === 0) {
+      alert("Por favor, selecione uma opção antes de prosseguir.");
+    }
+    else {
+      try {
+        router.push("/survey");
+      } catch (error) {
+        console.error(error);
+        router.push("/");
+      }
+    }
+  };
+
+  useEffect(() => {
+    
+  }, []);
+
   return (
     <main>
       <div className="div-p">
@@ -18,8 +46,8 @@ export default function Home() {
       <div className="div-p">
         Qual das seguintes opções melhor definie seu posicionamento político?
       </div>
-      <PoliticalLeaning />
-      <SeguirButton />
+      <PoliticalLeaning changeHandler={setParticipantLeaning} />
+      <SeguirButton clickHandler={nextButtonHandler} />
     </main>
   );
 }
