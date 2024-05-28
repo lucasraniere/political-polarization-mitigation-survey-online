@@ -2,7 +2,7 @@ import PolarizationDef from "@/components/PolarizationDef";
 import PoliticalLeaning from "@/components/index/PoliticalLeaning";
 import SeguirButton from "@/components/index/SeguirButton";
 import { useEffect, useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const [participantId, setParticipantId] = useState<string>("");
@@ -11,7 +11,6 @@ export default function Home() {
   const [participantLeaning, setParticipantLeaning] = useState<number>(0);
 
   const router = useRouter();
-  const searchParams = useSearchParams();
 
   const nextButtonHandler = () => {
     if (participantLeaning === 0) {
@@ -28,7 +27,19 @@ export default function Home() {
   };
 
   useEffect(() => {
-    
+    const queryParams = new URLSearchParams(window.location.search);
+    const pId = queryParams.get("PROLIFIC_PID");
+    const stdId = queryParams.get("STUDY_ID");
+    const sesId = queryParams.get("SESSION_ID");
+    setParticipantId(pId || "");
+    setStudyId(stdId || "");
+    setSessionId(sesId || "");
+
+    console.log({
+      participantId: pId || "",
+      studyId: stdId || "",
+      sessionId: sesId || ""
+    });
   }, []);
 
   return (
