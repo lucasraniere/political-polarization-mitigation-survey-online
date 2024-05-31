@@ -7,38 +7,83 @@ import { useRouter } from "next/navigation";
 export default function Home() {
   const [participantId, setParticipantId] = useState<string>("");
   const [sessionId, setSessionId] = useState<string>("");
-  const [studyId, setStudyId] = useState<string>("");
   const [participantLeaning, setParticipantLeaning] = useState<number>(0);
 
   const router = useRouter();
 
+  // backend functions
+  const checkParticipant = async (pId: string) => {
+    const response = await fetch(`http://localhost:5000/check_participant/${pId}`);
+    const data = await response.json();
+    return data;
+  };
+
+  const addParticipant = async (pId: string) => {
+    const response = await fetch(`http://localhost:5000/add_participant/${pId}`, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+    }).then((response) => {
+      console.log(response);
+    });
+  };
+
+  const setParticipantLeaningBack = async (pId: string, leaning: number) => {
+    const response = await fetch(`http://localhost:5000/set_participant_leaning/${pId}/${leaning}`, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+    }).then((response) => {
+      console.log(response);
+    });
+  }
+
+  const addSession = async (pId: string, sId: string) => {
+    const response = await fetch(`http://localhost:5000/add_session/${pId}/${sId}`, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+    }).then((response) => {
+      console.log(response);
+    });
+  };
+
+  // button handler
   const nextButtonHandler = () => {
     if (participantLeaning === 0) {
       alert("Por favor, selecione uma opção antes de prosseguir.");
     }
     else {
       try {
-        router.push("/survey");
+        setParticipantLeaningBack(participantId, participantLeaning).then(() => {
+          router.push(`/survey/?PROLIFIC_PID=${participantId}`);
+        });
       } catch (error) {
         console.error(error);
-        router.push("/");
+        router.push(`/?PROLIFIC_PID=${participantId}&SESSION_ID=${sessionId}`);
       }
     }
   };
 
-  useEffect(() => {
+  useEffect(() => { // put the stuff inside the try catch
     const queryParams = new URLSearchParams(window.location.search);
     const pId = queryParams.get("PROLIFIC_PID");
-    const stdId = queryParams.get("STUDY_ID");
     const sesId = queryParams.get("SESSION_ID");
     setParticipantId(pId || "");
-    setStudyId(stdId || "");
     setSessionId(sesId || "");
-
-    console.log({
-      participantId: pId || "",
-      studyId: stdId || "",
-      sessionId: sesId || ""
+    checkParticipant: checkParticipant(pId).then((data) => {
+      if (data==true) {
+        try {
+          router.push(`/survey/?PROLIFIC_PID=${pId}`);
+        } catch (error) {
+          console.error(error);
+          router.push(`/?PROLIFIC_PID=${pId}&SESSION_ID=${sesId}`);
+        }
+      } else {
+        addParticipant(pId).then((data) => {
+          console.log(data);
+          addSession(pId, sesId).then((data) => {
+            console.log(data);
+          });
+        });
+      }
     });
   }, []);
 

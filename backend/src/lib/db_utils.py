@@ -1,13 +1,14 @@
-import os, utils
+import os
+import lib.utils as utils
 from dotenv import load_dotenv
 import mysql.connector
 
 load_dotenv()
-
 TABLE_SQLS = {
     'participants': '''CREATE TABLE IF NOT EXISTS Participants (
         ParticipantId VARCHAR(50) NOT NULL,
         TreatmentGroup VARCHAR(7) NOT NULL,
+        PoliticalLeaning TINYINT(1),
         Tweet1 CHAR(4) NOT NULL,
         Tweet2 CHAR(4) NOT NULL,
         Tweet3 CHAR(4) NOT NULL,
@@ -17,31 +18,32 @@ TABLE_SQLS = {
         );''',
     'sessions': '''CREATE TABLE IF NOT EXISTS Sessions (
         SessionId VARCHAR(50) NOT NULL,
-        ParticipantId VARCHAR(50) NOT NULL,
+        FK_ParticipantId VARCHAR(50) NOT NULL,
         PRIMARY KEY (SessionId),
-        FOREIGN KEY (ParticipantId) REFERENCES Participants(ParticipantId)
+        FOREIGN KEY (FK_ParticipantId) REFERENCES Participants(ParticipantId)
         );''',
     'Tweets': '''CREATE TABLE IF NOT EXISTS Tweets (
         TweetId CHAR(4) NOT NULL,
-        TweetText VARCHAR(280) NOT NULL,
+        TweetText VARCHAR(400) NOT NULL,
         PoliticalBias TINYINT(1) NOT NULL,
+        TreatmentGroup VARCHAR(7) NOT NULL,
         Available TINYINT(1) NOT NULL,
-        ParticipantId VARCHAR(50),
+        FK_ParticipantId VARCHAR(50),
         PRIMARY KEY (TweetId),
-        FOREIGN KEY (ParticipantId) REFERENCES Participants(ParticipantId)
+        FOREIGN KEY (FK_ParticipantId) REFERENCES Participants(ParticipantId)
         );''',
     'RephrasedTweets': '''CREATE TABLE IF NOT EXISTS RephrasedTweets (
         RepTweetId CHAR(5) NOT NULL,
-        TweetId CHAR(4) NOT NULL,
-        RephrasedText VARCHAR(280) NOT NULL,
+        FK_TweetId CHAR(4) NOT NULL,
+        RephrasedText VARCHAR(400) NOT NULL,
         TreatmentGroup VARCHAR(7) NOT NULL,
         PRIMARY KEY (RepTweetId),
-        FOREIGN KEY (TweetId) REFERENCES Tweets(TweetId)
+        FOREIGN KEY (FK_TweetId) REFERENCES Tweets(TweetId)
         )''',
     'answers': '''CREATE TABLE IF NOT EXISTS Answers (
-        AnswerId INT NOT NULL AUTO_INCREMENT,
-        ParticipantId VARCHAR(50) NOT NULL,
-        SessionId VARCHAR(50) NOT NULL,
+        AnswerId VARCHAR(100) NOT NULL,
+        FK_ParticipantId VARCHAR(50) NOT NULL,
+        FK_SessionId VARCHAR(50) NOT NULL,
         Text1 CHAR(5) NOT NULL,
         Text2 CHAR(5) NOT NULL,
         AnswerQ1 TINYINT(1) NOT NULL,
@@ -49,8 +51,8 @@ TABLE_SQLS = {
         AnswerQ3 TINYINT(1) NOT NULL,
         AnswerQ4 TINYINT(1) NOT NULL,
         PRIMARY KEY (AnswerId),
-        FOREIGN KEY (ParticipantId) REFERENCES Participants(ParticipantId),
-        FOREIGN KEY (SessionId) REFERENCES Sessions(SessionId)
+        FOREIGN KEY (FK_ParticipantId) REFERENCES Participants(ParticipantId),
+        FOREIGN KEY (FK_SessionId) REFERENCES Sessions(SessionId)
         )'''
 }
 
@@ -62,6 +64,7 @@ def get_connection():
     )
 
 
+## database creation
 def create_database():
     with get_connection() as con:
         cur = con.cursor()
@@ -81,27 +84,6 @@ def create_tables():
         add_constraint(cur)
 
 
-def get_group_counts():
-    with get_connection() as con:
-        cur = con.cursor()
-        cur.execute("USE survey_db")
-        cur.execute("SELECT COUNT(*) FROM Participants WHERE TreatmentGroup='human'")
-        h_count = cur.fetchone()[0]
-        cur.execute("SELECT COUNT(*) FROM Participants WHERE TreatmentGroup='machine'")
-        m_count = cur.fetchone()[0]
-        cur.execute("SELECT COUNT(*) FROM Participants WHERE TreatmentGroup='placebo'")
-        p_count = cur.fetchone()[0]
-    return h_count, m_count, p_count
-
-
-def get_available_tweets():
-    with get_connection() as con:
-        cur = con.cursor()
-        cur.execute("USE survey_db")
-        cur.execute("SELECT TweetId FROM Tweets WHERE Available=1")
-        return [row[0] for row in cur.fetchall()]
-
-
 def add_constraint(cur):
     constraints = [
         ("FK_Tweet1", "Tweet1"),
@@ -117,10 +99,10 @@ def add_constraint(cur):
         ''')
 
 
-def add_tweet(id, text, bias):
-    sql = ('INSERT INTO Tweets (TweetId, TweetText, PoliticalBias, Available)'
-        'VALUES (%s, %s, %s, 1)')
-    args = (id, text, bias)
+def add_tweet(id, text, bias, group):
+    sql = ('INSERT INTO Tweets (TweetId, TweetText, PoliticalBias, TreatmentGroup, Available)'
+        'VALUES (%s, %s, %s, %s, 1)')
+    args = (id, text, bias, group)
     with get_connection() as con:
         cur = con.cursor()
         cur.execute("USE survey_db")
@@ -128,8 +110,63 @@ def add_tweet(id, text, bias):
         con.commit()
 
 
-def change_assigned_tweets(p_id, t_id):
-    pass
+def add_rephrased_tweet(id, tweet_id, text, group):
+    sql = ('INSERT INTO RephrasedTweets (RepTweetId, FK_TweetId, RephrasedText, TreatmentGroup)'
+        'VALUES (%s, %s, %s, %s)')
+    args = (id, tweet_id, text, group)
+    with get_connection() as con:
+        cur = con.cursor()
+        cur.execute("USE survey_db")
+        cur.execute(sql, args)
+        con.commit()
+
+
+## data checking
+def get_group_counts():
+    with get_connection() as con:
+        cur = con.cursor()
+        cur.execute("USE survey_db")
+        cur.execute("SELECT COUNT(*) FROM Participants WHERE TreatmentGroup='human'")
+        h_count = cur.fetchone()[0]
+        cur.execute("SELECT COUNT(*) FROM Participants WHERE TreatmentGroup='machine'")
+        m_count = cur.fetchone()[0]
+        cur.execute("SELECT COUNT(*) FROM Participants WHERE TreatmentGroup='placebo'")
+        p_count = cur.fetchone()[0]
+    return h_count, m_count, p_count
+
+
+def check_participant(id):
+    with get_connection() as con:
+        cur = con.cursor()
+        cur.execute("USE survey_db")
+        cur.execute("SELECT * FROM Participants WHERE ParticipantId=%s", (id,))
+        return True if cur.fetchone() else False
+
+
+def get_available_tweets():
+    with get_connection() as con:
+        cur = con.cursor()
+        cur.execute("USE survey_db")
+        cur.execute("SELECT TweetId FROM Tweets WHERE Available=1")
+        return [row[0] for row in cur.fetchall()]
+
+
+## data manipulation
+def set_assigned_tweets(p_id, t_id):
+    with get_connection() as con:
+        cur = con.cursor()
+        cur.execute("USE survey_db")
+        for id in t_id:
+            cur.execute("UPDATE Tweets SET FK_ParticipantId=%s, Available=0 WHERE TweetId=%s", (p_id, id))
+        con.commit()
+
+
+def add_session(p_id, s_id):
+    with get_connection() as con:
+        cur = con.cursor()
+        cur.execute("USE survey_db")
+        cur.execute("INSERT IGNORE INTO Sessions (SessionId, FK_ParticipantId) VALUES (%s, %s)", (s_id, p_id))
+        con.commit()
 
 
 def add_participant(id):
@@ -145,5 +182,11 @@ def add_participant(id):
         cur.execute("USE survey_db")
         cur.execute(sql, args)
         con.commit()
-    for tweet in assigned_tweets:
-        change_assigned_tweets(id, tweet)
+    set_assigned_tweets(id, assigned_tweets)
+
+def set_participant_leaning(id, leaning):
+    with get_connection() as con:
+        cur = con.cursor()
+        cur.execute("USE survey_db")
+        cur.execute("UPDATE Participants SET PoliticalLeaning=%s, ParticipantStatus='tweet_1' WHERE ParticipantId=%s", (leaning, id))
+        con.commit()
