@@ -62,29 +62,46 @@ export default function Home() {
     }
   };
 
-  useEffect(() => { // put the stuff inside the try catch
+  useEffect(() => {
     const queryParams = new URLSearchParams(window.location.search);
     const pId = queryParams.get("PROLIFIC_PID");
     const sesId = queryParams.get("SESSION_ID");
     setParticipantId(pId || "");
     setSessionId(sesId || "");
-    checkParticipant: checkParticipant(pId).then((data) => {
-      if (data==true) {
-        try {
-          router.push(`/survey/?PROLIFIC_PID=${pId}`);
-        } catch (error) {
-          console.error(error);
-          router.push(`/?PROLIFIC_PID=${pId}&SESSION_ID=${sesId}`);
+    try {
+      checkParticipant(pId).then((data) => {
+        if (data===false || data==='started') {
+          try {
+            addParticipant(pId).then((data) => {
+              console.log(data);
+              addSession(pId, sesId).then((data) => {
+                console.log(data);
+              });
+            });
+          } catch (error) {
+            console.error(error);
+            router.push(`/?PROLIFIC_PID=${pId}&SESSION_ID=${sesId}`);
+          }
+        } if (data=='finished' || data=='aswered') {
+          try {
+            router.push(`/ending/?PROLIFIC_PID=${pId}`);
+          } catch (error) {
+            console.error(error);
+            router.push(`/ending/?PROLIFIC_PID=${pId}`);
+          }
+        } else {
+          try {
+            router.push(`/survey/?PROLIFIC_PID=${pId}&SESSION_ID=${sesId}`);
+          } catch (error) {
+            console.error(error);
+            router.push(`/?PROLIFIC_PID=${pId}&SESSION_ID=${sesId}`);
+          }
         }
-      } else {
-        addParticipant(pId).then((data) => {
-          console.log(data);
-          addSession(pId, sesId).then((data) => {
-            console.log(data);
-          });
-        });
-      }
-    });
+      });
+    } catch (error) {
+      console.error(error);
+      router.push(`/?PROLIFIC_PID=${pId}&SESSION_ID=${sesId}`);
+    }
   }, []);
 
   return (

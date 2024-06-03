@@ -139,8 +139,9 @@ def check_participant(id):
     with get_connection() as con:
         cur = con.cursor()
         cur.execute("USE survey_db")
-        cur.execute("SELECT * FROM Participants WHERE ParticipantId=%s", (id,))
-        return True if cur.fetchone() else False
+        cur.execute("SELECT ParticipantStatus FROM Participants WHERE ParticipantId=%s", (id,))
+        result = cur.fetchone()
+        return {'status': result[0] if result else False}
 
 
 def get_available_tweets():
@@ -150,6 +151,60 @@ def get_available_tweets():
         cur.execute("SELECT TweetId FROM Tweets WHERE Available=1")
         return [row[0] for row in cur.fetchall()]
 
+
+def get_participant_tweets(id):
+    with get_connection() as con:
+        cur = con.cursor()
+        cur.execute("USE survey_db")
+        cur.execute("SELECT Tweet1, Tweet2, Tweet3, Tweet4 FROM Participants WHERE ParticipantId=%s", (id,))
+        return cur.fetchone()
+
+
+def get_tweet(id):
+    with get_connection() as con:
+        cur = con.cursor()
+        cur.execute("USE survey_db")
+        cur.execute("SELECT TweetText FROM Tweets WHERE TweetId=%s", (id,))
+        return cur.fetchone()
+
+
+def get_rephrased(id):
+    with get_connection() as con:
+        cur = con.cursor()
+        cur.execute("USE survey_db")
+        cur.execute("SELECT RephrasedText FROM RephrasedTweets WHERE FK_TweetId=%s", (id,))
+        return cur.fetchone()
+
+
+def get_rephrased_id(id):
+    with get_connection() as con:
+        cur = con.cursor()
+        cur.execute("USE survey_db")
+        cur.execute("SELECT RepTweetId FROM RephrasedTweets WHERE FK_TweetId=%s", (id,))
+        return cur.fetchone()
+
+
+def get_text(id):
+    if (id.length == 4):
+        return get_tweet(id)
+    else:
+        return get_rephrased(id)
+
+
+def check_answer(id):
+    with get_connection() as con:
+        cur = con.cursor()
+        cur.execute("USE survey_db")
+        cur.execute("SELECT Text1, Text2 FROM Answers WHERE AnswerId=%s", (id,))
+        response = cur.fetchone()
+        return {'text1': response[0], 'text2': response[1]} if response else False
+
+
+def get_shuffled_texts(id, tweet_number):
+    current_tweet = get_participant_tweets(id)[tweet_number-1]
+    current_rephrased = get_rephrased_id(current_tweet)[0]
+    shuffle_ids = utils.shuffle_texts([current_tweet, current_rephrased])
+    return {'text1': shuffle_ids[0], 'text2': shuffle_ids[1]}
 
 ## data manipulation
 def set_assigned_tweets(p_id, t_id):

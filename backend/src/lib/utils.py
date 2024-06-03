@@ -16,3 +16,8 @@ def select_tweets(tweets):
     assigned_tweets = np.concatenate((left_samples, right_samples))
     np.random.shuffle(assigned_tweets)
     return assigned_tweets
+
+
+def shuffle_texts(texts):
+    np.random.shuffle(texts)
+    return texts

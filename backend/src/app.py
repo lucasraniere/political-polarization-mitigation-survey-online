@@ -23,6 +23,21 @@ def add_participant(id):
     return jsonify({'message': f'Participant {id} added'})
 
 
+@app.route('/check_answer/<string:id>', methods=['GET'])
+def check_answer(id):
+    return jsonify(db.check_answer(id))
+
+
+@app.route('/get_tweet_ids/<string:id>', methods=['GET'])
+def get_tweet_ids(id):
+    return jsonify(db.get_participant_tweets(id))
+
+
+@app.route('/get_tweet_texts/<string:id>/<int:tweet_number>', methods=['GET'])
+def get_tweet_texts(id, tweet_number):
+    return jsonify(db.get_shuffled_texts(id, tweet_number))
+
+
 @app.route('/add_session/<string:pid>/<string:sid>', methods=['POST', 'GET'])
 def add_session(pid, sid):
     db.add_session(pid, sid)
