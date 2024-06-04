@@ -19,27 +19,30 @@ export default function Home() {
   };
 
   const addParticipant = async (pId: string) => {
-    const response = await fetch(`http://localhost:5000/add_participant/${pId}`, {
+    const response = await fetch('http://localhost:5000/add_participant/', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({'pId': pId})
     }).then((response) => {
       console.log(response);
     });
   };
 
   const setParticipantLeaningBack = async (pId: string, leaning: number) => {
-    const response = await fetch(`http://localhost:5000/set_participant_leaning/${pId}/${leaning}`, {
+    const response = await fetch('http://localhost:5000/set_participant_leaning/', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({'pId': pId, 'leaning': leaning})
     }).then((response) => {
       console.log(response);
     });
   }
 
   const addSession = async (pId: string, sId: string) => {
-    const response = await fetch(`http://localhost:5000/add_session/${pId}/${sId}`, {
+    const response = await fetch('http://localhost:5000/add_session/', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({'pId': pId, 'sId': sId})
     }).then((response) => {
       console.log(response);
     });
@@ -53,7 +56,7 @@ export default function Home() {
     else {
       try {
         setParticipantLeaningBack(participantId, participantLeaning).then(() => {
-          router.push(`/survey/?PROLIFIC_PID=${participantId}`);
+          router.push(`/survey/?PROLIFIC_PID=${participantId}&SESSION_ID=${sessionId}`);
         });
       } catch (error) {
         console.error(error);
@@ -70,38 +73,27 @@ export default function Home() {
     setSessionId(sesId || "");
     try {
       checkParticipant(pId).then((data) => {
-        if (data===false || data==='started') {
-          try {
-            addParticipant(pId).then((data) => {
-              console.log(data);
-              addSession(pId, sesId).then((data) => {
-                console.log(data);
-              });
+        switch (data.status) {
+          case false:
+            addParticipant(pId).then(() => {
+              addSession(pId, sesId);
             });
-          } catch (error) {
-            console.error(error);
-            router.push(`/?PROLIFIC_PID=${pId}&SESSION_ID=${sesId}`);
-          }
-        } if (data=='finished' || data=='aswered') {
-          try {
+            break;
+          case 'started':
+            addSession(pId, sesId);
+            break;
+          case 'finished' || 'answered':
             router.push(`/ending/?PROLIFIC_PID=${pId}`);
-          } catch (error) {
-            console.error(error);
-            router.push(`/ending/?PROLIFIC_PID=${pId}`);
-          }
-        } else {
-          try {
+            break;
+          default:
             router.push(`/survey/?PROLIFIC_PID=${pId}&SESSION_ID=${sesId}`);
-          } catch (error) {
-            console.error(error);
-            router.push(`/?PROLIFIC_PID=${pId}&SESSION_ID=${sesId}`);
-          }
+            break;
         }
       });
     } catch (error) {
       console.error(error);
       router.push(`/?PROLIFIC_PID=${pId}&SESSION_ID=${sesId}`);
-    }
+    };
   }, []);
 
   return (

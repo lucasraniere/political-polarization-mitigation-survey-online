@@ -46,10 +46,10 @@ TABLE_SQLS = {
         FK_SessionId VARCHAR(50) NOT NULL,
         Text1 CHAR(5) NOT NULL,
         Text2 CHAR(5) NOT NULL,
-        AnswerQ1 TINYINT(1) NOT NULL,
-        AnswerQ2 TINYINT(1) NOT NULL,
-        AnswerQ3 TINYINT(1) NOT NULL,
-        AnswerQ4 TINYINT(1) NOT NULL,
+        AnswerQ1 TINYINT(1),
+        AnswerQ2 TINYINT(1),
+        AnswerQ3 TINYINT(1),
+        AnswerQ4 TINYINT(1),
         PRIMARY KEY (AnswerId),
         FOREIGN KEY (FK_ParticipantId) REFERENCES Participants(ParticipantId),
         FOREIGN KEY (FK_SessionId) REFERENCES Sessions(SessionId)
@@ -172,7 +172,7 @@ def get_rephrased(id):
     with get_connection() as con:
         cur = con.cursor()
         cur.execute("USE survey_db")
-        cur.execute("SELECT RephrasedText FROM RephrasedTweets WHERE FK_TweetId=%s", (id,))
+        cur.execute("SELECT RephrasedText FROM RephrasedTweets WHERE RepTweetId=%s", (id,))
         return cur.fetchone()
 
 
@@ -185,10 +185,10 @@ def get_rephrased_id(id):
 
 
 def get_text(id):
-    if (id.length == 4):
-        return get_tweet(id)
+    if (len(id) == 4):
+        return get_tweet(id)[0]
     else:
-        return get_rephrased(id)
+        return get_rephrased(id)[0]
 
 
 def check_answer(id):
@@ -205,6 +205,11 @@ def get_shuffled_texts(id, tweet_number):
     current_rephrased = get_rephrased_id(current_tweet)[0]
     shuffle_ids = utils.shuffle_texts([current_tweet, current_rephrased])
     return {'text1': shuffle_ids[0], 'text2': shuffle_ids[1]}
+
+
+def get_texts(id_1, id_2):
+    return {'text1': get_text(id_1), 'text2': get_text(id_2)}
+
 
 ## data manipulation
 def set_assigned_tweets(p_id, t_id):
@@ -239,9 +244,44 @@ def add_participant(id):
         con.commit()
     set_assigned_tweets(id, assigned_tweets)
 
+
 def set_participant_leaning(id, leaning):
     with get_connection() as con:
         cur = con.cursor()
         cur.execute("USE survey_db")
         cur.execute("UPDATE Participants SET PoliticalLeaning=%s, ParticipantStatus='tweet_1' WHERE ParticipantId=%s", (leaning, id))
+        con.commit()
+
+
+def create_answer(p_id, s_id, tweet_number):
+    answer_id = p_id + 'T' + str(tweet_number)
+    shuffled_text_ids = get_shuffled_texts(p_id, tweet_number)
+    text_1 = get_text(shuffled_text_ids['text1'])
+    text_2 = get_text(shuffled_text_ids['text2'])
+    sql = ('INSERT INTO Answers (AnswerId, FK_ParticipantId, FK_SessionId, Text1, Text2)'
+    'VALUES (%s, %s, %s, %s, %s)')
+    args = (answer_id, p_id, s_id, shuffled_text_ids['text1'], shuffled_text_ids['text2'])
+    with get_connection() as con:
+        cur = con.cursor()
+        cur.execute("USE survey_db")
+        cur.execute(sql, args)
+        con.commit()
+    return {'text1': text_1, 'text2': text_2}
+
+
+def set_answers(a_id, answers):
+    sql = ('UPDATE Answers SET AnswerQ1=%s, AnswerQ2=%s, AnswerQ3=%s, AnswerQ4=%s WHERE AnswerId=%s')
+    args = (answers['q1'], answers['q2'], answers['q3'], answers['q4'], a_id)
+    with get_connection() as con:
+        cur = con.cursor()
+        cur.execute("USE survey_db")
+        cur.execute(sql, args)
+        con.commit()
+
+
+def set_participant_status(id, status):
+    with get_connection() as con:
+        cur = con.cursor()
+        cur.execute("USE survey_db")
+        cur.execute("UPDATE Participants SET ParticipantStatus=%s WHERE ParticipantId=%s", (status, id))
         con.commit()
