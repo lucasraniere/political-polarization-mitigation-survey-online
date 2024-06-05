@@ -2,12 +2,14 @@ import PolarizationPopUp from '@/components/survey/PolarizationPopUp';
 import Questionnaire from '@/components/survey/Questionnaire';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { get } from 'http';
 
 export default function Survey() {
     const router = useRouter();
     const [showPopup, setShowPopup] = useState(false);
     const [tweetNumber, setTweetNumber] = useState(0);
     const [participantId, setParticipantId] = useState("");
+    const [currentSessionId, setCurrentSessionId] = useState("");
     const [text1, setText1] = useState("");
     const [text2, setText2] = useState("");
     const [answerQ1, setAnswerQ1] = useState(0);
@@ -55,6 +57,16 @@ export default function Survey() {
         return data;
     };
 
+    const setParticipantStatus = async (pId: string, status: string) => {
+        const response = await fetch('http://localhost:5000/set_participant_status/', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({'pId': pId, 'status': status})
+        });
+        const data = await response.json();
+        return data;
+    };
+
     // utils
     const getTweetNumber = (status:string) => {
         switch (status) {
@@ -69,8 +81,8 @@ export default function Survey() {
         }
     };
 
-    const get_next_status = (tweet_number:number) => {
-        switch (tweet_number) {
+    const getNextStatus = (ttNumber:number) => {
+        switch (ttNumber) {
             case 1:
                 return 'tweet_2';
             case 2:
@@ -98,11 +110,17 @@ export default function Survey() {
         }
         else {
             if (tweetNumber === 4) {
-                router.push("/ending");
+                setAnswers(participantId + 'T' + String(tweetNumber), getCurrentAnswers()).then(() => {
+                    setParticipantStatus(participantId, 'answered').then(() => {
+                        router.push(`/ending/?PROLIFIC_PID=${participantId}`);
+                    });
+                });
             }
             else {
                 setAnswers(participantId + 'T' + String(tweetNumber), getCurrentAnswers()).then(() => {
-                    alert("Respostas salvas com sucesso!");
+                    setParticipantStatus(participantId, getNextStatus(tweetNumber)).then(() => {
+                        router.refresh();
+                    });
                 });
             }
         }
@@ -113,6 +131,7 @@ export default function Survey() {
         const pId = queryParams.get("PROLIFIC_PID");
         const sId = queryParams.get("SESSION_ID");
         setParticipantId(pId || "");
+        setCurrentSessionId(sId || "");
         try {
             checkParticipant(pId).then((data) => {
                 const currentTweet = getTweetNumber(data.status);

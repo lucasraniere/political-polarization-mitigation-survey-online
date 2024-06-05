@@ -83,10 +83,14 @@ export default function Home() {
             addSession(pId, sesId);
             break;
           case 'finished' || 'answered':
-            router.push(`/ending/?PROLIFIC_PID=${pId}`);
+            addSession(pId, sesId).then(() => {
+              router.push(`/ending/?PROLIFIC_PID=${pId}`);
+            });
             break;
           default:
-            router.push(`/survey/?PROLIFIC_PID=${pId}&SESSION_ID=${sesId}`);
+            addSession(pId, sesId).then(() => {
+              router.push(`/survey/?PROLIFIC_PID=${pId}&SESSION_ID=${sesId}`);
+            });
             break;
         }
       });
