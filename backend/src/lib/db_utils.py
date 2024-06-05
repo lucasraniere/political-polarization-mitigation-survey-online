@@ -144,11 +144,11 @@ def check_participant(id):
         return {'status': result[0] if result else False}
 
 
-def get_available_tweets():
+def get_available_tweets(treatment_group):
     with get_connection() as con:
         cur = con.cursor()
         cur.execute("USE survey_db")
-        cur.execute("SELECT TweetId FROM Tweets WHERE Available=1")
+        cur.execute("SELECT TweetId FROM Tweets WHERE Available=1 and TreatmentGroup=%s", (treatment_group,))
         return [row[0] for row in cur.fetchall()]
 
 
@@ -232,7 +232,7 @@ def add_session(p_id, s_id):
 def add_participant(id):
     h_count, m_count, p_count = get_group_counts()
     assigned_group = utils.select_group(h_count, m_count, p_count)
-    assigned_tweets = utils.select_tweets(get_available_tweets())
+    assigned_tweets = utils.select_tweets(get_available_tweets(assigned_group))
     sql = ('INSERT INTO Participants (ParticipantId, TreatmentGroup, Tweet1, Tweet2, Tweet3, Tweet4, ParticipantStatus)'
             'VALUES (%s, %s, %s, %s, %s, %s, %s)')
     args = (id, assigned_group, assigned_tweets[0], assigned_tweets[1],

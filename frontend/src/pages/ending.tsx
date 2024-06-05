@@ -14,7 +14,7 @@ export default function EndingPage() {
         const participantId = urlParams.get('PROLIFIC_PID');
 
         setParticipantStatus(participantId, 'finished').then(() => {
-            window.location.href = 'https://app.prolific.co/submissions/complete?cc=5D2B5E4B';
+            window.location.href = 'https://app.prolific.com/submissions/complete?cc=CKGSLL86';
         });
     }
 

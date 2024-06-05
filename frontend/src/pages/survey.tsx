@@ -2,7 +2,6 @@ import PolarizationPopUp from '@/components/survey/PolarizationPopUp';
 import Questionnaire from '@/components/survey/Questionnaire';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { get } from 'http';
 
 export default function Survey() {
     const router = useRouter();
@@ -103,6 +102,13 @@ export default function Survey() {
         };
     };
 
+    const resetAnswers = () => {
+        setAnswerQ1(0);
+        setAnswerQ2(0);
+        setAnswerQ3(0);
+        setAnswerQ4(0);
+    };
+
     // button handler
     const handleNextButton = () => {
         if (answerQ1 === 0 || answerQ2 === 0 || answerQ3 === 0 || answerQ4 === 0) {
@@ -119,7 +125,23 @@ export default function Survey() {
             else {
                 setAnswers(participantId + 'T' + String(tweetNumber), getCurrentAnswers()).then(() => {
                     setParticipantStatus(participantId, getNextStatus(tweetNumber)).then(() => {
-                        router.refresh();
+                        // router.refresh();
+                        const currentTweet = tweetNumber + 1;
+                        setTweetNumber(currentTweet);
+                        checkAnswers(participantId, currentTweet).then((data) => {
+                            if (data) {
+                                getTexts(data.text1, data.text2).then((data) => {
+                                    setText1(data.text1);
+                                    setText2(data.text2);
+                                });
+                            } else {
+                                createAnswer(participantId, currentSessionId, currentTweet).then((data) => {
+                                    setText1(data.text1);
+                                    setText2(data.text2);
+                                    resetAnswers();
+                                });
+                            }
+                        });
                     });
                 });
             }
@@ -180,6 +202,11 @@ export default function Survey() {
                 handleAnswerQ2={setAnswerQ2}
                 handleAnswerQ3={setAnswerQ3}
                 handleAnswerQ4={setAnswerQ4}
+
+                question1={answerQ1}
+                question2={answerQ2}
+                question3={answerQ3}
+                question4={answerQ4}
             />
             <div className="next-button">
                 <button onClick={handleNextButton}>Próximo Tweet &gt;</button>

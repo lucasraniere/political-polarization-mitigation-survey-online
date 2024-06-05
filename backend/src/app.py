@@ -64,6 +64,7 @@ def create_answer():
     texts = db.create_answer(p_id, s_id, tt_number)
     return jsonify(texts)
 
+
 @app.route('/set_answers/<string:a_id>', methods=['POST', 'PUT'])
 def set_answers(a_id):
     answers = request.json
