@@ -211,6 +211,15 @@ def get_texts(id_1, id_2):
     return {'text1': get_text(id_1), 'text2': get_text(id_2)}
 
 
+def get_answer(id):
+    with get_connection() as con:
+        cur = con.cursor()
+        cur.execute("USE survey_db")
+        cur.execute("SELECT Text1, Text2, AnswerQ1, AnswerQ2, AnswerQ3, AnswerQ4 FROM Answers WHERE AnswerId=%s", (id,))
+        response = cur.fetchone()
+        return {'text1': get_text(response[0]), 'text2': get_text(response[1]),'q1': response[2], 'q2': response[3], 'q3': response[4], 'q4': response[5]} if response else False
+
+
 ## data manipulation
 def set_assigned_tweets(p_id, t_id):
     with get_connection() as con:

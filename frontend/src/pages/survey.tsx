@@ -2,11 +2,14 @@ import PolarizationPopUp from '@/components/survey/PolarizationPopUp';
 import Questionnaire from '@/components/survey/Questionnaire';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { get } from 'http';
+import next from 'next';
 
 export default function Survey() {
     const router = useRouter();
     const [showPopup, setShowPopup] = useState(false);
     const [tweetNumber, setTweetNumber] = useState(0);
+    const [maxProgresTweet, setMaxProgressTweet] = useState(0);
     const [participantId, setParticipantId] = useState("");
     const [currentSessionId, setCurrentSessionId] = useState("");
     const [text1, setText1] = useState("");
@@ -109,7 +112,27 @@ export default function Survey() {
         setAnswerQ4(0);
     };
 
-    // button handler
+    const getAnswer = async (answerId:string) => {
+        const response = await fetch(`http://localhost:5000/get_answer/${answerId}`);
+        const data = await response.json();
+        return data;
+    };
+
+    const goToPreviousTweet = () => {
+        const previousTweet = tweetNumber - 1;
+        const previousAnswerId = participantId + 'T' + String(previousTweet);
+        getAnswer(previousAnswerId).then((data) => {
+            setTweetNumber(previousTweet);
+            setText1(data.text1);
+            setText2(data.text2);
+            setAnswerQ1(data.q1);
+            setAnswerQ2(data.q2);
+            setAnswerQ3(data.q3);
+            setAnswerQ4(data.q4);
+        });
+    };
+
+    // button handlers
     const handleNextButton = () => {
         if (answerQ1 === 0 || answerQ2 === 0 || answerQ3 === 0 || answerQ4 === 0) {
             alert("Por favor, responda todas as perguntas antes de prosseguir.");
@@ -123,17 +146,30 @@ export default function Survey() {
                 });
             }
             else {
-                setAnswers(participantId + 'T' + String(tweetNumber), getCurrentAnswers()).then(() => {
-                    setParticipantStatus(participantId, getNextStatus(tweetNumber)).then(() => {
-                        // router.refresh();
+                setAnswers(participantId + 'T' + String(tweetNumber), getCurrentAnswers()).
+                then(() => {
+                    var nextState = ''
+                    if (tweetNumber+1 > maxProgresTweet) {
+                        setMaxProgressTweet(tweetNumber+1);
+                        nextState = getNextStatus(tweetNumber);
+                    } else {
+                        nextState = 'tweet_'+String(maxProgresTweet);
+                    }
+                    setParticipantStatus(participantId, nextState).then(() => {
                         const currentTweet = tweetNumber + 1;
                         setTweetNumber(currentTweet);
-                        checkAnswers(participantId, currentTweet).then((data) => {
+                        getAnswer(participantId+'T'+currentTweet).then((data) => {
                             if (data) {
-                                getTexts(data.text1, data.text2).then((data) => {
-                                    setText1(data.text1);
-                                    setText2(data.text2);
-                                });
+                                setText1(data.text1);
+                                setText2(data.text2);
+                                const q1 = data.q1 ? data.q1 : 0;
+                                const q2 = data.q2 ? data.q2 : 0;
+                                const q3 = data.q3 ? data.q3 : 0;
+                                const q4 = data.q4 ? data.q4 : 0;
+                                setAnswerQ1(q1);
+                                setAnswerQ2(q2);
+                                setAnswerQ3(q3);
+                                setAnswerQ4(q4);
                             } else {
                                 createAnswer(participantId, currentSessionId, currentTweet).then((data) => {
                                     setText1(data.text1);
@@ -148,6 +184,18 @@ export default function Survey() {
         }
     };
 
+    const handlePreviousButton = () => {
+        const hasSomeAnswer = (answerQ1 != 0 || answerQ2 != 0 || answerQ3 != 0 || answerQ4 != 0);
+        if (hasSomeAnswer && tweetNumber === maxProgresTweet) {
+            const confimation = confirm("Tem certeza que quer voltar? Suas respostas serão perdidas.");
+            if (confimation) {
+                goToPreviousTweet();
+            }
+        } else {
+            goToPreviousTweet();
+        }
+    };
+
     useEffect(() => {
         const queryParams = new URLSearchParams(window.location.search);
         const pId = queryParams.get("PROLIFIC_PID");
@@ -158,6 +206,7 @@ export default function Survey() {
             checkParticipant(pId).then((data) => {
                 const currentTweet = getTweetNumber(data.status);
                 setTweetNumber(currentTweet);
+                setMaxProgressTweet(currentTweet);
                 checkAnswers(pId, currentTweet).then((data) => {
                     if (data) {
                         getTexts(data.text1, data.text2).then((data) => {
@@ -208,8 +257,17 @@ export default function Survey() {
                 question3={answerQ3}
                 question4={answerQ4}
             />
-            <div className="next-button">
-                <button onClick={handleNextButton}>Próximo Tweet &gt;</button>
+            <div className="nav-buttons">
+                {
+                    tweetNumber > 1 ?
+                    <div className="previous-button">
+                        <button onClick={handlePreviousButton}>&lt; Tweet Anterior</button>
+                    </div>
+                    : null
+                }
+                <div className="next-button">
+                    <button onClick={handleNextButton}>Próximo Tweet &gt;</button>
+                </div>
             </div>
         </main>
     )

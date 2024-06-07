@@ -57,6 +57,20 @@
 
 .next-button {
     text-align: right;
+    float: right;
+    align-self: right;
+}
+
+.previous-button {
+    text-align: left;
+    float: left;
+    align-self: left;
+}
+
+.nav-buttons {
+    display: flexbox;
+    justify-content: space-between;
+    /* padding: 0.5em; */
 }
 
 /* ids */

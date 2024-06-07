@@ -79,5 +79,10 @@ def set_participant_status():
     return jsonify({'message': f'Participant {data['pId']} status set to {data['status']}'})
 
 
+@app.route('/get_answer/<string:id>', methods=['GET'])
+def get_answer(id):
+    return jsonify(db.get_answer(id))
+
+
 if __name__ == '__main__':
     app.run(debug=True)
