@@ -1,0 +1,24 @@
+2024-06-10 16:00:03.583495 -- Answer TCParticipant005T1 set
+2024-06-10 16:00:03.635983 -- Participant TCParticipant005 status set to tweet_2
+2024-06-10 16:00:03.818191 -- Answer created for participant TCParticipant005 and session TCSession005
+2024-06-10 16:02 -- Answer TCParticipant005T2 set: {'q1': 5, 'q2': 4, 'q3': 5, 'q4': 4}
+2024-06-10 16:02 -- Participant TCParticipant005 status set to tweet_3
+2024-06-10 16:02 -- Answer created for participant TCParticipant005 and session TCSession005
+2024-06-10 16:04:05 -- Answer TCParticipant005T3 set: {'q1': 1, 'q2': 2, 'q3': 1, 'q4': 2}
+2024-06-10 16:04:05 -- Participant TCParticipant005 status set to tweet_4
+2024-06-10 16:04:05 -- Answer created for participant TCParticipant005 and session TCSession005
+2024-06-10 16:13:02 -- Answer TCParticipant005T1 set: {'q1': 5, 'q2': 5, 'q3': 5, 'q4': 4}
+2024-06-10 16:13:02 -- Participant TCParticipant005 status set to tweet_4
+2024-06-10 16:13:02 -- Getting answer TCParticipant005T2 from Participant TCParticipant005
+2024-06-10 16:14:51 -- Getting answer TCParticipant005T1 from Participant TCParticipant005
+2024-06-10 16:15:12 -- Answer TCParticipant005T1 set: {'q1': 5, 'q2': 5, 'q3': 5, 'q4': 4}
+2024-06-10 16:15:12 -- Participant TCParticipant005 status set to tweet_4
+2024-06-10 16:15:12 -- Getting answer TCParticipant005T2 from Participant TCParticipant005
+2024-06-10 16:15:28 -- Answer TCParticipant005T2 set: {'q1': 5, 'q2': 4, 'q3': 5, 'q4': 4}
+2024-06-10 16:15:29 -- Participant TCParticipant005 status set to tweet_4
+2024-06-10 16:15:29 -- Getting answer TCParticipant005T3 from Participant TCParticipant005
+2024-06-10 16:15:36 -- Answer TCParticipant005T3 set: {'q1': 1, 'q2': 2, 'q3': 1, 'q4': 2}
+2024-06-10 16:15:36 -- Participant TCParticipant005 status set to tweet_4
+2024-06-10 16:15:36 -- Getting answer TCParticipant005T4 from Participant TCParticipant005
+2024-06-10 16:15:41 -- Answer TCParticipant005T4 set: {'q1': 1, 'q2': 1, 'q3': 2, 'q4': 2}
+2024-06-10 16:15:41 -- Participant TCParticipant005 status set to answered

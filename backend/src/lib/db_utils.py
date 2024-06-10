@@ -6,7 +6,7 @@ import mysql.connector
 load_dotenv()
 TABLE_SQLS = {
     'participants': '''CREATE TABLE IF NOT EXISTS Participants (
-        ParticipantId VARCHAR(50) NOT NULL,
+        ParticipantId VARCHAR(30) NOT NULL,
         TreatmentGroup VARCHAR(7) NOT NULL,
         PoliticalLeaning TINYINT(1),
         Tweet1 CHAR(4) NOT NULL,
@@ -17,8 +17,8 @@ TABLE_SQLS = {
         PRIMARY KEY (ParticipantId)
         );''',
     'sessions': '''CREATE TABLE IF NOT EXISTS Sessions (
-        SessionId VARCHAR(50) NOT NULL,
-        FK_ParticipantId VARCHAR(50) NOT NULL,
+        SessionId VARCHAR(30) NOT NULL,
+        FK_ParticipantId VARCHAR(30) NOT NULL,
         PRIMARY KEY (SessionId),
         FOREIGN KEY (FK_ParticipantId) REFERENCES Participants(ParticipantId)
         );''',
@@ -28,7 +28,7 @@ TABLE_SQLS = {
         PoliticalBias TINYINT(1) NOT NULL,
         TreatmentGroup VARCHAR(7) NOT NULL,
         Available TINYINT(1) NOT NULL,
-        FK_ParticipantId VARCHAR(50),
+        FK_ParticipantId VARCHAR(30),
         PRIMARY KEY (TweetId),
         FOREIGN KEY (FK_ParticipantId) REFERENCES Participants(ParticipantId)
         );''',
@@ -41,9 +41,9 @@ TABLE_SQLS = {
         FOREIGN KEY (FK_TweetId) REFERENCES Tweets(TweetId)
         )''',
     'answers': '''CREATE TABLE IF NOT EXISTS Answers (
-        AnswerId VARCHAR(100) NOT NULL,
-        FK_ParticipantId VARCHAR(50) NOT NULL,
-        FK_SessionId VARCHAR(50) NOT NULL,
+        AnswerId VARCHAR(30) NOT NULL,
+        FK_ParticipantId VARCHAR(30) NOT NULL,
+        FK_SessionId VARCHAR(30) NOT NULL,
         Text1 CHAR(5) NOT NULL,
         Text2 CHAR(5) NOT NULL,
         AnswerQ1 TINYINT(1),
