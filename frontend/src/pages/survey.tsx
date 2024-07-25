@@ -18,6 +18,7 @@ export default function Survey() {
     const [answerQ2, setAnswerQ2] = useState(0);
     const [answerQ3, setAnswerQ3] = useState(0);
     const [answerQ4, setAnswerQ4] = useState(0);
+    const [timeSpent, setTimeSpent] = useState(0);
 
     // backend functions
     const checkParticipant = async (pId: string) => {
@@ -101,7 +102,8 @@ export default function Survey() {
             q1: answerQ1,
             q2: answerQ2,
             q3: answerQ3,
-            q4: answerQ4
+            q4: answerQ4,
+            timeSpent: timeSpent
         };
     };
 
@@ -110,6 +112,7 @@ export default function Survey() {
         setAnswerQ2(0);
         setAnswerQ3(0);
         setAnswerQ4(0);
+        setTimeSpent(0);
     };
 
     const getAnswer = async (answerId:string) => {
@@ -129,6 +132,7 @@ export default function Survey() {
             setAnswerQ2(data.q2);
             setAnswerQ3(data.q3);
             setAnswerQ4(data.q4);
+            setTimeSpent(data.time);
         });
     };
 
@@ -170,6 +174,7 @@ export default function Survey() {
                                 setAnswerQ2(q2);
                                 setAnswerQ3(q3);
                                 setAnswerQ4(q4);
+                                setTimeSpent(data.time);
                             } else {
                                 createAnswer(participantId, currentSessionId, currentTweet).then((data) => {
                                     setText1(data.text1);
@@ -186,11 +191,16 @@ export default function Survey() {
 
     const handlePreviousButton = () => {
         const hasSomeAnswer = (answerQ1 != 0 || answerQ2 != 0 || answerQ3 != 0 || answerQ4 != 0);
+        const hasAllAnswer = (answerQ1 != 0 && answerQ2 != 0 && answerQ3 != 0 && answerQ4 != 0);
         if (hasSomeAnswer && tweetNumber === maxProgresTweet) {
             const confimation = confirm("Tem certeza que quer voltar? Suas respostas serão perdidas.");
             if (confimation) {
                 goToPreviousTweet();
             }
+        } else if (hasAllAnswer) {
+            setAnswers(participantId + 'T' + String(tweetNumber), getCurrentAnswers()).then(() => {
+                goToPreviousTweet();
+            });
         } else {
             goToPreviousTweet();
         }
@@ -212,6 +222,7 @@ export default function Survey() {
                         getTexts(data.text1, data.text2).then((data) => {
                             setText1(data.text1);
                             setText2(data.text2);
+                            setTimeSpent(data.time);
                         });
                     } else {
                         createAnswer(pId, sId, currentTweet).then((data) => {
@@ -225,6 +236,10 @@ export default function Survey() {
             console.error(error);
             router.push(`/survey/?PROLIFIC_PID=${pId}`);
         }
+        const interval = setInterval(() => {
+            setTimeSpent(timeSpent => timeSpent + 1);
+        }, 1000);
+        return () => clearInterval(interval);
     }, []);
 
     return (

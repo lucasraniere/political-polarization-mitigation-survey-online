@@ -1,35 +1,219 @@
-2024-06-10 16:00:03.583495 -- Answer TCParticipant005T1 set
-2024-06-10 16:00:03.635983 -- Participant TCParticipant005 status set to tweet_2
-2024-06-10 16:00:03.818191 -- Answer created for participant TCParticipant005 and session TCSession005
-2024-06-10 16:02 -- Answer TCParticipant005T2 set: {'q1': 5, 'q2': 4, 'q3': 5, 'q4': 4}
-2024-06-10 16:02 -- Participant TCParticipant005 status set to tweet_3
-2024-06-10 16:02 -- Answer created for participant TCParticipant005 and session TCSession005
-2024-06-10 16:04:05 -- Answer TCParticipant005T3 set: {'q1': 1, 'q2': 2, 'q3': 1, 'q4': 2}
-2024-06-10 16:04:05 -- Participant TCParticipant005 status set to tweet_4
-2024-06-10 16:04:05 -- Answer created for participant TCParticipant005 and session TCSession005
-2024-06-10 16:13:02 -- Answer TCParticipant005T1 set: {'q1': 5, 'q2': 5, 'q3': 5, 'q4': 4}
-2024-06-10 16:13:02 -- Participant TCParticipant005 status set to tweet_4
-2024-06-10 16:13:02 -- Getting answer TCParticipant005T2 from Participant TCParticipant005
-2024-06-10 16:14:51 -- Getting answer TCParticipant005T1 from Participant TCParticipant005
-2024-06-10 16:15:12 -- Answer TCParticipant005T1 set: {'q1': 5, 'q2': 5, 'q3': 5, 'q4': 4}
-2024-06-10 16:15:12 -- Participant TCParticipant005 status set to tweet_4
-2024-06-10 16:15:12 -- Getting answer TCParticipant005T2 from Participant TCParticipant005
-2024-06-10 16:15:28 -- Answer TCParticipant005T2 set: {'q1': 5, 'q2': 4, 'q3': 5, 'q4': 4}
-2024-06-10 16:15:29 -- Participant TCParticipant005 status set to tweet_4
-2024-06-10 16:15:29 -- Getting answer TCParticipant005T3 from Participant TCParticipant005
-2024-06-10 16:15:36 -- Answer TCParticipant005T3 set: {'q1': 1, 'q2': 2, 'q3': 1, 'q4': 2}
-2024-06-10 16:15:36 -- Participant TCParticipant005 status set to tweet_4
-2024-06-10 16:15:36 -- Getting answer TCParticipant005T4 from Participant TCParticipant005
-2024-06-10 16:15:41 -- Answer TCParticipant005T4 set: {'q1': 1, 'q2': 1, 'q3': 2, 'q4': 2}
-2024-06-10 16:15:41 -- Participant TCParticipant005 status set to answered
-2024-07-25 14:56:41 -- Checking participant 12h3uigahsgdhkgasd
-2024-07-25 14:56:42 -- Participant 12h3uigahsgdhkgasd added
-2024-07-25 14:56:42 -- Session 123123kjaksjda added
-2024-07-25 14:59:43 -- Checking participant 12h3uigahsgdhkgasd
-2024-07-25 14:59:43 -- Session 123123kjaksjda added
-2024-07-25 14:59:49 -- Checking participant 12h3uigahsgdhkgasd
-2024-07-25 14:59:49 -- Session 123123kjaksjda added
-2024-07-25 15:01:30 -- Checking participant 12h3uigahsgdhkgasd
-2024-07-25 15:01:30 -- Session 123123kjaksjda added
-2024-07-25 15:01:37 -- Checking participant 12h3uigahsgdhkgasd
-2024-07-25 15:01:37 -- Session 123123kjaksjda added
+2024-07-25 15:25:07 -- Checking participant ParticipantTest
+2024-07-25 15:25:07 -- Participant ParticipantTest added
+2024-07-25 15:25:07 -- Session None added
+2024-07-25 15:25:58 -- Participant ParticipantTest leaning set to 7
+2024-07-25 15:25:59 -- Checking participant ParticipantTest
+2024-07-25 15:25:59 -- Checking answer ParticipantTestT1
+2024-07-25 15:26:24 -- Checking participant ParticipantTest31
+2024-07-25 15:26:24 -- Checking answer ParticipantTest31Tundefined
+2024-07-25 15:26:31 -- Checking participant ParticipantTest31
+2024-07-25 15:26:32 -- Participant ParticipantTest31 added
+2024-07-25 15:26:32 -- Session SessionTest321 added
+2024-07-25 15:28:48 -- Participant ParticipantTest31 leaning set to 4
+2024-07-25 15:28:48 -- Checking participant ParticipantTest31
+2024-07-25 15:28:48 -- Checking answer ParticipantTest31T1
+2024-07-25 15:31:25 -- Checking participant ParticipantTest123
+2024-07-25 15:31:25 -- Participant ParticipantTest123 added
+2024-07-25 15:31:25 -- Session SessionTest123 added
+2024-07-25 15:31:29 -- Participant ParticipantTest123 leaning set to 4
+2024-07-25 15:31:29 -- Checking participant ParticipantTest123
+2024-07-25 15:31:29 -- Checking answer ParticipantTest123T1
+2024-07-25 15:31:30 -- Answer created for participant ParticipantTest123 and session SessionTest123
+2024-07-25 15:35:17 -- Checking participant ParticipantTest123
+2024-07-25 15:35:17 -- Checking answer ParticipantTest123T1
+2024-07-25 15:35:17 -- Getting texts for participants L014 and HL014
+2024-07-25 15:40:15 -- Checking participant ParticipantTest123
+2024-07-25 15:40:15 -- Checking answer ParticipantTest123T1
+2024-07-25 15:40:15 -- Getting texts for participants L014 and HL014
+2024-07-25 15:41:10 -- Checking participant ParticipantTest123
+2024-07-25 15:41:10 -- Checking answer ParticipantTest123T1
+2024-07-25 15:41:10 -- Getting texts for participants L014 and HL014
+2024-07-25 15:41:22 -- Answer ParticipantTest123T1 set: {'q1': 1, 'q2': 1, 'q3': 2, 'q4': 2}
+2024-07-25 15:41:22 -- Participant ParticipantTest123 status set to tweet_2
+2024-07-25 15:41:22 -- Getting answer ParticipantTest123T2 from Participant ParticipantTest123
+2024-07-25 15:41:22 -- Answer created for participant ParticipantTest123 and session SessionTest123
+2024-07-25 15:41:43 -- Answer ParticipantTest123T2 set: {'q1': 1, 'q2': 1, 'q3': 2, 'q4': 2}
+2024-07-25 15:41:43 -- Participant ParticipantTest123 status set to tweet_3
+2024-07-25 15:41:43 -- Getting answer ParticipantTest123T3 from Participant ParticipantTest123
+2024-07-25 15:41:44 -- Answer created for participant ParticipantTest123 and session SessionTest123
+2024-07-25 15:42:13 -- Answer ParticipantTest123T3 set: {'q1': 1, 'q2': 1, 'q3': 2, 'q4': 2}
+2024-07-25 15:42:13 -- Participant ParticipantTest123 status set to tweet_4
+2024-07-25 15:42:13 -- Getting answer ParticipantTest123T4 from Participant ParticipantTest123
+2024-07-25 15:42:13 -- Answer created for participant ParticipantTest123 and session SessionTest123
+2024-07-25 15:43:51 -- Checking participant ParticipantTest123
+2024-07-25 15:43:51 -- Checking answer ParticipantTest123T4
+2024-07-25 15:43:51 -- Getting texts for participants R005 and HR005
+2024-07-25 15:43:56 -- Checking participant ParticipantTest123
+2024-07-25 15:43:56 -- Checking answer ParticipantTest123T4
+2024-07-25 15:43:56 -- Getting texts for participants R005 and HR005
+2024-07-25 15:44:13 -- Answer ParticipantTest123T4 set: {'q1': 1, 'q2': 1, 'q3': 4, 'q4': 1}
+2024-07-25 15:44:13 -- Participant ParticipantTest123 status set to answered
+2024-07-25 15:44:16 -- Participant ParticipantTest123 status set to finished
+2024-07-25 15:46:13 -- Checking participant Teste123123123
+2024-07-25 15:46:13 -- Participant Teste123123123 added
+2024-07-25 15:46:13 -- Session TEsdasdasdasdasdasd added
+2024-07-25 15:46:21 -- Participant Teste123123123 leaning set to 1
+2024-07-25 15:46:21 -- Checking participant Teste123123123
+2024-07-25 15:46:21 -- Checking answer Teste123123123T1
+2024-07-25 15:46:21 -- Answer created for participant Teste123123123 and session TEsdasdasdasdasdasd
+2024-07-25 15:46:43 -- Answer Teste123123123T1 set: {'q1': 1, 'q2': 1, 'q3': 2, 'q4': 2}
+2024-07-25 15:46:43 -- Participant Teste123123123 status set to tweet_2
+2024-07-25 15:46:43 -- Getting answer Teste123123123T2 from Participant Teste123123123
+2024-07-25 15:46:43 -- Answer created for participant Teste123123123 and session TEsdasdasdasdasdasd
+2024-07-25 15:47:03 -- Answer Teste123123123T2 set: {'q1': 1, 'q2': 2, 'q3': 2, 'q4': 2}
+2024-07-25 15:47:03 -- Participant Teste123123123 status set to tweet_3
+2024-07-25 15:47:03 -- Getting answer Teste123123123T3 from Participant Teste123123123
+2024-07-25 15:47:03 -- Answer created for participant Teste123123123 and session TEsdasdasdasdasdasd
+2024-07-25 15:47:12 -- Answer Teste123123123T3 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 2}
+2024-07-25 15:47:12 -- Participant Teste123123123 status set to tweet_4
+2024-07-25 15:47:12 -- Getting answer Teste123123123T4 from Participant Teste123123123
+2024-07-25 15:47:13 -- Answer created for participant Teste123123123 and session TEsdasdasdasdasdasd
+2024-07-25 15:48:00 -- Checking participant Teste123123123
+2024-07-25 15:48:00 -- Checking answer Teste123123123T4
+2024-07-25 15:48:00 -- Getting texts for participants HL007 and L007
+2024-07-25 15:54:08 -- Checking participant Teste123123123
+2024-07-25 15:54:08 -- Checking answer Teste123123123T4
+2024-07-25 15:54:08 -- Getting texts for participants HL007 and L007
+2024-07-25 16:00:20 -- Answer Teste123123123T4 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 819}
+2024-07-25 16:00:20 -- Participant Teste123123123 status set to answered
+2024-07-25 16:10:00 -- Checking participant LucasRaniere123123123
+2024-07-25 16:10:00 -- Participant LucasRaniere123123123 added
+2024-07-25 16:10:00 -- Session SessionTesteLucas added
+2024-07-25 16:10:12 -- Participant LucasRaniere123123123 leaning set to 3
+2024-07-25 16:10:12 -- Checking participant LucasRaniere123123123
+2024-07-25 16:10:12 -- Checking answer LucasRaniere123123123T1
+2024-07-25 16:10:12 -- Answer created for participant LucasRaniere123123123 and session SessionTesteLucas
+2024-07-25 16:10:23 -- Answer LucasRaniere123123123T1 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 10}
+2024-07-25 16:10:23 -- Participant LucasRaniere123123123 status set to tweet_2
+2024-07-25 16:10:23 -- Getting answer LucasRaniere123123123T2 from Participant LucasRaniere123123123
+2024-07-25 16:10:23 -- Answer created for participant LucasRaniere123123123 and session SessionTesteLucas
+2024-07-25 16:10:34 -- Answer LucasRaniere123123123T2 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 12}
+2024-07-25 16:10:34 -- Participant LucasRaniere123123123 status set to tweet_3
+2024-07-25 16:10:34 -- Getting answer LucasRaniere123123123T3 from Participant LucasRaniere123123123
+2024-07-25 16:10:35 -- Answer created for participant LucasRaniere123123123 and session SessionTesteLucas
+2024-07-25 16:10:54 -- Answer LucasRaniere123123123T3 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 19}
+2024-07-25 16:10:54 -- Participant LucasRaniere123123123 status set to tweet_4
+2024-07-25 16:10:54 -- Getting answer LucasRaniere123123123T4 from Participant LucasRaniere123123123
+2024-07-25 16:10:54 -- Answer created for participant LucasRaniere123123123 and session SessionTesteLucas
+2024-07-25 16:11:00 -- Getting answer LucasRaniere123123123T3 from Participant LucasRaniere123123123
+2024-07-25 16:11:08 -- Answer LucasRaniere123123123T3 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 28}
+2024-07-25 16:11:08 -- Participant LucasRaniere123123123 status set to tweet_4
+2024-07-25 16:11:09 -- Getting answer LucasRaniere123123123T4 from Participant LucasRaniere123123123
+2024-07-25 16:11:23 -- Getting answer LucasRaniere123123123T3 from Participant LucasRaniere123123123
+2024-07-25 16:11:24 -- Getting answer LucasRaniere123123123T2 from Participant LucasRaniere123123123
+2024-07-25 16:11:25 -- Getting answer LucasRaniere123123123T1 from Participant LucasRaniere123123123
+2024-07-25 16:11:33 -- Answer LucasRaniere123123123T1 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 18}
+2024-07-25 16:11:33 -- Participant LucasRaniere123123123 status set to tweet_4
+2024-07-25 16:11:33 -- Getting answer LucasRaniere123123123T2 from Participant LucasRaniere123123123
+2024-07-25 16:11:41 -- Answer LucasRaniere123123123T2 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 20}
+2024-07-25 16:11:41 -- Participant LucasRaniere123123123 status set to tweet_4
+2024-07-25 16:11:41 -- Getting answer LucasRaniere123123123T3 from Participant LucasRaniere123123123
+2024-07-25 16:11:41 -- Answer LucasRaniere123123123T3 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 28}
+2024-07-25 16:11:41 -- Participant LucasRaniere123123123 status set to tweet_4
+2024-07-25 16:11:41 -- Getting answer LucasRaniere123123123T4 from Participant LucasRaniere123123123
+2024-07-25 16:27:31 -- Answer LucasRaniere123123123T4 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 949}
+2024-07-25 16:27:32 -- Participant LucasRaniere123123123 status set to answered
+2024-07-25 16:28:03 -- Checking participant AAAA
+2024-07-25 16:28:03 -- Participant AAAA added
+2024-07-25 16:28:03 -- Session AAAWEW added
+2024-07-25 16:28:07 -- Participant AAAA leaning set to 3
+2024-07-25 16:28:07 -- Checking participant AAAA
+2024-07-25 16:28:07 -- Checking answer AAAAT1
+2024-07-25 16:28:07 -- Answer created for participant AAAA and session AAAWEW
+2024-07-25 16:28:12 -- Answer AAAAT1 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 4}
+2024-07-25 16:28:12 -- Participant AAAA status set to tweet_2
+2024-07-25 16:28:12 -- Getting answer AAAAT2 from Participant AAAA
+2024-07-25 16:28:12 -- Answer created for participant AAAA and session AAAWEW
+2024-07-25 16:28:16 -- Answer AAAAT2 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 3}
+2024-07-25 16:28:16 -- Participant AAAA status set to tweet_3
+2024-07-25 16:28:16 -- Getting answer AAAAT3 from Participant AAAA
+2024-07-25 16:28:16 -- Answer created for participant AAAA and session AAAWEW
+2024-07-25 16:28:21 -- Answer AAAAT3 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 4}
+2024-07-25 16:28:21 -- Participant AAAA status set to tweet_4
+2024-07-25 16:28:21 -- Getting answer AAAAT4 from Participant AAAA
+2024-07-25 16:28:21 -- Answer created for participant AAAA and session AAAWEW
+2024-07-25 16:28:25 -- Answer AAAAT4 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 4}
+2024-07-25 16:28:25 -- Participant AAAA status set to answered
+2024-07-25 16:48:14 -- Checking participant AAAA2
+2024-07-25 16:48:15 -- Participant AAAA2 added
+2024-07-25 16:48:15 -- Session 123123123123 added
+2024-07-25 16:48:17 -- Participant AAAA2 leaning set to 3
+2024-07-25 16:48:17 -- Checking participant AAAA2
+2024-07-25 16:48:17 -- Checking answer AAAA2T1
+2024-07-25 16:48:17 -- Answer created for participant AAAA2 and session 123123123123
+2024-07-25 16:48:22 -- Answer AAAA2T1 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 4}
+2024-07-25 16:48:22 -- Participant AAAA2 status set to tweet_2
+2024-07-25 16:48:22 -- Getting answer AAAA2T2 from Participant AAAA2
+2024-07-25 16:48:22 -- Answer created for participant AAAA2 and session 123123123123
+2024-07-25 16:48:26 -- Getting answer AAAA2T1 from Participant AAAA2
+2024-07-25 16:48:27 -- Answer AAAA2T1 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 5}
+2024-07-25 16:48:27 -- Participant AAAA2 status set to tweet_2
+2024-07-25 16:48:27 -- Getting answer AAAA2T2 from Participant AAAA2
+2024-07-25 16:48:31 -- Getting answer AAAA2T1 from Participant AAAA2
+2024-07-25 16:48:33 -- Answer AAAA2T1 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 7}
+2024-07-25 16:48:33 -- Participant AAAA2 status set to tweet_2
+2024-07-25 16:48:33 -- Getting answer AAAA2T2 from Participant AAAA2
+2024-07-25 16:48:40 -- Getting answer AAAA2T1 from Participant AAAA2
+2024-07-25 16:48:42 -- Answer AAAA2T1 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 8}
+2024-07-25 16:48:42 -- Participant AAAA2 status set to tweet_2
+2024-07-25 16:48:42 -- Getting answer AAAA2T2 from Participant AAAA2
+2024-07-25 16:48:47 -- Answer AAAA2T2 set: {'q1': 1, 'q2': 1, 'q3': 3, 'q4': 1, 'timeSpent': 6}
+2024-07-25 16:48:48 -- Participant AAAA2 status set to tweet_3
+2024-07-25 16:48:48 -- Getting answer AAAA2T3 from Participant AAAA2
+2024-07-25 16:48:48 -- Answer created for participant AAAA2 and session 123123123123
+2024-07-25 16:48:50 -- Getting answer AAAA2T2 from Participant AAAA2
+2024-07-25 16:48:53 -- Getting answer AAAA2T1 from Participant AAAA2
+2024-07-25 16:48:55 -- Answer AAAA2T1 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 9}
+2024-07-25 16:48:55 -- Participant AAAA2 status set to tweet_3
+2024-07-25 16:48:55 -- Getting answer AAAA2T2 from Participant AAAA2
+2024-07-25 16:48:58 -- Checking participant AAAA2
+2024-07-25 16:48:58 -- Checking answer AAAA2T3
+2024-07-25 16:48:58 -- Getting texts for participants PR066 and R066
+2024-07-25 16:49:54 -- Checking participant AAAA2
+2024-07-25 16:49:54 -- Checking answer AAAA2T3
+2024-07-25 16:49:54 -- Getting texts for participants PR066 and R066
+2024-07-25 16:55:50 -- Checking participant AAAA2
+2024-07-25 16:55:50 -- Checking answer AAAA2T3
+2024-07-25 16:55:50 -- Getting texts for participants PR066 and R066
+2024-07-25 16:58:27 -- Checking participant AAAA2
+2024-07-25 16:58:27 -- Checking answer AAAA2T3
+2024-07-25 16:58:27 -- Getting texts for participants PR066 and R066
+2024-07-25 16:58:59 -- Checking participant zzzzzzzzz
+2024-07-25 16:59:00 -- Participant zzzzzzzzz added
+2024-07-25 16:59:00 -- Session zzzzzzzz23 added
+2024-07-25 16:59:09 -- Participant zzzzzzzzz leaning set to 3
+2024-07-25 16:59:09 -- Checking participant zzzzzzzzz
+2024-07-25 16:59:09 -- Checking answer zzzzzzzzzT1
+2024-07-25 16:59:09 -- Answer created for participant zzzzzzzzz and session zzzzzzzz23
+2024-07-25 16:59:21 -- Answer zzzzzzzzzT1 set: {'q1': 1, 'q2': 2, 'q3': 2, 'q4': 2, 'timeSpent': 12}
+2024-07-25 16:59:21 -- Participant zzzzzzzzz status set to tweet_2
+2024-07-25 16:59:21 -- Getting answer zzzzzzzzzT2 from Participant zzzzzzzzz
+2024-07-25 16:59:22 -- Answer created for participant zzzzzzzzz and session zzzzzzzz23
+2024-07-25 16:59:35 -- Answer zzzzzzzzzT2 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 14}
+2024-07-25 16:59:35 -- Participant zzzzzzzzz status set to tweet_3
+2024-07-25 16:59:35 -- Getting answer zzzzzzzzzT3 from Participant zzzzzzzzz
+2024-07-25 16:59:36 -- Answer created for participant zzzzzzzzz and session zzzzzzzz23
+2024-07-25 16:59:44 -- Getting answer zzzzzzzzzT2 from Participant zzzzzzzzz
+2024-07-25 16:59:49 -- Answer zzzzzzzzzT2 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 19}
+2024-07-25 16:59:49 -- Getting answer zzzzzzzzzT1 from Participant zzzzzzzzz
+2024-07-25 16:59:56 -- Answer zzzzzzzzzT1 set: {'q1': 1, 'q2': 2, 'q3': 2, 'q4': 2, 'timeSpent': 20}
+2024-07-25 16:59:56 -- Participant zzzzzzzzz status set to tweet_3
+2024-07-25 16:59:56 -- Getting answer zzzzzzzzzT2 from Participant zzzzzzzzz
+2024-07-25 17:00:04 -- Answer zzzzzzzzzT2 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 26}
+2024-07-25 17:00:04 -- Participant zzzzzzzzz status set to tweet_3
+2024-07-25 17:00:04 -- Getting answer zzzzzzzzzT3 from Participant zzzzzzzzz
+2024-07-25 17:00:09 -- Answer zzzzzzzzzT3 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 2, 'timeSpent': 5}
+2024-07-25 17:00:09 -- Participant zzzzzzzzz status set to tweet_4
+2024-07-25 17:00:09 -- Getting answer zzzzzzzzzT4 from Participant zzzzzzzzz
+2024-07-25 17:00:09 -- Answer created for participant zzzzzzzzz and session zzzzzzzz23
+2024-07-25 17:00:21 -- Getting answer zzzzzzzzzT3 from Participant zzzzzzzzz
+2024-07-25 17:00:27 -- Answer zzzzzzzzzT3 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 2, 'timeSpent': 10}
+2024-07-25 17:00:27 -- Getting answer zzzzzzzzzT2 from Participant zzzzzzzzz
+2024-07-25 17:00:32 -- Answer zzzzzzzzzT2 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 32}
+2024-07-25 17:00:32 -- Participant zzzzzzzzz status set to tweet_4
+2024-07-25 17:00:33 -- Getting answer zzzzzzzzzT3 from Participant zzzzzzzzz
+2024-07-25 17:00:37 -- Answer zzzzzzzzzT3 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 2, 'timeSpent': 15}
+2024-07-25 17:00:37 -- Participant zzzzzzzzz status set to tweet_4
+2024-07-25 17:00:37 -- Getting answer zzzzzzzzzT4 from Participant zzzzzzzzz
+2024-07-25 17:00:50 -- Answer zzzzzzzzzT4 set: {'q1': 3, 'q2': 3, 'q3': 2, 'q4': 2, 'timeSpent': 11}
+2024-07-25 17:00:50 -- Participant zzzzzzzzz status set to answered

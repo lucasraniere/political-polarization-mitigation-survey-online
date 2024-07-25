@@ -50,6 +50,7 @@ TABLE_SQLS = {
         AnswerQ2 TINYINT(1),
         AnswerQ3 TINYINT(1),
         AnswerQ4 TINYINT(1),
+        TimeSpent SMALLINT(5) NOT NULL,
         PRIMARY KEY (AnswerId),
         FOREIGN KEY (FK_ParticipantId) REFERENCES Participants(ParticipantId),
         FOREIGN KEY (FK_SessionId) REFERENCES Sessions(SessionId)
@@ -195,9 +196,9 @@ def check_answer(id):
     with get_connection() as con:
         cur = con.cursor()
         cur.execute("USE survey_db")
-        cur.execute("SELECT Text1, Text2 FROM Answers WHERE AnswerId=%s", (id,))
+        cur.execute("SELECT Text1, Text2, TimeSpent FROM Answers WHERE AnswerId=%s", (id,))
         response = cur.fetchone()
-        return {'text1': response[0], 'text2': response[1]} if response else False
+        return {'text1': response[0], 'text2': response[1], 'time': response[2]} if response else False
 
 
 def get_shuffled_texts(id, tweet_number):
@@ -215,9 +216,9 @@ def get_answer(id):
     with get_connection() as con:
         cur = con.cursor()
         cur.execute("USE survey_db")
-        cur.execute("SELECT Text1, Text2, AnswerQ1, AnswerQ2, AnswerQ3, AnswerQ4 FROM Answers WHERE AnswerId=%s", (id,))
+        cur.execute("SELECT Text1, Text2, AnswerQ1, AnswerQ2, AnswerQ3, AnswerQ4, TimeSpent FROM Answers WHERE AnswerId=%s", (id,))
         response = cur.fetchone()
-        return {'text1': get_text(response[0]), 'text2': get_text(response[1]),'q1': response[2], 'q2': response[3], 'q3': response[4], 'q4': response[5]} if response else False
+        return {'text1': get_text(response[0]), 'text2': get_text(response[1]),'q1': response[2], 'q2': response[3], 'q3': response[4], 'q4': response[5], 'time': response[6]} if response else False
 
 
 ## data manipulation
@@ -267,9 +268,9 @@ def create_answer(p_id, s_id, tweet_number):
     shuffled_text_ids = get_shuffled_texts(p_id, tweet_number)
     text_1 = get_text(shuffled_text_ids['text1'])
     text_2 = get_text(shuffled_text_ids['text2'])
-    sql = ('INSERT INTO Answers (AnswerId, FK_ParticipantId, FK_SessionId, Text1, Text2)'
-    'VALUES (%s, %s, %s, %s, %s)')
-    args = (answer_id, p_id, s_id, shuffled_text_ids['text1'], shuffled_text_ids['text2'])
+    sql = ('INSERT INTO Answers (AnswerId, FK_ParticipantId, FK_SessionId, Text1, Text2, TimeSpent)'
+    'VALUES (%s, %s, %s, %s, %s, %s)')
+    args = (answer_id, p_id, s_id, shuffled_text_ids['text1'], shuffled_text_ids['text2'], 0)
     with get_connection() as con:
         cur = con.cursor()
         cur.execute("USE survey_db")
@@ -279,8 +280,8 @@ def create_answer(p_id, s_id, tweet_number):
 
 
 def set_answers(a_id, answers):
-    sql = ('UPDATE Answers SET AnswerQ1=%s, AnswerQ2=%s, AnswerQ3=%s, AnswerQ4=%s WHERE AnswerId=%s')
-    args = (answers['q1'], answers['q2'], answers['q3'], answers['q4'], a_id)
+    sql = ('UPDATE Answers SET AnswerQ1=%s, AnswerQ2=%s, AnswerQ3=%s, AnswerQ4=%s, TimeSpent=%s WHERE AnswerId=%s')
+    args = (answers['q1'], answers['q2'], answers['q3'], answers['q4'], answers['timeSpent'],a_id)
     with get_connection() as con:
         cur = con.cursor()
         cur.execute("USE survey_db")
