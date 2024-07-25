@@ -110,7 +110,7 @@ export default function Home() {
         Você poderá reler essa definição de textos polarizados a qualquer momento durante o survey, basta clicar no ícone de interrogação (?) presente no canto superior direito das próximas telas.
       </div>
       <div className="div-p">
-        Para iniciar o survey responda a questão abaixo e clique em seguir.
+        <strong>Você poderá ser exposto a tweets com conteúdo e temas sensíveis. Prossiga para a próxima etapa apenas se concorda em partiticapr do surve</strong>. Para iniciar o survey responda a questão abaixo e clique em seguir.
       </div>
       <div className="div-p">
         Qual das seguintes opções melhor definie seu posicionamento político?
