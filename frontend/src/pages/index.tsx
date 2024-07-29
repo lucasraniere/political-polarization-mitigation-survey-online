@@ -67,8 +67,8 @@ export default function Home() {
 
   useEffect(() => {
     const queryParams = new URLSearchParams(window.location.search);
-    const pId = queryParams.get("PROLIFIC_PID");
-    const sesId = queryParams.get("SESSION_ID");
+    const pId = queryParams.get("PROLIFIC_PID") || "";
+    const sesId = queryParams.get("SESSION_ID") || "";
     setParticipantId(pId || "");
     setSessionId(sesId || "");
     try {

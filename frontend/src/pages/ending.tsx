@@ -13,7 +13,7 @@ export default function EndingPage() {
         const urlParams = new URLSearchParams(window.location.search);
         const participantId = urlParams.get('PROLIFIC_PID');
 
-        setParticipantStatus(participantId, 'finished').then(() => {
+        setParticipantStatus((participantId ? participantId : ''), 'finished').then(() => {
             window.location.href = 'https://app.prolific.com/submissions/complete?cc=CKGSLL86';
         });
     }

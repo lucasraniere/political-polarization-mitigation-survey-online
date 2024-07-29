@@ -217,3 +217,89 @@
 2024-07-25 17:00:37 -- Getting answer zzzzzzzzzT4 from Participant zzzzzzzzz
 2024-07-25 17:00:50 -- Answer zzzzzzzzzT4 set: {'q1': 3, 'q2': 3, 'q3': 2, 'q4': 2, 'timeSpent': 11}
 2024-07-25 17:00:50 -- Participant zzzzzzzzz status set to answered
+2024-07-29 15:51:40 -- Checking participant null
+2024-07-29 15:56:08 -- Checking participant ZZZTeste
+2024-07-29 15:56:08 -- Participant ZZZTeste added
+2024-07-29 15:56:08 -- Session zzzsseettion added
+2024-07-29 15:56:12 -- Participant ZZZTeste leaning set to 4
+2024-07-29 15:56:13 -- Checking participant ZZZTeste
+2024-07-29 15:56:13 -- Checking answer ZZZTesteT1
+2024-07-29 15:56:14 -- Answer created for participant ZZZTeste and session zzzsseettion
+2024-07-29 15:56:29 -- Answer ZZZTesteT1 set: {'q1': 1, 'q2': 1, 'q3': 2, 'q4': 3, 'timeSpent': 15}
+2024-07-29 15:56:29 -- Participant ZZZTeste status set to tweet_2
+2024-07-29 15:56:29 -- Getting answer ZZZTesteT2 from Participant ZZZTeste
+2024-07-29 15:56:29 -- Answer created for participant ZZZTeste and session zzzsseettion
+2024-07-29 15:57:41 -- Answer ZZZTesteT2 set: {'q1': 5, 'q2': 5, 'q3': 5, 'q4': 4, 'timeSpent': 71}
+2024-07-29 15:57:41 -- Participant ZZZTeste status set to tweet_3
+2024-07-29 15:57:41 -- Getting answer ZZZTesteT3 from Participant ZZZTeste
+2024-07-29 15:57:41 -- Answer created for participant ZZZTeste and session zzzsseettion
+2024-07-29 15:58:09 -- Answer ZZZTesteT3 set: {'q1': 3, 'q2': 2, 'q3': 3, 'q4': 2, 'timeSpent': 28}
+2024-07-29 15:58:09 -- Participant ZZZTeste status set to tweet_4
+2024-07-29 15:58:09 -- Getting answer ZZZTesteT4 from Participant ZZZTeste
+2024-07-29 15:58:09 -- Answer created for participant ZZZTeste and session zzzsseettion
+2024-07-29 16:19:08 -- Answer ZZZTesteT4 set: {'q1': 2, 'q2': 2, 'q3': 3, 'q4': 2, 'timeSpent': 1237}
+2024-07-29 16:19:08 -- Participant ZZZTeste status set to answered
+2024-07-29 16:19:20 -- Participant ZZZTeste status set to finished
+2024-07-29 16:22:45 -- Checking participant 61254c5a6facc8ed023a64de
+2024-07-29 16:22:45 -- Participant 61254c5a6facc8ed023a64de added
+2024-07-29 16:22:45 -- Session S61254c5a6facc8ed023a64d added
+2024-07-29 16:29:41 -- Participant 61254c5a6facc8ed023a64de leaning set to 1
+2024-07-29 16:29:41 -- Checking participant 61254c5a6facc8ed023a64de
+2024-07-29 16:29:41 -- Checking answer 61254c5a6facc8ed023a64deT1
+2024-07-29 16:29:41 -- Answer created for participant 61254c5a6facc8ed023a64de and session S61254c5a6facc8ed023a64d
+2024-07-29 16:29:52 -- Checking participant 61254c5a6facc8ed023a64de
+2024-07-29 16:29:52 -- Session S61254c5a6facc8ed023a64d added
+2024-07-29 16:29:52 -- Checking participant 61254c5a6facc8ed023a64de
+2024-07-29 16:29:52 -- Checking answer 61254c5a6facc8ed023a64deT1
+2024-07-29 16:29:52 -- Getting texts for participants R087 and PR087
+2024-07-29 16:33:49 -- Checking participant 61254c5a6facc8ed023a65de
+2024-07-29 16:33:49 -- Participant 61254c5a6facc8ed023a65de added
+2024-07-29 16:33:49 -- Session S61254c5a6facc8ed023a64f added
+2024-07-29 16:36:36 -- Participant 61254c5a6facc8ed023a65de leaning set to 7
+2024-07-29 16:36:37 -- Checking participant 61254c5a6facc8ed023a65de
+2024-07-29 16:36:37 -- Checking answer 61254c5a6facc8ed023a65deT1
+2024-07-29 16:36:37 -- Answer created for participant 61254c5a6facc8ed023a65de and session S61254c5a6facc8ed023a64f
+2024-07-29 16:37:45 -- Answer 61254c5a6facc8ed023a65deT1 set: {'q1': 1, 'q2': 2, 'q3': 3, 'q4': 2, 'timeSpent': 65}
+2024-07-29 16:37:45 -- Participant 61254c5a6facc8ed023a65de status set to tweet_2
+2024-07-29 16:37:45 -- Getting answer 61254c5a6facc8ed023a65deT2 from Participant 61254c5a6facc8ed023a65de
+2024-07-29 16:37:45 -- Answer created for participant 61254c5a6facc8ed023a65de and session S61254c5a6facc8ed023a64f
+2024-07-29 16:37:50 -- Answer 61254c5a6facc8ed023a65deT2 set: {'q1': 1, 'q2': 1, 'q3': 2, 'q4': 2, 'timeSpent': 5}
+2024-07-29 16:37:50 -- Participant 61254c5a6facc8ed023a65de status set to tweet_3
+2024-07-29 16:37:50 -- Getting answer 61254c5a6facc8ed023a65deT3 from Participant 61254c5a6facc8ed023a65de
+2024-07-29 16:37:51 -- Answer created for participant 61254c5a6facc8ed023a65de and session S61254c5a6facc8ed023a64f
+2024-07-29 16:37:56 -- Answer 61254c5a6facc8ed023a65deT3 set: {'q1': 5, 'q2': 5, 'q3': 4, 'q4': 4, 'timeSpent': 5}
+2024-07-29 16:37:56 -- Participant 61254c5a6facc8ed023a65de status set to tweet_4
+2024-07-29 16:37:56 -- Getting answer 61254c5a6facc8ed023a65deT4 from Participant 61254c5a6facc8ed023a65de
+2024-07-29 16:37:57 -- Answer created for participant 61254c5a6facc8ed023a65de and session S61254c5a6facc8ed023a64f
+2024-07-29 16:38:01 -- Answer 61254c5a6facc8ed023a65deT4 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 2, 'timeSpent': 4}
+2024-07-29 16:38:01 -- Participant 61254c5a6facc8ed023a65de status set to answered
+2024-07-29 16:38:16 -- Participant 61254c5a6facc8ed023a65de status set to finished
+2024-07-29 17:00:23 -- Checking participant 61254c5a6facc8ed023a64df
+2024-07-29 17:00:24 -- Participant 61254c5a6facc8ed023a64df added
+2024-07-29 17:00:24 -- Session 61254c5a6facc8sd023a64dd added
+2024-07-29 17:00:29 -- Participant 61254c5a6facc8ed023a64df leaning set to 2
+2024-07-29 17:00:29 -- Checking participant 61254c5a6facc8ed023a64df
+2024-07-29 17:00:29 -- Checking answer 61254c5a6facc8ed023a64dfT1
+2024-07-29 17:00:29 -- Answer created for participant 61254c5a6facc8ed023a64df and session 61254c5a6facc8sd023a64dd
+2024-07-29 17:01:04 -- Answer 61254c5a6facc8ed023a64dfT1 set: {'q1': 1, 'q2': 2, 'q3': 3, 'q4': 1, 'timeSpent': 33}
+2024-07-29 17:01:04 -- Participant 61254c5a6facc8ed023a64df status set to tweet_2
+2024-07-29 17:01:04 -- Getting answer 61254c5a6facc8ed023a64dfT2 from Participant 61254c5a6facc8ed023a64df
+2024-07-29 17:01:04 -- Answer created for participant 61254c5a6facc8ed023a64df and session 61254c5a6facc8sd023a64dd
+2024-07-29 17:02:23 -- Answer 61254c5a6facc8ed023a64dfT2 set: {'q1': 5, 'q2': 5, 'q3': 5, 'q4': 2, 'timeSpent': 74}
+2024-07-29 17:02:23 -- Participant 61254c5a6facc8ed023a64df status set to tweet_3
+2024-07-29 17:02:23 -- Getting answer 61254c5a6facc8ed023a64dfT3 from Participant 61254c5a6facc8ed023a64df
+2024-07-29 17:02:23 -- Answer created for participant 61254c5a6facc8ed023a64df and session 61254c5a6facc8sd023a64dd
+2024-07-29 17:37:16 -- Checking participant asdasdasdasdsad
+2024-07-29 17:37:17 -- Participant asdasdasdasdsad added
+2024-07-29 17:37:17 -- Session 61254c5cc8sd023a64dd added
+2024-07-29 17:55:36 -- Checking participant zzzzteste123
+2024-07-29 17:55:37 -- Participant zzzzteste123 added
+2024-07-29 17:55:37 -- Session asdasda5w53 added
+2024-07-29 17:55:53 -- Participant zzzzteste123 leaning set to 6
+2024-07-29 17:55:53 -- Checking participant zzzzteste123
+2024-07-29 17:55:53 -- Checking answer zzzzteste123T1
+2024-07-29 17:55:54 -- Answer created for participant zzzzteste123 and session asdasda5w53
+2024-07-29 17:56:13 -- Answer zzzzteste123T1 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 19}
+2024-07-29 17:56:13 -- Participant zzzzteste123 status set to tweet_2
+2024-07-29 17:56:13 -- Getting answer zzzzteste123T2 from Participant zzzzteste123
+2024-07-29 17:56:13 -- Answer created for participant zzzzteste123 and session asdasda5w53

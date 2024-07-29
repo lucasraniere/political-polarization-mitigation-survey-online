@@ -13,7 +13,7 @@ export default function PolarizationDef() {
                     <li><b>Teorias conspiratórias:</b> Narrativas que propõem explicações alternativas, muitas vezes sem evidências sólidas, para eventos complexos. Costumam envolver a crença em conspirações ocultas de poderosos grupos ou indivíduos;</li>
                     <li><b>Desumanização ou demonização de opositores:</b> Retrato dos opositores políticos como vilões, inimigos ou ameaças à sociedade. Usa linguagem que desumaniza ou demoniza os adversários, diminuindo sua credibilidade e legitimidade;</li>
                     <li><b>Imputação de crime:</b> Atribuição de atos criminosos ou comportamento moralmente questionável a indivíduos ou grupos sem evidências substanciais. Usada como estratégia retórica para desacreditar oponentes ou gerar desconfiança pública;</li>
-                    <li><b>Linguagem divisiva:</b> Comunicação que aumenta as divisões sociais, políticas ou culturais. Usa linguagem que polariza e separa as pessoas em grupos opostos, alimentando conflitos e hostilidades, tratando temas como "nós contra eles".</li>
+                    <li><b>Linguagem divisiva:</b> Comunicação que aumenta as divisões sociais, políticas ou culturais. Usa linguagem que polariza e separa as pessoas em grupos opostos, alimentando conflitos e hostilidades, tratando temas como &ldquo;nós contra eles&rdquo;.</li>
                 </ul>
             </div>
         </div>

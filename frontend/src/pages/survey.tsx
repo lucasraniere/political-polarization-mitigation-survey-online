@@ -81,6 +81,8 @@ export default function Survey() {
                 return 3;
             case 'tweet_4':
                 return 4;
+            default:
+                return -1;
         }
     };
 
@@ -94,6 +96,8 @@ export default function Survey() {
                 return 'tweet_4';
             case 4:
                 return 'answered';
+            default:
+                return "ERROR";
         }
     };
 
@@ -152,10 +156,10 @@ export default function Survey() {
             else {
                 setAnswers(participantId + 'T' + String(tweetNumber), getCurrentAnswers()).
                 then(() => {
-                    var nextState = ''
+                    var nextState = "";
                     if (tweetNumber+1 > maxProgresTweet) {
                         setMaxProgressTweet(tweetNumber+1);
-                        nextState = getNextStatus(tweetNumber);
+                        nextState = getNextStatus(tweetNumber) || "";
                     } else {
                         nextState = 'tweet_'+String(maxProgresTweet);
                     }
@@ -208,8 +212,8 @@ export default function Survey() {
 
     useEffect(() => {
         const queryParams = new URLSearchParams(window.location.search);
-        const pId = queryParams.get("PROLIFIC_PID");
-        const sId = queryParams.get("SESSION_ID");
+        const pId = queryParams.get("PROLIFIC_PID") || "";
+        const sId = queryParams.get("SESSION_ID") || "";
         setParticipantId(pId || "");
         setCurrentSessionId(sId || "");
         try {
