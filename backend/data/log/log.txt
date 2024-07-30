@@ -303,3 +303,11 @@
 2024-07-29 17:56:13 -- Participant zzzzteste123 status set to tweet_2
 2024-07-29 17:56:13 -- Getting answer zzzzteste123T2 from Participant zzzzteste123
 2024-07-29 17:56:13 -- Answer created for participant zzzzteste123 and session asdasda5w53
+2024-07-30 17:21:41 -- Participant  leaning set to 6
+2024-07-30 17:23:16 -- Checking participant cccccc
+2024-07-30 17:23:16 -- Participant cccccc added
+2024-07-30 17:23:16 -- Session cccc12 added
+2024-07-30 17:23:25 -- Participant cccccc leaning set to 7
+2024-07-30 17:23:25 -- Checking participant cccccc
+2024-07-30 17:23:25 -- Checking answer ccccccT1
+2024-07-30 17:23:25 -- Answer created for participant cccccc and session cccc12
