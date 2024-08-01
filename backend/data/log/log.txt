@@ -311,3 +311,254 @@
 2024-07-30 17:23:25 -- Checking participant cccccc
 2024-07-30 17:23:25 -- Checking answer ccccccT1
 2024-07-30 17:23:25 -- Answer created for participant cccccc and session cccc12
+2024-07-31 17:48:51 -- Participant  leaning set to 4
+2024-07-31 17:48:59 -- Answer T0 set: {'q1': 1, 'q2': 1, 'q3': 2, 'q4': 3, 'timeSpent': 7}
+2024-07-31 17:48:59 -- Participant  status set to ERROR
+2024-07-31 17:48:59 -- Getting answer T1 from Participant 
+2024-07-31 17:49:02 -- Answer T1 set: {'q1': 1, 'q2': 1, 'q3': 2, 'q4': 3, 'timeSpent': 10}
+2024-07-31 17:49:02 -- Participant  status set to tweet_2
+2024-07-31 17:49:02 -- Getting answer T2 from Participant 
+2024-07-31 17:50:22 -- Checking participant z0101zz
+2024-07-31 17:50:22 -- Participant z0101zz added
+2024-07-31 17:50:23 -- Session z1z1z1z1z1 added
+2024-07-31 17:51:05 -- Participant z0101zz leaning set to 4
+2024-07-31 17:51:06 -- Checking participant z0101zz
+2024-07-31 17:51:06 -- Checking answer z0101zzT1
+2024-07-31 17:51:06 -- Answer created for participant z0101zz and session z1z1z1z1z1
+2024-07-31 17:51:21 -- Answer z0101zzT1 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 2, 'timeSpent': 14}
+2024-07-31 17:51:21 -- Participant z0101zz status set to tweet_2
+2024-07-31 17:51:21 -- Getting answer z0101zzT2 from Participant z0101zz
+2024-07-31 17:51:21 -- Answer created for participant z0101zz and session z1z1z1z1z1
+2024-08-01 13:10:06 -- Checking participant 000000011
+2024-08-01 13:10:06 -- Participant 000000011 added
+2024-08-01 13:10:06 -- Session 0000123123 added
+2024-08-01 13:10:15 -- Participant 000000011 leaning set to 1
+2024-08-01 13:10:15 -- Checking participant 000000011
+2024-08-01 13:10:15 -- Checking answer 000000011T1
+2024-08-01 13:10:16 -- Answer created for participant 000000011 and session 0000123123
+2024-08-01 13:10:33 -- Answer 000000011T1 set: {'q1': 1, 'q2': 1, 'q3': 2, 'q4': 2, 'timeSpent': 16}
+2024-08-01 13:10:34 -- Participant 000000011 status set to tweet_2
+2024-08-01 13:10:34 -- Getting answer 000000011T2 from Participant 000000011
+2024-08-01 13:10:34 -- Answer created for participant 000000011 and session 0000123123
+2024-08-01 13:10:50 -- Getting answer 000000011T1 from Participant 000000011
+2024-08-01 13:10:57 -- Answer 000000011T1 set: {'q1': 1, 'q2': 1, 'q3': 2, 'q4': 2, 'timeSpent': 22}
+2024-08-01 13:10:57 -- Participant 000000011 status set to tweet_2
+2024-08-01 13:10:57 -- Getting answer 000000011T2 from Participant 000000011
+2024-08-01 13:11:03 -- Answer 000000011T2 set: {'q1': 1, 'q2': 1, 'q3': 2, 'q4': 2, 'timeSpent': 6}
+2024-08-01 13:11:04 -- Participant 000000011 status set to tweet_3
+2024-08-01 13:11:04 -- Getting answer 000000011T3 from Participant 000000011
+2024-08-01 13:11:04 -- Answer created for participant 000000011 and session 0000123123
+2024-08-01 13:11:06 -- Getting answer 000000011T2 from Participant 000000011
+2024-08-01 13:11:06 -- Answer 000000011T2 set: {'q1': 1, 'q2': 1, 'q3': 2, 'q4': 2, 'timeSpent': 6}
+2024-08-01 13:11:06 -- Getting answer 000000011T1 from Participant 000000011
+2024-08-01 13:11:10 -- Answer 000000011T1 set: {'q1': 1, 'q2': 1, 'q3': 2, 'q4': 2, 'timeSpent': 25}
+2024-08-01 13:11:10 -- Participant 000000011 status set to tweet_3
+2024-08-01 13:11:10 -- Getting answer 000000011T2 from Participant 000000011
+2024-08-01 13:11:14 -- Answer 000000011T2 set: {'q1': 1, 'q2': 1, 'q3': 2, 'q4': 2, 'timeSpent': 10}
+2024-08-01 13:11:14 -- Participant 000000011 status set to tweet_3
+2024-08-01 13:11:14 -- Getting answer 000000011T3 from Participant 000000011
+2024-08-01 13:11:19 -- Answer 000000011T3 set: {'q1': 3, 'q2': 3, 'q3': 3, 'q4': 3, 'timeSpent': 5}
+2024-08-01 13:11:19 -- Participant 000000011 status set to tweet_4
+2024-08-01 13:11:19 -- Getting answer 000000011T4 from Participant 000000011
+2024-08-01 13:11:20 -- Answer created for participant 000000011 and session 0000123123
+2024-08-01 13:11:22 -- Getting answer 000000011T3 from Participant 000000011
+2024-08-01 13:11:22 -- Answer 000000011T3 set: {'q1': 3, 'q2': 3, 'q3': 3, 'q4': 3, 'timeSpent': 5}
+2024-08-01 13:11:22 -- Getting answer 000000011T2 from Participant 000000011
+2024-08-01 13:11:25 -- Answer 000000011T2 set: {'q1': 1, 'q2': 1, 'q3': 2, 'q4': 2, 'timeSpent': 12}
+2024-08-01 13:11:25 -- Participant 000000011 status set to tweet_4
+2024-08-01 13:11:25 -- Getting answer 000000011T3 from Participant 000000011
+2024-08-01 13:11:25 -- Answer 000000011T3 set: {'q1': 3, 'q2': 3, 'q3': 3, 'q4': 3, 'timeSpent': 5}
+2024-08-01 13:11:25 -- Participant 000000011 status set to tweet_4
+2024-08-01 13:11:25 -- Getting answer 000000011T4 from Participant 000000011
+2024-08-01 13:11:36 -- Answer 000000011T4 set: {'q1': 2, 'q2': 2, 'q3': 3, 'q4': 3, 'timeSpent': 11}
+2024-08-01 13:11:36 -- Participant 000000011 status set to answered
+2024-08-01 13:11:44 -- Participant 000000011 status set to finished
+2024-08-01 14:05:50 -- Checking participant 00000TESTEHOST
+2024-08-01 14:05:51 -- Participant 00000TESTEHOST added
+2024-08-01 14:05:51 -- Session 000000000 added
+2024-08-01 14:06:23 -- Participant 00000TESTEHOST leaning set to 4
+2024-08-01 14:06:23 -- Checking participant 00000TESTEHOST
+2024-08-01 14:06:23 -- Checking answer 00000TESTEHOSTT1
+2024-08-01 14:06:23 -- Answer created for participant 00000TESTEHOST and session 000000000
+2024-08-01 14:07:04 -- Answer 00000TESTEHOSTT1 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 40}
+2024-08-01 14:07:04 -- Participant 00000TESTEHOST status set to tweet_2
+2024-08-01 14:07:04 -- Getting answer 00000TESTEHOSTT2 from Participant 00000TESTEHOST
+2024-08-01 14:07:04 -- Answer created for participant 00000TESTEHOST and session 000000000
+2024-08-01 14:07:13 -- Getting answer 00000TESTEHOSTT1 from Participant 00000TESTEHOST
+2024-08-01 14:07:19 -- Answer 00000TESTEHOSTT1 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 45}
+2024-08-01 14:07:19 -- Participant 00000TESTEHOST status set to tweet_2
+2024-08-01 14:07:19 -- Getting answer 00000TESTEHOSTT2 from Participant 00000TESTEHOST
+2024-08-01 14:07:26 -- Answer 00000TESTEHOSTT2 set: {'q1': 1, 'q2': 2, 'q3': 3, 'q4': 4, 'timeSpent': 8}
+2024-08-01 14:07:26 -- Participant 00000TESTEHOST status set to tweet_3
+2024-08-01 14:07:26 -- Getting answer 00000TESTEHOSTT3 from Participant 00000TESTEHOST
+2024-08-01 14:07:27 -- Answer created for participant 00000TESTEHOST and session 000000000
+2024-08-01 14:07:34 -- Getting answer 00000TESTEHOSTT2 from Participant 00000TESTEHOST
+2024-08-01 14:07:37 -- Answer 00000TESTEHOSTT2 set: {'q1': 1, 'q2': 2, 'q3': 3, 'q4': 3, 'timeSpent': 11}
+2024-08-01 14:07:37 -- Participant 00000TESTEHOST status set to tweet_3
+2024-08-01 14:07:37 -- Getting answer 00000TESTEHOSTT3 from Participant 00000TESTEHOST
+2024-08-01 14:08:01 -- Answer 00000TESTEHOSTT3 set: {'q1': 1, 'q2': 1, 'q3': 2, 'q4': 1, 'timeSpent': 21}
+2024-08-01 14:08:01 -- Participant 00000TESTEHOST status set to tweet_4
+2024-08-01 14:08:01 -- Getting answer 00000TESTEHOSTT4 from Participant 00000TESTEHOST
+2024-08-01 14:08:01 -- Answer created for participant 00000TESTEHOST and session 000000000
+2024-08-01 15:13:52 -- Checking participant 000
+2024-08-01 15:14:15 -- Checking participant 000
+2024-08-01 15:14:19 -- Checking participant lucas
+2024-08-01 15:22:19 -- Checking participant lucas
+2024-08-01 15:23:15 -- Checking participant lucas
+2024-08-01 15:24:02 -- Checking participant lucas
+2024-08-01 15:28:09 -- Checking participant lucas
+2024-08-01 15:29:28 -- Checking participant lucas
+2024-08-01 15:29:51 -- Checking participant lucas
+2024-08-01 15:30:10 -- Checking participant lucas
+2024-08-01 15:36:55 -- Checking participant lucas
+2024-08-01 15:44:20 -- Checking participant lucas
+2024-08-01 15:55:14 -- Checking participant lucas
+2024-08-01 15:56:32 -- Checking participant lucas
+2024-08-01 16:01:04 -- Checking participant lucas
+2024-08-01 16:03:52 -- Checking participant lucas
+2024-08-01 17:17:27 -- Checking participant z0z0z0z0z
+2024-08-01 17:17:28 -- Participant z0z0z0z0z added
+2024-08-01 17:17:28 -- Session zasdasdasdasda added
+2024-08-01 17:18:39 -- Participant z0z0z0z0z leaning set to 4
+2024-08-01 17:18:39 -- Checking participant z0z0z0z0z
+2024-08-01 17:18:39 -- Checking answer z0z0z0z0zT1
+2024-08-01 17:18:39 -- Answer created for participant z0z0z0z0z and session zasdasdasdasda
+2024-08-01 17:20:31 -- Checking participant z0z0z0z0z
+2024-08-01 17:20:32 -- Checking answer z0z0z0z0zT1
+2024-08-01 17:20:32 -- Getting texts for participants L055 and ML055
+2024-08-01 17:24:49 -- Checking participant z9z9z9z9z9z9z
+2024-08-01 17:24:49 -- Participant z9z9z9z9z9z9z added
+2024-08-01 17:24:49 -- Session z9z9z99z9z9z added
+2024-08-01 17:25:07 -- Participant z9z9z9z9z9z9z leaning set to 7
+2024-08-01 17:25:07 -- Checking participant z9z9z9z9z9z9z
+2024-08-01 17:25:07 -- Checking answer z9z9z9z9z9z9zT1
+2024-08-01 17:25:07 -- Answer created for participant z9z9z9z9z9z9z and session z9z9z99z9z9z
+2024-08-01 17:41:58 -- Checking participant wolololo
+2024-08-01 17:41:58 -- Participant wolololo added
+2024-08-01 17:41:59 -- Session whatever added
+2024-08-01 17:42:16 -- Participant wolololo leaning set to 4
+2024-08-01 17:42:16 -- Checking participant wolololo
+2024-08-01 17:42:16 -- Checking answer wolololoT1
+2024-08-01 17:42:17 -- Answer created for participant wolololo and session whatever
+2024-08-01 17:42:25 -- Answer wolololoT1 set: {'q1': 2, 'q2': 2, 'q3': 2, 'q4': 2, 'timeSpent': 8}
+2024-08-01 17:42:25 -- Participant wolololo status set to tweet_2
+2024-08-01 17:42:25 -- Getting answer wolololoT2 from Participant wolololo
+2024-08-01 17:42:25 -- Answer created for participant wolololo and session whatever
+2024-08-01 17:42:29 -- Getting answer wolololoT1 from Participant wolololo
+2024-08-01 19:13:26 -- Checking participant asdasdasd
+2024-08-01 19:13:57 -- Checking participant asdasdasd
+2024-08-01 19:21:40 -- Checking participant 99999999
+2024-08-01 19:22:52 -- Checking participant 99999999
+2024-08-01 19:23:22 -- Checking participant 99999999
+2024-08-01 19:23:59 -- Checking participant 99999999
+2024-08-01 19:24:20 -- Checking participant 99999999
+2024-08-01 19:25:46 -- Checking participant 99999999
+2024-08-01 19:25:46 -- Participant 99999999 added
+2024-08-01 19:25:46 -- Session 9999999999 added
+2024-08-01 19:26:14 -- Checking participant 99999999
+2024-08-01 19:26:30 -- Checking participant 99999999
+2024-08-01 19:26:30 -- Session 9999999999 added
+2024-08-01 19:26:42 -- Participant 99999999 leaning set to 4
+2024-08-01 19:26:43 -- Checking participant 99999999
+2024-08-01 19:26:43 -- Checking answer 99999999T1
+2024-08-01 19:26:43 -- Answer created for participant 99999999 and session 9999999999
+2024-08-01 19:27:20 -- Checking participant 99999999
+2024-08-01 19:27:20 -- Checking answer 99999999T1
+2024-08-01 19:27:20 -- Getting texts for participants R000 and HR000
+2024-08-01 19:28:22 -- Checking participant 99999999
+2024-08-01 19:28:23 -- Checking answer 99999999T1
+2024-08-01 19:28:23 -- Getting texts for participants R000 and HR000
+2024-08-01 19:28:46 -- Checking participant 0000000
+2024-08-01 19:28:46 -- Checking answer 0000000T-1
+2024-08-01 19:28:57 -- Checking participant 0000000
+2024-08-01 19:28:57 -- Participant 0000000 added
+2024-08-01 19:28:57 -- Session 0000000 added
+2024-08-01 19:29:04 -- Participant 0000000 leaning set to 3
+2024-08-01 19:29:04 -- Checking participant 0000000
+2024-08-01 19:29:04 -- Checking answer 0000000T1
+2024-08-01 19:29:04 -- Answer created for participant 0000000 and session 0000000
+2024-08-01 19:29:09 -- Answer 0000000T1 set: {'q1': 2, 'q2': 2, 'q3': 3, 'q4': 3, 'timeSpent': 4}
+2024-08-01 19:29:09 -- Participant 0000000 status set to tweet_2
+2024-08-01 19:30:13 -- Answer 0000000T2 set: {'q1': 2, 'q2': 2, 'q3': 3, 'q4': 3, 'timeSpent': 69}
+2024-08-01 19:30:13 -- Participant 0000000 status set to tweet_3
+2024-08-01 19:30:52 -- Checking participant teste1
+2024-08-01 19:30:52 -- Participant teste1 added
+2024-08-01 19:30:52 -- Session teste1 added
+2024-08-01 19:31:14 -- Participant teste1 leaning set to 2
+2024-08-01 19:31:14 -- Checking participant teste1
+2024-08-01 19:31:14 -- Checking answer teste1T1
+2024-08-01 19:31:14 -- Answer created for participant teste1 and session teste1
+2024-08-01 19:31:28 -- Answer teste1T1 set: {'q1': 1, 'q2': 2, 'q3': 2, 'q4': 1, 'timeSpent': 13}
+2024-08-01 19:31:28 -- Participant teste1 status set to tweet_2
+2024-08-01 19:36:05 -- Checking participant teste1
+2024-08-01 19:36:05 -- Participant teste1 added
+2024-08-01 19:36:05 -- Session teste1 added
+2024-08-01 19:36:14 -- Participant teste1 leaning set to 6
+2024-08-01 19:36:14 -- Checking participant teste1
+2024-08-01 19:36:14 -- Checking answer teste1T1
+2024-08-01 19:36:14 -- Answer created for participant teste1 and session teste1
+2024-08-01 19:36:25 -- Answer teste1T1 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 2, 'timeSpent': 10}
+2024-08-01 19:36:25 -- Participant teste1 status set to tweet_2
+2024-08-01 19:36:25 -- Getting answer teste1T2 from Participant teste1
+2024-08-01 19:36:25 -- Answer created for participant teste1 and session teste1
+2024-08-01 19:37:01 -- Checking participant teste1
+2024-08-01 19:37:01 -- Checking answer teste1T2
+2024-08-01 19:37:01 -- Getting texts for participants R049 and MR049
+2024-08-01 19:37:32 -- Checking participant teste1
+2024-08-01 19:37:32 -- Session teste1 added
+2024-08-01 19:37:32 -- Checking participant teste1
+2024-08-01 19:37:33 -- Checking answer teste1T2
+2024-08-01 19:37:33 -- Getting texts for participants R049 and MR049
+2024-08-01 19:38:04 -- Checking participant teste2
+2024-08-01 19:38:04 -- Participant teste2 added
+2024-08-01 19:38:04 -- Session teste2 added
+2024-08-01 19:38:08 -- Participant teste2 leaning set to 1
+2024-08-01 19:38:08 -- Checking participant teste2
+2024-08-01 19:38:08 -- Checking answer teste2T1
+2024-08-01 19:38:09 -- Answer created for participant teste2 and session teste2
+2024-08-01 19:38:13 -- Answer teste2T1 set: {'q1': 1, 'q2': 2, 'q3': 2, 'q4': 2, 'timeSpent': 4}
+2024-08-01 19:38:13 -- Participant teste2 status set to tweet_2
+2024-08-01 19:38:13 -- Getting answer teste2T2 from Participant teste2
+2024-08-01 19:38:13 -- Answer created for participant teste2 and session teste2
+2024-08-01 19:38:18 -- Answer teste2T2 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 5}
+2024-08-01 19:38:18 -- Participant teste2 status set to tweet_3
+2024-08-01 19:38:18 -- Getting answer teste2T3 from Participant teste2
+2024-08-01 19:38:18 -- Answer created for participant teste2 and session teste2
+2024-08-01 19:38:24 -- Answer teste2T3 set: {'q1': 2, 'q2': 3, 'q3': 2, 'q4': 2, 'timeSpent': 6}
+2024-08-01 19:38:24 -- Participant teste2 status set to tweet_4
+2024-08-01 19:38:24 -- Getting answer teste2T4 from Participant teste2
+2024-08-01 19:38:24 -- Answer created for participant teste2 and session teste2
+2024-08-01 19:38:28 -- Answer teste2T4 set: {'q1': 4, 'q2': 4, 'q3': 4, 'q4': 4, 'timeSpent': 4}
+2024-08-01 19:38:28 -- Participant teste2 status set to answered
+2024-08-01 19:38:29 -- Participant teste2 status set to finished
+2024-08-01 19:41:33 -- Checking participant teste2
+2024-08-01 19:41:33 -- Session test2 added
+2024-08-01 19:41:57 -- Checking participant teste1
+2024-08-01 19:41:57 -- Session teste2 added
+2024-08-01 19:41:57 -- Checking participant teste1
+2024-08-01 19:41:57 -- Checking answer teste1T2
+2024-08-01 19:41:57 -- Getting texts for participants R049 and MR049
+2024-08-01 19:42:26 -- Checking participant teste1
+2024-08-01 19:42:26 -- Session teste2 added
+2024-08-01 19:42:27 -- Checking participant teste1
+2024-08-01 19:42:27 -- Checking answer teste1T2
+2024-08-01 19:42:27 -- Getting texts for participants R049 and MR049
+2024-08-01 19:44:04 -- Checking participant test1
+2024-08-01 19:44:04 -- Participant test1 added
+2024-08-01 19:44:04 -- Session test1 added
+2024-08-01 19:44:24 -- Checking participant test1e
+2024-08-01 19:44:24 -- Participant test1e added
+2024-08-01 19:44:24 -- Session teste1 added
+2024-08-01 19:44:35 -- Checking participant teste1
+2024-08-01 19:44:35 -- Session teste1 added
+2024-08-01 19:44:35 -- Checking participant teste1
+2024-08-01 19:44:35 -- Checking answer teste1T2
+2024-08-01 19:44:35 -- Getting texts for participants R049 and MR049
+2024-08-01 19:45:16 -- Checking participant teste1
+2024-08-01 19:45:16 -- Session teste1 added
+2024-08-01 19:45:16 -- Checking participant teste1
+2024-08-01 19:45:16 -- Checking answer teste1T2
+2024-08-01 19:45:16 -- Getting texts for participants R049 and MR049
+2024-08-01 19:45:53 -- Checking participant teste1
+2024-08-01 19:45:53 -- Checking answer teste1T2
+2024-08-01 19:45:53 -- Getting texts for participants R049 and MR049

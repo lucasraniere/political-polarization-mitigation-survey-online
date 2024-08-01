@@ -15,36 +15,36 @@ def save_2_log(message):
         f.write(f'{datetime.now().strftime("%Y-%m-%d %H:%M:%S")} -- {message}\n')
 
 
-@app.route('/')
+@app.route('/api')
 def index():
     return jsonify({'message': 'Hello World!'})
 
 
-@app.route('/check_participant/<string:id>', methods=['GET'])
+@app.route('/api/check_participant/<string:id>', methods=['GET'])
 def check_participant(id):
     save_2_log(f'Checking participant {id}')
     return jsonify(db.check_participant(id))
 
 
-@app.route('/check_answer/<string:id>', methods=['GET'])
+@app.route('/api/check_answer/<string:id>', methods=['GET'])
 def check_answer(id):
     save_2_log(f'Checking answer {id}')
     return jsonify(db.check_answer(id))
 
 
-@app.route('/get_tweet_ids/<string:id>', methods=['GET'])
+@app.route('/api/get_tweet_ids/<string:id>', methods=['GET'])
 def get_tweet_ids(id):
     save_2_log(f'Getting tweet ids for participant {id}')
     return jsonify(db.get_participant_tweets(id))
 
 
-@app.route('/get_texts/<string:id_1>/<string:id_2>', methods=['GET'])
+@app.route('/api/get_texts/<string:id_1>/<string:id_2>', methods=['GET'])
 def get_texts(id_1, id_2):
     save_2_log(f'Getting texts for participants {id_1} and {id_2}')
     return jsonify(db.get_texts(id_1, id_2))
 
 
-@app.route('/add_participant/', methods=['POST', 'GET'])
+@app.route('/api/add_participant/', methods=['POST', 'GET'])
 def add_participant():
     id = request.json['pId']
     db.add_participant(id)
@@ -52,7 +52,7 @@ def add_participant():
     return jsonify({'message': f'Participant {id} added'})
 
 
-@app.route('/add_session/', methods=['POST', 'GET'])
+@app.route('/api/add_session/', methods=['POST', 'GET'])
 def add_session():
     data = request.json
     db.add_session(data['pId'], data['sId'])
@@ -60,7 +60,7 @@ def add_session():
     return jsonify({'message': f'Session {data['sId']} added'})
 
 
-@app.route('/set_participant_leaning/', methods=['POST', 'GET'])
+@app.route('/api/set_participant_leaning/', methods=['POST', 'GET'])
 def set_participant_leaning():
     data = request.json
     id = data['pId']
@@ -70,7 +70,7 @@ def set_participant_leaning():
     return jsonify({'message': f'Participant {id} leaning set to {p_leainig}'})
 
 
-@app.route('/create_answer/', methods=['POST', 'GET'])
+@app.route('/api/create_answer/', methods=['POST', 'GET'])
 def create_answer():
     data = request.json
     p_id = data['pId']
@@ -81,7 +81,7 @@ def create_answer():
     return jsonify(texts)
 
 
-@app.route('/set_answers/<string:a_id>', methods=['POST', 'PUT'])
+@app.route('/api/set_answers/<string:a_id>', methods=['POST', 'PUT'])
 def set_answers(a_id):
     answers = request.json
     db.set_answers(a_id, answers)
@@ -89,7 +89,7 @@ def set_answers(a_id):
     return jsonify({'message': 'Answer set'})
 
 
-@app.route('/set_participant_status/', methods=['POST', 'PUT'])
+@app.route('/api/set_participant_status/', methods=['POST', 'PUT'])
 def set_participant_status():
     data = request.json
     db.set_participant_status(data['pId'], data['status'])
@@ -97,7 +97,7 @@ def set_participant_status():
     return jsonify({'message': f'Participant {data['pId']} status set to {data['status']}'})
 
 
-@app.route('/get_answer/<string:id>', methods=['GET'])
+@app.route('/api/get_answer/<string:id>', methods=['GET'])
 def get_answer(id):
     save_2_log(f'Getting answer {id} from Participant {id[:-2]}')
     return jsonify(db.get_answer(id))

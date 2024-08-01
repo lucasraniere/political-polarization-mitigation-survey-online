@@ -2,8 +2,6 @@ import PolarizationPopUp from '@/components/survey/PolarizationPopUp';
 import Questionnaire from '@/components/survey/Questionnaire';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { get } from 'http';
-import next from 'next';
 
 export default function Survey() {
     const router = useRouter();
@@ -22,26 +20,26 @@ export default function Survey() {
 
     // backend functions
     const checkParticipant = async (pId: string) => {
-        const response = await fetch(`http://localhost:5000/check_participant/${pId}`);
+        const response = await fetch(`http://localhost:5000/api/check_participant/${pId}`);
         const data = await response.json();
         return data;
     };
 
     const checkAnswers = async (pId: string, tweetNumber: number) => {
         const answerId = pId + 'T' + String(tweetNumber);
-        const response = await fetch(`http://localhost:5000/check_answer/${answerId}`);
+        const response = await fetch(`http://localhost:5000/api/check_answer/${answerId}`);
         const data = await response.json();
         return data;
     };
 
     const getTexts = async (idText1: string, idText2: string) => {
-        const response = await fetch(`http://localhost:5000/get_texts/${idText1}/${idText2}`);
+        const response = await fetch(`http://localhost:5000/api/get_texts/${idText1}/${idText2}`);
         const data = await response.json();
         return data;
     };
 
     const createAnswer = async (pId: string, sId: string, tweetNumber: number) => {
-        const response = await fetch('http://localhost:5000/create_answer/', {
+        const response = await fetch('http://localhost:5000/api/create_answer/', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({'pId': pId, 'sId': sId, 'tweetNumber': tweetNumber})
@@ -51,7 +49,7 @@ export default function Survey() {
     };
 
     const setAnswers = async (aId: string, answers: object) => {
-        const response = await fetch(`http://localhost:5000/set_answers/${aId}`, {
+        const response = await fetch(`http://localhost:5000/api/set_answers/${aId}`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(answers)
@@ -61,7 +59,7 @@ export default function Survey() {
     };
 
     const setParticipantStatus = async (pId: string, status: string) => {
-        const response = await fetch('http://localhost:5000/set_participant_status/', {
+        const response = await fetch('http://localhost:5000/api/set_participant_status/', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({'pId': pId, 'status': status})
@@ -120,7 +118,7 @@ export default function Survey() {
     };
 
     const getAnswer = async (answerId:string) => {
-        const response = await fetch(`http://localhost:5000/get_answer/${answerId}`);
+        const response = await fetch(`http://localhost:5000/api/get_answer/${answerId}`);
         const data = await response.json();
         return data;
     };

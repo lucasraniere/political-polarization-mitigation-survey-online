@@ -13,13 +13,13 @@ export default function Home() {
 
   // backend functions
   const checkParticipant = async (pId: string) => {
-    const response = await fetch(`http://localhost:5000/check_participant/${pId}`);
+    const response = await fetch(`http://localhost:5000/api/check_participant/${pId}`);
     const data = await response.json();
     return data;
   };
 
   const addParticipant = async (pId: string) => {
-    const response = await fetch('http://localhost:5000/add_participant/', {
+    const response = await fetch('http://localhost:5000/api/add_participant/', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({'pId': pId})
@@ -29,7 +29,7 @@ export default function Home() {
   };
 
   const setParticipantLeaningBack = async (pId: string, leaning: number) => {
-    const response = await fetch('http://localhost:5000/set_participant_leaning/', {
+    const response = await fetch('http://localhost:5000/api/set_participant_leaning/', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({'pId': pId, 'leaning': leaning})
@@ -39,7 +39,7 @@ export default function Home() {
   }
 
   const addSession = async (pId: string, sId: string) => {
-    const response = await fetch('http://localhost:5000/add_session/', {
+    const response = await fetch('http://localhost:5000/api/add_session/', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({'pId': pId, 'sId': sId})
