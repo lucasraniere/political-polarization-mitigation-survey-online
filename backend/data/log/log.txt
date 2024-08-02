@@ -562,3 +562,671 @@
 2024-08-01 19:45:53 -- Checking participant teste1
 2024-08-01 19:45:53 -- Checking answer teste1T2
 2024-08-01 19:45:53 -- Getting texts for participants R049 and MR049
+2024-08-02 14:36:35 -- Checking participant teste00123
+2024-08-02 14:36:35 -- Participant teste00123 added
+2024-08-02 14:36:35 -- Session testekj1231231 added
+2024-08-02 14:36:42 -- Participant teste00123 leaning set to 4
+2024-08-02 14:36:42 -- Checking participant teste00123
+2024-08-02 14:36:42 -- Checking answer teste00123T1
+2024-08-02 14:36:42 -- Answer created for participant teste00123 and session testekj1231231
+2024-08-02 14:36:47 -- Answer teste00123T1 set: {'q1': 2, 'q2': 2, 'q3': 2, 'q4': 2, 'timeSpent': 5}
+2024-08-02 14:36:47 -- Participant teste00123 status set to tweet_2
+2024-08-02 14:36:47 -- Getting answer teste00123T2 from Participant teste00123
+2024-08-02 14:36:48 -- Answer created for participant teste00123 and session testekj1231231
+2024-08-02 14:36:49 -- Getting answer teste00123T1 from Participant teste00123
+2024-08-02 14:36:51 -- Answer teste00123T1 set: {'q1': 2, 'q2': 2, 'q3': 2, 'q4': 2, 'timeSpent': 7}
+2024-08-02 14:36:51 -- Participant teste00123 status set to tweet_2
+2024-08-02 14:36:51 -- Getting answer teste00123T2 from Participant teste00123
+2024-08-02 14:36:56 -- Answer teste00123T2 set: {'q1': 1, 'q2': 2, 'q3': 2, 'q4': 2, 'timeSpent': 5}
+2024-08-02 14:36:56 -- Participant teste00123 status set to tweet_3
+2024-08-02 14:36:56 -- Getting answer teste00123T3 from Participant teste00123
+2024-08-02 14:36:56 -- Answer created for participant teste00123 and session testekj1231231
+2024-08-02 14:37:03 -- Answer teste00123T3 set: {'q1': 1, 'q2': 2, 'q3': 3, 'q4': 1, 'timeSpent': 7}
+2024-08-02 14:37:03 -- Participant teste00123 status set to tweet_4
+2024-08-02 14:37:03 -- Getting answer teste00123T4 from Participant teste00123
+2024-08-02 14:37:03 -- Answer created for participant teste00123 and session testekj1231231
+2024-08-02 14:37:06 -- Getting answer teste00123T3 from Participant teste00123
+2024-08-02 14:37:07 -- Answer teste00123T3 set: {'q1': 1, 'q2': 2, 'q3': 3, 'q4': 1, 'timeSpent': 8}
+2024-08-02 14:37:07 -- Getting answer teste00123T2 from Participant teste00123
+2024-08-02 14:37:08 -- Answer teste00123T2 set: {'q1': 1, 'q2': 2, 'q3': 2, 'q4': 2, 'timeSpent': 6}
+2024-08-02 14:37:08 -- Participant teste00123 status set to tweet_4
+2024-08-02 14:37:08 -- Getting answer teste00123T3 from Participant teste00123
+2024-08-02 14:37:09 -- Answer teste00123T3 set: {'q1': 1, 'q2': 2, 'q3': 3, 'q4': 1, 'timeSpent': 9}
+2024-08-02 14:37:09 -- Participant teste00123 status set to tweet_4
+2024-08-02 14:37:09 -- Getting answer teste00123T4 from Participant teste00123
+2024-08-02 14:37:15 -- Answer teste00123T4 set: {'q1': 1, 'q2': 1, 'q3': 4, 'q4': 2, 'timeSpent': 6}
+2024-08-02 14:37:15 -- Participant teste00123 status set to answered
+2024-08-02 14:37:57 -- Checking participant teste00123123123
+2024-08-02 14:37:57 -- Participant teste00123123123 added
+2024-08-02 14:37:58 -- Session asdasdasdasdasd added
+2024-08-02 14:38:02 -- Participant teste00123123123 leaning set to 7
+2024-08-02 14:38:02 -- Checking participant teste00123123123
+2024-08-02 14:38:02 -- Checking answer teste00123123123T1
+2024-08-02 14:38:02 -- Answer created for participant teste00123123123 and session asdasdasdasdasd
+2024-08-02 14:38:06 -- Answer teste00123123123T1 set: {'q1': 2, 'q2': 2, 'q3': 2, 'q4': 2, 'timeSpent': 4}
+2024-08-02 14:38:06 -- Participant teste00123123123 status set to tweet_2
+2024-08-02 14:38:06 -- Getting answer teste00123123123T2 from Participant teste00123123123
+2024-08-02 14:38:07 -- Answer created for participant teste00123123123 and session asdasdasdasdasd
+2024-08-02 14:38:12 -- Answer teste00123123123T2 set: {'q1': 1, 'q2': 1, 'q3': 3, 'q4': 2, 'timeSpent': 6}
+2024-08-02 14:38:12 -- Participant teste00123123123 status set to tweet_3
+2024-08-02 14:38:12 -- Getting answer teste00123123123T3 from Participant teste00123123123
+2024-08-02 14:38:13 -- Answer created for participant teste00123123123 and session asdasdasdasdasd
+2024-08-02 14:38:39 -- Checking participant Teste1
+2024-08-02 14:38:40 -- Session teste1 added
+2024-08-02 14:38:40 -- Checking participant Teste1
+2024-08-02 14:38:40 -- Checking answer Teste1T2
+2024-08-02 14:38:40 -- Getting texts for participants R049 and MR049
+2024-08-02 14:44:28 -- Checking participant crossTest
+2024-08-02 14:44:28 -- Participant crossTest added
+2024-08-02 14:44:28 -- Session crossTest added
+2024-08-02 14:47:12 -- Participant crossTest leaning set to 7
+2024-08-02 14:47:12 -- Checking participant crossTest
+2024-08-02 14:47:12 -- Checking answer crossTestT1
+2024-08-02 14:47:12 -- Answer created for participant crossTest and session crossTest
+2024-08-02 14:47:24 -- Answer crossTestT1 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 12}
+2024-08-02 14:47:24 -- Participant crossTest status set to tweet_2
+2024-08-02 14:47:24 -- Getting answer crossTestT2 from Participant crossTest
+2024-08-02 14:47:24 -- Answer created for participant crossTest and session crossTest
+2024-08-02 15:07:15 -- Checking participant 000
+2024-08-02 15:17:18 -- Checking participant 000
+2024-08-02 15:22:31 -- Checking participant 000
+2024-08-02 15:27:50 -- Checking participant 000
+2024-08-02 15:31:02 -- Checking participant 000
+2024-08-02 15:32:34 -- Checking participant 000
+2024-08-02 15:32:41 -- Checking participant 000
+2024-08-02 15:32:55 -- Checking participant 000
+2024-08-02 15:33:32 -- Checking participant 000
+2024-08-02 15:33:32 -- Participant 000 added
+2024-08-02 15:33:33 -- Session 000 added
+2024-08-02 15:33:47 -- Participant 000 leaning set to 1
+2024-08-02 15:33:48 -- Checking participant 000
+2024-08-02 15:33:48 -- Checking answer 000T1
+2024-08-02 15:33:48 -- Answer created for participant 000 and session 000
+2024-08-02 15:35:33 -- Checking participant 000
+2024-08-02 15:35:33 -- Checking answer 000T1
+2024-08-02 15:35:33 -- Getting texts for participants MR047 and R047
+2024-08-02 15:37:31 -- Checking participant 000
+2024-08-02 15:37:41 -- Checking participant 000
+2024-08-02 15:37:41 -- Session 000 added
+2024-08-02 15:37:42 -- Checking participant 000
+2024-08-02 15:37:42 -- Checking answer 000T1
+2024-08-02 15:37:42 -- Getting texts for participants MR047 and R047
+2024-08-02 15:38:03 -- Checking participant 001
+2024-08-02 15:38:03 -- Checking answer 001T-1
+2024-08-02 15:38:10 -- Checking participant 001
+2024-08-02 15:38:11 -- Participant 001 added
+2024-08-02 15:38:11 -- Session 001 added
+2024-08-02 15:38:16 -- Participant 001 leaning set to 7
+2024-08-02 15:38:17 -- Checking participant 001
+2024-08-02 15:38:17 -- Checking answer 001T1
+2024-08-02 15:38:17 -- Answer created for participant 001 and session 001
+2024-08-02 15:38:32 -- Answer 001T1 set: {'q1': 1, 'q2': 1, 'q3': 2, 'q4': 2, 'timeSpent': 15}
+2024-08-02 15:38:32 -- Participant 001 status set to tweet_2
+2024-08-02 15:38:32 -- Getting answer 001T2 from Participant 001
+2024-08-02 15:38:33 -- Answer created for participant 001 and session 001
+2024-08-02 15:38:37 -- Answer 001T2 set: {'q1': 3, 'q2': 3, 'q3': 3, 'q4': 3, 'timeSpent': 4}
+2024-08-02 15:38:37 -- Participant 001 status set to tweet_3
+2024-08-02 15:38:37 -- Getting answer 001T3 from Participant 001
+2024-08-02 15:38:38 -- Answer created for participant 001 and session 001
+2024-08-02 15:38:42 -- Answer 001T3 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 5}
+2024-08-02 15:38:42 -- Participant 001 status set to tweet_4
+2024-08-02 15:38:42 -- Getting answer 001T4 from Participant 001
+2024-08-02 15:38:42 -- Answer created for participant 001 and session 001
+2024-08-02 15:39:01 -- Answer 001T4 set: {'q1': 5, 'q2': 5, 'q3': 5, 'q4': 4, 'timeSpent': 18}
+2024-08-02 15:39:01 -- Participant 001 status set to answered
+2024-08-02 15:41:12 -- Checking participant 002
+2024-08-02 15:42:19 -- Checking participant 002
+2024-08-02 15:42:19 -- Participant 002 added
+2024-08-02 15:42:19 -- Session 002 added
+2024-08-02 15:42:25 -- Participant 002 leaning set to 1
+2024-08-02 15:42:26 -- Checking participant 002
+2024-08-02 15:42:26 -- Checking answer 002T1
+2024-08-02 15:42:26 -- Answer created for participant 002 and session 002
+2024-08-02 15:42:44 -- Answer 002T1 set: {'q1': 1, 'q2': 1, 'q3': 2, 'q4': 2, 'timeSpent': 18}
+2024-08-02 15:42:44 -- Participant 002 status set to tweet_2
+2024-08-02 15:42:44 -- Getting answer 002T2 from Participant 002
+2024-08-02 15:42:45 -- Answer created for participant 002 and session 002
+2024-08-02 15:43:57 -- Answer 002T2 set: {'q1': 1, 'q2': 1, 'q3': 2, 'q4': 2, 'timeSpent': 71}
+2024-08-02 15:44:02 -- Answer 002T2 set: {'q1': 1, 'q2': 1, 'q3': 2, 'q4': 2, 'timeSpent': 76}
+2024-08-02 15:44:06 -- Answer 002T2 set: {'q1': 1, 'q2': 1, 'q3': 2, 'q4': 2, 'timeSpent': 80}
+2024-08-02 15:44:08 -- Answer 002T2 set: {'q1': 1, 'q2': 1, 'q3': 2, 'q4': 2, 'timeSpent': 81}
+2024-08-02 15:44:08 -- Answer 002T2 set: {'q1': 1, 'q2': 1, 'q3': 2, 'q4': 2, 'timeSpent': 82}
+2024-08-02 15:44:08 -- Answer 002T2 set: {'q1': 1, 'q2': 1, 'q3': 2, 'q4': 2, 'timeSpent': 82}
+2024-08-02 15:44:09 -- Answer 002T2 set: {'q1': 1, 'q2': 1, 'q3': 2, 'q4': 2, 'timeSpent': 82}
+2024-08-02 15:44:09 -- Answer 002T2 set: {'q1': 1, 'q2': 1, 'q3': 2, 'q4': 2, 'timeSpent': 82}
+2024-08-02 15:44:09 -- Answer 002T2 set: {'q1': 1, 'q2': 1, 'q3': 2, 'q4': 2, 'timeSpent': 82}
+2024-08-02 15:44:12 -- Answer 002T2 set: {'q1': 1, 'q2': 1, 'q3': 2, 'q4': 2, 'timeSpent': 85}
+2024-08-02 15:44:13 -- Answer 002T2 set: {'q1': 1, 'q2': 1, 'q3': 2, 'q4': 2, 'timeSpent': 87}
+2024-08-02 15:44:17 -- Checking participant 002
+2024-08-02 15:44:25 -- Answer 002T2 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 7}
+2024-08-02 15:44:28 -- Answer 002T2 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 10}
+2024-08-02 15:44:51 -- Checking participant 002
+2024-08-02 15:45:10 -- Checking participant 002
+2024-08-02 15:45:26 -- Participant 002 leaning set to 5
+2024-08-02 15:45:32 -- Checking participant 002
+2024-08-02 15:50:25 -- Checking participant p000
+2024-08-02 15:50:26 -- Participant p000 added
+2024-08-02 15:50:26 -- Session s000 added
+2024-08-02 15:50:54 -- Participant p000 leaning set to 4
+2024-08-02 15:50:54 -- Checking participant p000
+2024-08-02 15:50:54 -- Checking answer p000T1
+2024-08-02 15:50:54 -- Answer created for participant p000 and session s000
+2024-08-02 15:51:28 -- Answer p000T1 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 31}
+2024-08-02 15:51:28 -- Participant p000 status set to tweet_2
+2024-08-02 15:51:28 -- Getting answer p000T2 from Participant p000
+2024-08-02 15:51:28 -- Answer created for participant p000 and session s000
+2024-08-02 15:51:42 -- Answer p000T2 set: {'q1': 2, 'q2': 2, 'q3': 2, 'q4': 2, 'timeSpent': 12}
+2024-08-02 15:51:42 -- Participant p000 status set to tweet_3
+2024-08-02 15:51:42 -- Getting answer p000T3 from Participant p000
+2024-08-02 15:51:42 -- Answer created for participant p000 and session s000
+2024-08-02 15:51:43 -- Getting answer p000T2 from Participant p000
+2024-08-02 15:51:44 -- Answer p000T2 set: {'q1': 2, 'q2': 2, 'q3': 2, 'q4': 2, 'timeSpent': 12}
+2024-08-02 15:51:44 -- Getting answer p000T1 from Participant p000
+2024-08-02 15:51:57 -- Answer p000T1 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 44}
+2024-08-02 15:51:57 -- Participant p000 status set to tweet_3
+2024-08-02 15:51:57 -- Getting answer p000T2 from Participant p000
+2024-08-02 15:52:07 -- Answer p000T2 set: {'q1': 2, 'q2': 2, 'q3': 2, 'q4': 2, 'timeSpent': 22}
+2024-08-02 15:52:07 -- Participant p000 status set to tweet_3
+2024-08-02 15:52:07 -- Getting answer p000T3 from Participant p000
+2024-08-02 15:52:16 -- Answer p000T3 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 9}
+2024-08-02 15:52:16 -- Participant p000 status set to tweet_4
+2024-08-02 15:52:16 -- Getting answer p000T4 from Participant p000
+2024-08-02 15:52:16 -- Answer created for participant p000 and session s000
+2024-08-02 15:52:26 -- Answer p000T4 set: {'q1': 5, 'q2': 5, 'q3': 5, 'q4': 2, 'timeSpent': 9}
+2024-08-02 15:52:26 -- Participant p000 status set to answered
+2024-08-02 15:52:45 -- Checking participant p000
+2024-08-02 15:52:45 -- Session  added
+2024-08-02 15:52:45 -- Checking participant p000
+2024-08-02 15:52:46 -- Checking answer p000T-1
+2024-08-02 15:52:46 -- Answer created for participant p000 and session 
+2024-08-02 15:54:23 -- Checking participant p000
+2024-08-02 15:54:23 -- Session  added
+2024-08-02 15:54:23 -- Checking participant p000
+2024-08-02 15:54:23 -- Checking answer p000T-1
+2024-08-02 15:54:23 -- Getting texts for participants PL060 and L060
+2024-08-02 15:57:58 -- Checking participant p000
+2024-08-02 15:57:58 -- Checking answer p000T-1
+2024-08-02 15:57:59 -- Getting texts for participants PL060 and L060
+2024-08-02 15:58:05 -- Checking participant p000
+2024-08-02 15:58:05 -- Checking answer p000T-1
+2024-08-02 15:58:05 -- Getting texts for participants PL060 and L060
+2024-08-02 15:59:15 -- Checking participant p000
+2024-08-02 15:59:15 -- Checking answer p000T-1
+2024-08-02 15:59:15 -- Getting texts for participants PL060 and L060
+2024-08-02 15:59:19 -- Checking participant p000
+2024-08-02 15:59:20 -- Checking answer p000T-1
+2024-08-02 15:59:20 -- Getting texts for participants PL060 and L060
+2024-08-02 15:59:36 -- Checking participant p000
+2024-08-02 15:59:36 -- Checking answer p000T-1
+2024-08-02 15:59:36 -- Getting texts for participants PL060 and L060
+2024-08-02 16:00:46 -- Checking participant p000
+2024-08-02 16:00:46 -- Session  added
+2024-08-02 16:00:46 -- Checking participant p000
+2024-08-02 16:00:46 -- Checking answer p000T-1
+2024-08-02 16:00:46 -- Getting texts for participants PL060 and L060
+2024-08-02 16:01:36 -- Checking participant p000
+2024-08-02 16:01:36 -- Checking answer p000T-1
+2024-08-02 16:01:36 -- Getting texts for participants PL060 and L060
+2024-08-02 16:01:48 -- Checking participant p002
+2024-08-02 16:01:49 -- Checking answer p002T-1
+2024-08-02 16:02:38 -- Checking participant p002
+2024-08-02 16:02:38 -- Participant p002 added
+2024-08-02 16:02:38 -- Session s002 added
+2024-08-02 16:02:49 -- Participant p002 leaning set to 2
+2024-08-02 16:02:50 -- Checking participant p002
+2024-08-02 16:02:50 -- Checking answer p002T1
+2024-08-02 16:02:50 -- Answer created for participant p002 and session s002
+2024-08-02 16:03:05 -- Answer p002T1 set: {'q1': 2, 'q2': 3, 'q3': 3, 'q4': 3, 'timeSpent': 15}
+2024-08-02 16:03:05 -- Participant p002 status set to tweet_2
+2024-08-02 16:03:05 -- Getting answer p002T2 from Participant p002
+2024-08-02 16:03:05 -- Answer created for participant p002 and session s002
+2024-08-02 16:03:12 -- Answer p002T2 set: {'q1': 1, 'q2': 1, 'q3': 4, 'q4': 1, 'timeSpent': 7}
+2024-08-02 16:03:12 -- Participant p002 status set to tweet_3
+2024-08-02 16:03:12 -- Getting answer p002T3 from Participant p002
+2024-08-02 16:03:12 -- Answer created for participant p002 and session s002
+2024-08-02 16:03:17 -- Answer p002T3 set: {'q1': 3, 'q2': 3, 'q3': 3, 'q4': 3, 'timeSpent': 5}
+2024-08-02 16:03:17 -- Participant p002 status set to tweet_4
+2024-08-02 16:03:17 -- Getting answer p002T4 from Participant p002
+2024-08-02 16:03:17 -- Answer created for participant p002 and session s002
+2024-08-02 16:03:23 -- Answer p002T4 set: {'q1': 1, 'q2': 1, 'q3': 2, 'q4': 2, 'timeSpent': 5}
+2024-08-02 16:03:23 -- Participant p002 status set to answered
+2024-08-02 16:03:53 -- Checking participant p002
+2024-08-02 16:03:54 -- Checking answer p002T-1
+2024-08-02 16:03:54 -- Answer created for participant p002 and session 
+2024-08-02 16:07:26 -- Checking participant asdasdasdasdasdasdasd
+2024-08-02 16:07:26 -- Checking answer asdasdasdasdasdasdasdT-1
+2024-08-02 16:08:34 -- Checking participant asdasdasdasdasdasdasd
+2024-08-02 16:08:34 -- Checking answer asdasdasdasdasdasdasdT-1
+2024-08-02 16:08:49 -- Checking participant p002
+2024-08-02 16:09:15 -- Checking participant p002
+2024-08-02 16:09:16 -- Checking participant p002
+2024-08-02 16:09:35 -- Checking participant p003
+2024-08-02 16:09:35 -- Participant p003 added
+2024-08-02 16:09:35 -- Session s003 added
+2024-08-02 16:09:40 -- Checking participant p003
+2024-08-02 16:09:40 -- Session s003 added
+2024-08-02 16:09:43 -- Participant p003 leaning set to 6
+2024-08-02 16:09:43 -- Checking participant p003
+2024-08-02 16:09:43 -- Checking answer p003T1
+2024-08-02 16:09:43 -- Answer created for participant p003 and session s003
+2024-08-02 16:09:54 -- Answer p003T1 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 10}
+2024-08-02 16:09:54 -- Participant p003 status set to tweet_2
+2024-08-02 16:09:54 -- Getting answer p003T2 from Participant p003
+2024-08-02 16:09:54 -- Answer created for participant p003 and session s003
+2024-08-02 16:09:56 -- Checking participant p003
+2024-08-02 16:09:56 -- Checking answer p003T2
+2024-08-02 16:09:57 -- Getting texts for participants L052 and ML052
+2024-08-02 16:25:25 -- Checking participant p003
+2024-08-02 16:25:25 -- Checking answer p003T2
+2024-08-02 16:25:25 -- Getting texts for participants L052 and ML052
+2024-08-02 16:25:34 -- Checking participant p003
+2024-08-02 16:25:34 -- Checking answer p003T2
+2024-08-02 16:25:34 -- Getting texts for participants L052 and ML052
+2024-08-02 16:33:28 -- Checking participant p003
+2024-08-02 16:33:28 -- Checking answer p003T2
+2024-08-02 16:33:28 -- Getting texts for participants L052 and ML052
+2024-08-02 16:34:00 -- Checking participant p003
+2024-08-02 16:34:00 -- Checking answer p003T2
+2024-08-02 16:34:00 -- Getting texts for participants L052 and ML052
+2024-08-02 16:35:43 -- Checking participant p003
+2024-08-02 16:35:43 -- Checking answer p003T2
+2024-08-02 16:35:43 -- Getting texts for participants L052 and ML052
+2024-08-02 16:36:25 -- Checking participant p004
+2024-08-02 16:36:26 -- Participant p004 added
+2024-08-02 16:36:26 -- Session s004 added
+2024-08-02 16:36:30 -- Participant p004 leaning set to 7
+2024-08-02 16:36:31 -- Checking participant p004
+2024-08-02 16:36:31 -- Checking answer p004T1
+2024-08-02 16:36:31 -- Answer created for participant p004 and session s004
+2024-08-02 16:36:55 -- Answer p004T1 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 24}
+2024-08-02 16:36:55 -- Participant p004 status set to tweet_2
+2024-08-02 16:36:55 -- Getting answer p004T2 from Participant p004
+2024-08-02 16:36:55 -- Answer created for participant p004 and session s004
+2024-08-02 16:37:09 -- Answer p004T2 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 14}
+2024-08-02 16:37:09 -- Participant p004 status set to tweet_3
+2024-08-02 16:37:09 -- Getting answer p004T3 from Participant p004
+2024-08-02 16:37:09 -- Answer created for participant p004 and session s004
+2024-08-02 16:37:19 -- Checking participant p004
+2024-08-02 16:37:19 -- Checking answer p004T3
+2024-08-02 16:37:19 -- Getting texts for participants R050 and MR050
+2024-08-02 16:37:49 -- Checking participant p004
+2024-08-02 16:37:49 -- Checking answer p004T3
+2024-08-02 16:37:49 -- Getting texts for participants R050 and MR050
+2024-08-02 16:38:36 -- Checking participant p004
+2024-08-02 16:38:36 -- Checking answer p004T3
+2024-08-02 16:38:36 -- Getting texts for participants R050 and MR050
+2024-08-02 16:38:48 -- Checking participant p004
+2024-08-02 16:38:48 -- Checking answer p004T3
+2024-08-02 16:38:49 -- Getting texts for participants R050 and MR050
+2024-08-02 16:39:41 -- Checking participant p004
+2024-08-02 16:39:41 -- Checking answer p004T3
+2024-08-02 16:39:41 -- Getting texts for participants R050 and MR050
+2024-08-02 16:39:46 -- Checking participant p004
+2024-08-02 16:39:46 -- Checking answer p004T3
+2024-08-02 16:39:46 -- Getting texts for participants R050 and MR050
+2024-08-02 16:44:32 -- Checking participant p004
+2024-08-02 16:44:32 -- Checking answer p004T3
+2024-08-02 16:44:32 -- Getting texts for participants R050 and MR050
+2024-08-02 16:44:38 -- Checking participant p004
+2024-08-02 16:44:39 -- Checking answer p004T3
+2024-08-02 16:44:39 -- Getting texts for participants R050 and MR050
+2024-08-02 16:47:17 -- Checking participant p004
+2024-08-02 16:47:17 -- Checking answer p004T3
+2024-08-02 16:47:18 -- Getting texts for participants R050 and MR050
+2024-08-02 16:47:53 -- Checking participant p004
+2024-08-02 16:47:53 -- Checking answer p004T3
+2024-08-02 16:47:53 -- Getting texts for participants R050 and MR050
+2024-08-02 16:48:29 -- Checking participant p004
+2024-08-02 16:48:29 -- Checking answer p004T3
+2024-08-02 16:48:29 -- Getting texts for participants R050 and MR050
+2024-08-02 16:49:47 -- Checking participant p004
+2024-08-02 16:49:47 -- Checking answer p004T3
+2024-08-02 16:49:47 -- Getting texts for participants R050 and MR050
+2024-08-02 16:49:53 -- Checking participant p004
+2024-08-02 16:49:53 -- Checking answer p004T3
+2024-08-02 16:49:53 -- Getting texts for participants R050 and MR050
+2024-08-02 16:50:21 -- Checking participant p004
+2024-08-02 16:50:21 -- Checking answer p004T3
+2024-08-02 16:50:21 -- Getting texts for participants R050 and MR050
+2024-08-02 16:50:27 -- Checking participant p004
+2024-08-02 16:50:27 -- Checking answer p004T3
+2024-08-02 16:50:27 -- Getting texts for participants R050 and MR050
+2024-08-02 16:55:53 -- Checking participant p004
+2024-08-02 16:55:53 -- Checking answer p004T3
+2024-08-02 16:55:53 -- Getting texts for participants R050 and MR050
+2024-08-02 16:56:02 -- Checking participant p004
+2024-08-02 16:56:02 -- Checking answer p004T3
+2024-08-02 16:56:02 -- Getting texts for participants R050 and MR050
+2024-08-02 16:57:58 -- Checking participant p004
+2024-08-02 16:57:58 -- Checking answer p004T3
+2024-08-02 16:57:59 -- Getting texts for participants R050 and MR050
+2024-08-02 16:57:59 -- Checking participant p004
+2024-08-02 16:57:59 -- Checking answer p004T3
+2024-08-02 16:57:59 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:00 -- Checking participant p004
+2024-08-02 16:58:00 -- Checking answer p004T3
+2024-08-02 16:58:00 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:00 -- Checking participant p004
+2024-08-02 16:58:01 -- Checking answer p004T3
+2024-08-02 16:58:01 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:01 -- Checking participant p004
+2024-08-02 16:58:02 -- Checking answer p004T3
+2024-08-02 16:58:02 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:02 -- Checking participant p004
+2024-08-02 16:58:02 -- Checking answer p004T3
+2024-08-02 16:58:02 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:04 -- Checking participant p004
+2024-08-02 16:58:04 -- Checking answer p004T3
+2024-08-02 16:58:04 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:04 -- Checking participant p004
+2024-08-02 16:58:04 -- Checking answer p004T3
+2024-08-02 16:58:04 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:05 -- Checking participant p004
+2024-08-02 16:58:05 -- Checking answer p004T3
+2024-08-02 16:58:05 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:05 -- Checking participant p004
+2024-08-02 16:58:05 -- Checking answer p004T3
+2024-08-02 16:58:05 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:06 -- Checking participant p004
+2024-08-02 16:58:06 -- Checking answer p004T3
+2024-08-02 16:58:06 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:06 -- Checking participant p004
+2024-08-02 16:58:06 -- Checking answer p004T3
+2024-08-02 16:58:06 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:07 -- Checking participant p004
+2024-08-02 16:58:07 -- Checking answer p004T3
+2024-08-02 16:58:07 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:07 -- Checking participant p004
+2024-08-02 16:58:07 -- Checking answer p004T3
+2024-08-02 16:58:07 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:08 -- Checking participant p004
+2024-08-02 16:58:08 -- Checking answer p004T3
+2024-08-02 16:58:08 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:08 -- Checking participant p004
+2024-08-02 16:58:08 -- Checking answer p004T3
+2024-08-02 16:58:09 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:09 -- Checking participant p004
+2024-08-02 16:58:10 -- Checking answer p004T3
+2024-08-02 16:58:10 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:10 -- Checking participant p004
+2024-08-02 16:58:10 -- Checking answer p004T3
+2024-08-02 16:58:10 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:11 -- Checking participant p004
+2024-08-02 16:58:11 -- Checking answer p004T3
+2024-08-02 16:58:11 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:11 -- Checking participant p004
+2024-08-02 16:58:11 -- Checking answer p004T3
+2024-08-02 16:58:11 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:12 -- Checking participant p004
+2024-08-02 16:58:12 -- Checking answer p004T3
+2024-08-02 16:58:12 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:12 -- Checking participant p004
+2024-08-02 16:58:12 -- Checking answer p004T3
+2024-08-02 16:58:12 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:13 -- Checking participant p004
+2024-08-02 16:58:13 -- Checking answer p004T3
+2024-08-02 16:58:13 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:13 -- Checking participant p004
+2024-08-02 16:58:13 -- Checking answer p004T3
+2024-08-02 16:58:13 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:14 -- Checking participant p004
+2024-08-02 16:58:14 -- Checking answer p004T3
+2024-08-02 16:58:14 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:14 -- Checking participant p004
+2024-08-02 16:58:14 -- Checking answer p004T3
+2024-08-02 16:58:14 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:15 -- Checking participant p004
+2024-08-02 16:58:15 -- Checking answer p004T3
+2024-08-02 16:58:15 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:15 -- Checking participant p004
+2024-08-02 16:58:15 -- Checking answer p004T3
+2024-08-02 16:58:15 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:16 -- Checking participant p004
+2024-08-02 16:58:16 -- Checking answer p004T3
+2024-08-02 16:58:16 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:17 -- Checking participant p004
+2024-08-02 16:58:17 -- Checking answer p004T3
+2024-08-02 16:58:17 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:18 -- Checking participant p004
+2024-08-02 16:58:18 -- Checking answer p004T3
+2024-08-02 16:58:18 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:18 -- Checking participant p004
+2024-08-02 16:58:18 -- Checking answer p004T3
+2024-08-02 16:58:18 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:19 -- Checking participant p004
+2024-08-02 16:58:19 -- Checking answer p004T3
+2024-08-02 16:58:19 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:19 -- Checking participant p004
+2024-08-02 16:58:19 -- Checking answer p004T3
+2024-08-02 16:58:19 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:20 -- Checking participant p004
+2024-08-02 16:58:20 -- Checking answer p004T3
+2024-08-02 16:58:20 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:20 -- Checking participant p004
+2024-08-02 16:58:20 -- Checking answer p004T3
+2024-08-02 16:58:20 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:21 -- Checking participant p004
+2024-08-02 16:58:21 -- Checking answer p004T3
+2024-08-02 16:58:21 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:21 -- Checking participant p004
+2024-08-02 16:58:21 -- Checking answer p004T3
+2024-08-02 16:58:21 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:22 -- Checking participant p004
+2024-08-02 16:58:22 -- Checking answer p004T3
+2024-08-02 16:58:22 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:22 -- Checking participant p004
+2024-08-02 16:58:22 -- Checking answer p004T3
+2024-08-02 16:58:22 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:23 -- Checking participant p004
+2024-08-02 16:58:23 -- Checking answer p004T3
+2024-08-02 16:58:23 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:23 -- Checking participant p004
+2024-08-02 16:58:24 -- Checking answer p004T3
+2024-08-02 16:58:24 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:24 -- Checking participant p004
+2024-08-02 16:58:25 -- Checking answer p004T3
+2024-08-02 16:58:25 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:25 -- Checking participant p004
+2024-08-02 16:58:25 -- Checking answer p004T3
+2024-08-02 16:58:25 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:26 -- Checking participant p004
+2024-08-02 16:58:26 -- Checking answer p004T3
+2024-08-02 16:58:26 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:26 -- Checking participant p004
+2024-08-02 16:58:26 -- Checking answer p004T3
+2024-08-02 16:58:26 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:27 -- Checking participant p004
+2024-08-02 16:58:27 -- Checking answer p004T3
+2024-08-02 16:58:27 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:27 -- Checking participant p004
+2024-08-02 16:58:27 -- Checking answer p004T3
+2024-08-02 16:58:27 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:28 -- Checking participant p004
+2024-08-02 16:58:28 -- Checking answer p004T3
+2024-08-02 16:58:28 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:28 -- Checking participant p004
+2024-08-02 16:58:28 -- Checking answer p004T3
+2024-08-02 16:58:28 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:29 -- Checking participant p004
+2024-08-02 16:58:29 -- Checking answer p004T3
+2024-08-02 16:58:29 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:29 -- Checking participant p004
+2024-08-02 16:58:29 -- Checking answer p004T3
+2024-08-02 16:58:29 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:30 -- Checking participant p004
+2024-08-02 16:58:30 -- Checking answer p004T3
+2024-08-02 16:58:30 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:30 -- Checking participant p004
+2024-08-02 16:58:30 -- Checking answer p004T3
+2024-08-02 16:58:31 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:31 -- Checking participant p004
+2024-08-02 16:58:31 -- Checking answer p004T3
+2024-08-02 16:58:32 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:32 -- Checking participant p004
+2024-08-02 16:58:32 -- Checking answer p004T3
+2024-08-02 16:58:32 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:33 -- Checking participant p004
+2024-08-02 16:58:33 -- Checking answer p004T3
+2024-08-02 16:58:33 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:33 -- Checking participant p004
+2024-08-02 16:58:33 -- Checking answer p004T3
+2024-08-02 16:58:33 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:34 -- Checking participant p004
+2024-08-02 16:58:34 -- Checking answer p004T3
+2024-08-02 16:58:34 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:34 -- Checking participant p004
+2024-08-02 16:58:34 -- Checking answer p004T3
+2024-08-02 16:58:34 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:35 -- Checking participant p004
+2024-08-02 16:58:35 -- Checking answer p004T3
+2024-08-02 16:58:35 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:35 -- Checking participant p004
+2024-08-02 16:58:35 -- Checking answer p004T3
+2024-08-02 16:58:35 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:36 -- Checking participant p004
+2024-08-02 16:58:36 -- Checking answer p004T3
+2024-08-02 16:58:36 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:36 -- Checking participant p004
+2024-08-02 16:58:36 -- Checking answer p004T3
+2024-08-02 16:58:36 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:37 -- Checking participant p004
+2024-08-02 16:58:37 -- Checking answer p004T3
+2024-08-02 16:58:37 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:37 -- Checking participant p004
+2024-08-02 16:58:37 -- Checking answer p004T3
+2024-08-02 16:58:37 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:38 -- Checking participant p004
+2024-08-02 16:58:38 -- Checking answer p004T3
+2024-08-02 16:58:38 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:39 -- Checking participant p004
+2024-08-02 16:58:39 -- Checking answer p004T3
+2024-08-02 16:58:39 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:40 -- Checking participant p004
+2024-08-02 16:58:40 -- Checking answer p004T3
+2024-08-02 16:58:40 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:40 -- Checking participant p004
+2024-08-02 16:58:40 -- Checking answer p004T3
+2024-08-02 16:58:40 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:41 -- Checking participant p004
+2024-08-02 16:58:41 -- Checking answer p004T3
+2024-08-02 16:58:41 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:41 -- Checking participant p004
+2024-08-02 16:58:41 -- Checking answer p004T3
+2024-08-02 16:58:41 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:42 -- Checking participant p004
+2024-08-02 16:58:42 -- Checking answer p004T3
+2024-08-02 16:58:42 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:42 -- Checking participant p004
+2024-08-02 16:58:42 -- Checking answer p004T3
+2024-08-02 16:58:42 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:43 -- Checking participant p004
+2024-08-02 16:58:43 -- Checking answer p004T3
+2024-08-02 16:58:43 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:43 -- Checking participant p004
+2024-08-02 16:58:43 -- Checking answer p004T3
+2024-08-02 16:58:43 -- Getting texts for participants R050 and MR050
+2024-08-02 16:58:44 -- Checking participant p004
+2024-08-02 16:58:44 -- Checking answer p004T3
+2024-08-02 16:58:44 -- Getting texts for participants R050 and MR050
+2024-08-02 16:59:54 -- Checking participant p004
+2024-08-02 16:59:54 -- Checking answer p004T3
+2024-08-02 16:59:54 -- Getting texts for participants R050 and MR050
+2024-08-02 17:00:43 -- Checking participant p004
+2024-08-02 17:00:43 -- Checking answer p004T3
+2024-08-02 17:00:43 -- Getting texts for participants R050 and MR050
+2024-08-02 17:00:51 -- Checking participant p004
+2024-08-02 17:00:51 -- Checking answer p004T3
+2024-08-02 17:00:51 -- Getting texts for participants R050 and MR050
+2024-08-02 17:01:23 -- Checking participant p004
+2024-08-02 17:01:23 -- Checking answer p004T3
+2024-08-02 17:01:23 -- Getting texts for participants R050 and MR050
+2024-08-02 17:01:48 -- Checking participant p004
+2024-08-02 17:01:48 -- Checking answer p004T3
+2024-08-02 17:01:48 -- Getting texts for participants R050 and MR050
+2024-08-02 17:01:53 -- Checking participant p004
+2024-08-02 17:01:53 -- Checking answer p004T3
+2024-08-02 17:01:53 -- Getting texts for participants R050 and MR050
+2024-08-02 17:02:13 -- Checking participant p004
+2024-08-02 17:02:13 -- Checking answer p004T3
+2024-08-02 17:02:13 -- Getting texts for participants R050 and MR050
+2024-08-02 17:02:26 -- Checking participant p004
+2024-08-02 17:02:26 -- Checking answer p004T3
+2024-08-02 17:02:27 -- Getting texts for participants R050 and MR050
+2024-08-02 17:02:42 -- Checking participant p004
+2024-08-02 17:02:42 -- Checking answer p004T3
+2024-08-02 17:02:42 -- Getting texts for participants R050 and MR050
+2024-08-02 17:02:47 -- Checking participant p004
+2024-08-02 17:02:47 -- Checking answer p004T3
+2024-08-02 17:02:48 -- Getting texts for participants R050 and MR050
+2024-08-02 17:03:19 -- Checking participant p004
+2024-08-02 17:03:19 -- Checking answer p004T3
+2024-08-02 17:03:19 -- Getting texts for participants R050 and MR050
+2024-08-02 17:03:23 -- Checking participant p004
+2024-08-02 17:03:23 -- Checking answer p004T3
+2024-08-02 17:03:23 -- Getting texts for participants R050 and MR050
+2024-08-02 17:07:48 -- Checking participant p004
+2024-08-02 17:07:48 -- Checking answer p004T3
+2024-08-02 17:07:48 -- Getting texts for participants R050 and MR050
+2024-08-02 17:07:53 -- Checking participant p004
+2024-08-02 17:07:53 -- Checking answer p004T3
+2024-08-02 17:07:53 -- Getting texts for participants R050 and MR050
+2024-08-02 17:08:38 -- Checking participant p004
+2024-08-02 17:08:38 -- Checking answer p004T3
+2024-08-02 17:08:38 -- Getting texts for participants R050 and MR050
+2024-08-02 17:18:10 -- Checking participant p004
+2024-08-02 17:18:10 -- Checking answer p004T3
+2024-08-02 17:18:10 -- Getting texts for participants R050 and MR050
+2024-08-02 17:18:54 -- Checking answer p004T3
+2024-08-02 17:19:12 -- Checking participant p004
+2024-08-02 17:19:12 -- Checking answer p004T3
+2024-08-02 17:19:12 -- Getting texts for participants R050 and MR050
+2024-08-02 17:19:29 -- Checking participant p004
+2024-08-02 17:19:29 -- Checking answer p004T3
+2024-08-02 17:19:29 -- Getting texts for participants R050 and MR050
+2024-08-02 17:19:33 -- Checking participant p004
+2024-08-02 17:19:33 -- Checking answer p004T3
+2024-08-02 17:19:33 -- Getting texts for participants R050 and MR050
+2024-08-02 17:19:59 -- Checking participant p004
+2024-08-02 17:19:59 -- Checking answer p004T3
+2024-08-02 17:19:59 -- Getting texts for participants R050 and MR050
+2024-08-02 17:20:07 -- Checking participant p004
+2024-08-02 17:20:07 -- Checking answer p004T3
+2024-08-02 17:20:07 -- Getting texts for participants R050 and MR050
+2024-08-02 17:20:12 -- Answer p004T3 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 4}
+2024-08-02 17:20:12 -- Participant p004 status set to tweet_4
+2024-08-02 17:20:12 -- Getting answer p004T4 from Participant p004
+2024-08-02 17:20:12 -- Answer created for participant p004 and session s004
+2024-08-02 17:20:18 -- Answer p004T4 set: {'q1': 3, 'q2': 3, 'q3': 3, 'q4': 3, 'timeSpent': 6}
+2024-08-02 17:20:19 -- Participant p004 status set to answered
+2024-08-02 17:21:46 -- Checking participant p004
+2024-08-02 17:22:01 -- Checking participant p004
+2024-08-02 17:22:01 -- Session  added
+2024-08-02 17:22:02 -- Checking participant p004
+2024-08-02 17:28:41 -- Checking participant p000
+2024-08-02 17:28:42 -- Participant p000 added
+2024-08-02 17:28:42 -- Session s000 added
+2024-08-02 17:28:55 -- Participant p000 leaning set to 5
+2024-08-02 17:28:55 -- Checking participant p000
+2024-08-02 17:28:55 -- Checking answer p000T1
+2024-08-02 17:28:55 -- Answer created for participant p000 and session s000
+2024-08-02 17:29:23 -- Answer p000T1 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 27}
+2024-08-02 17:29:23 -- Participant p000 status set to tweet_2
+2024-08-02 17:29:23 -- Getting answer p000T2 from Participant p000
+2024-08-02 17:29:23 -- Answer created for participant p000 and session s000
+2024-08-02 17:29:29 -- Getting answer p000T1 from Participant p000
+2024-08-02 17:29:34 -- Answer p000T1 set: {'q1': 1, 'q2': 1, 'q3': 4, 'q4': 1, 'timeSpent': 31}
+2024-08-02 17:29:34 -- Participant p000 status set to tweet_2
+2024-08-02 17:29:34 -- Getting answer p000T2 from Participant p000
+2024-08-02 17:29:47 -- Answer p000T2 set: {'q1': 5, 'q2': 5, 'q3': 5, 'q4': 4, 'timeSpent': 14}
+2024-08-02 17:29:47 -- Participant p000 status set to tweet_3
+2024-08-02 17:29:47 -- Getting answer p000T3 from Participant p000
+2024-08-02 17:29:47 -- Answer created for participant p000 and session s000
+2024-08-02 17:30:00 -- Checking participant p000
+2024-08-02 17:30:00 -- Checking answer p000T3
+2024-08-02 17:30:00 -- Getting texts for participants HL021 and L021
+2024-08-02 17:30:05 -- Answer p000T3 set: {'q1': 1, 'q2': 1, 'q3': 2, 'q4': 2, 'timeSpent': 5}
+2024-08-02 17:30:05 -- Participant p000 status set to tweet_4
+2024-08-02 17:30:05 -- Getting answer p000T4 from Participant p000
+2024-08-02 17:30:05 -- Answer created for participant p000 and session s000
+2024-08-02 17:30:17 -- Answer p000T4 set: {'q1': 5, 'q2': 4, 'q3': 4, 'q4': 2, 'timeSpent': 11}
+2024-08-02 17:30:17 -- Participant p000 status set to answered
