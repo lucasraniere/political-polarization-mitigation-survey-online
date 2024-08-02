@@ -57,7 +57,7 @@ def add_session():
     data = request.json
     db.add_session(data['pId'], data['sId'])
     save_2_log(f'Session {data["sId"]} added')
-    return jsonify({'message': f'Session {data['sId']} added'})
+    return jsonify({'message': f'Session {data["sId"]} added'})
 
 
 @app.route('/api/set_participant_leaning/', methods=['POST', 'GET'])
@@ -94,7 +94,7 @@ def set_participant_status():
     data = request.json
     db.set_participant_status(data['pId'], data['status'])
     save_2_log(f'Participant {data["pId"]} status set to {data["status"]}')
-    return jsonify({'message': f'Participant {data['pId']} status set to {data['status']}'})
+    return jsonify({'message': f'Participant {data["pId"]} status set to {data["status"]}'})
 
 
 @app.route('/api/get_answer/<string:id>', methods=['GET'])
