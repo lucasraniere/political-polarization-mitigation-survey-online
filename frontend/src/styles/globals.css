@@ -1,5 +1,11 @@
 /* classes */
 
+.img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .popup-container {
     position: fixed;
     width: 100%;
@@ -225,7 +231,7 @@ header {
         'question1 question1 question1 question1 question1 opt1_1 opt2_1 opt3_1 opt4_1 opt5_1'
         'question2 question2 question2 question2 question2 opt1_2 opt2_2 opt3_2 opt4_2 opt5_2'
         'question3 question3 question3 question3 question3 opt1_3 opt2_3 opt3_3 opt4_3 opt5_3';
-    padding: 1em 2em;
+    padding: 1em 10em;
     input[type=radio] {
         width: 1.25em;
         height: 1.25em;
@@ -240,7 +246,7 @@ header {
     grid-template-areas:
         'scape scape scape scape label1 label2 label3 label4'
         'question question question question opt1 opt2 opt3 opt4';
-    padding: 1em 2em;
+    padding: 1em 10em;
     input[type=radio] {
         width: 1.25em;
         height: 1.25em;

@@ -3,6 +3,8 @@ import PoliticalLeaning from "@/components/index/PoliticalLeaning";
 import SeguirButton from "@/components/index/SeguirButton";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from 'next/image';
+import exampleImg from '../figs/survey-example.jpg';
 
 export default function Home() {
   const [participantId, setParticipantId] = useState<string>("");
@@ -106,15 +108,32 @@ export default function Home() {
 
   return (
     <main>
+      <h3>Introdução</h3>
       <div className="div-p">
-        Olá! Você está participando de um experimento que visa avaliar a percepção de usuários sobre características de polarização política presentes em textos de redes sociais. Serão apresentadas duas versões distintas de quatro textos retirados dessas plataformas, sendo que as duas versões terão diferenças na escrita. Sua tarefa consiste em analisar ambas as versões dos textos e responder a algumas questões, escolhendo a opção que melhor se adequar às suas percepções, dentre as alternativas fornecidas.
+        Olá! Você está participando de um experimento que tem como objetivo avaliar a percepção de usuários sobre características de polarização política presentes em textos de redes sociais. Serão apresentadas duas versões de quatro textos distintos, retirados de plataformas de redes sociais, onde as versões terão diferenças na escrita. Sua tarefa consiste em analisar ambas versões dos textos e responder à algumas questões, escolhendo, dentre as alternativas fornecidas, a opção que melhor se adequar às suas percepções.
       </div>
+      <h3>Instruções</h3>
+      <p>Caso opte por prosseguir com o survey, serão exibidos duas versões de quatro textos distintos e em sequência (uma dupla de cada vez). Para cada um dos textos, você verá uma tela similar à seguinte:</p>
+      <Image className="img"
+        src={exampleImg}
+        alt="Exemplo de tela do survey"
+        width={700}
+      />
+      <p>Após ler atenciosamente os dois textos, siga para as afirmações/questões abaixo dos textos. Leia cuidadosamente cada uma delas e marque a opção que você considera a mais correta. Todas as quatro telas nas quais você navegará terão as mesmas afirmações/questões e opções de respostas. As afirmações/questões são as seguintes:</p>
+      <ol>
+        <li>O texto 1 apresenta sinais de polarização;</li>
+        <li>O texto 2 apresenta sinais de polarização;</li>
+        <li>Os dois textos têm as mesmas ideias e temas centrais;</li>
+        <li>Qual dos dois textos você considera ter um maior grau de polarização?</li>
+      </ol>
+      <p>Você navegará entre as páginas utilizando os botões de navageção presentes na parte de baixo de cada uma das quatro páginas. Você só poderá seguir para os próximos textos quando marcar sua opção de resposta para cada uma das afirmações/questões.</p>
+      <h3>Definição de polarização em textos</h3>
       <PolarizationDef />
       <div className="div-p">
         Você poderá reler essa definição de textos polarizados a qualquer momento durante o survey, basta clicar no ícone de interrogação (?) presente no canto superior direito das próximas telas.
       </div>
       <div className="div-p">
-        <strong>Você poderá ser exposto a tweets com conteúdo e temas sensíveis. Prossiga para a próxima etapa apenas se concorda em partiticapr do surve</strong>. Para iniciar o survey responda a questão abaixo e clique em seguir.
+        <strong>Você poderá ser exposto a textos que apresentem conteúdos e temas sensíveis. Prossiga para a próxima etapa apenas se concorda em partiticapr do survey</strong>. Para iniciar o survey responda a questão abaixo e clique em seguir.
       </div>
       <div className="div-p">
         Qual das seguintes opções melhor definie seu posicionamento político?
