@@ -2,10 +2,12 @@ import PolarizationPopUp from '@/components/survey/PolarizationPopUp';
 import Questionnaire from '@/components/survey/Questionnaire';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import LoadingMessage from '@/components/survey/LoadingMessage';
 
 export default function Survey() {
     const router = useRouter();
     const [showPopup, setShowPopup] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
     const [tweetNumber, setTweetNumber] = useState(0);
     const [maxProgresTweet, setMaxProgressTweet] = useState(0);
     const [participantId, setParticipantId] = useState("");
@@ -124,6 +126,7 @@ export default function Survey() {
     };
 
     const goToPreviousTweet = () => {
+        setIsLoading(true);
         const previousTweet = tweetNumber - 1;
         const previousAnswerId = participantId + 'T' + String(previousTweet);
         getAnswer(previousAnswerId).then((data) => {
@@ -135,6 +138,7 @@ export default function Survey() {
             setAnswerQ3(data.q3);
             setAnswerQ4(data.q4);
             setTimeSpent(data.time);
+            setIsLoading(false);
         });
     };
 
@@ -152,6 +156,7 @@ export default function Survey() {
                 });
             }
             else {
+                setIsLoading(true);
                 setAnswers(participantId + 'T' + String(tweetNumber), getCurrentAnswers()).
                 then(() => {
                     var nextState = "";
@@ -186,6 +191,7 @@ export default function Survey() {
                             }
                         });
                     });
+                    setIsLoading(false);
                 });
             }
         }
@@ -214,6 +220,7 @@ export default function Survey() {
         const sId = queryParams.get("SESSION_ID") || "";
         setParticipantId(pId || "");
         setCurrentSessionId(sId || "");
+        setIsLoading(true);
         try {
             checkParticipant(pId).then((data) => {
                 if (data.status !== 'finished' && data.status !== 'answered') {
@@ -234,11 +241,13 @@ export default function Survey() {
                                 setTimeSpent(0);
                             });
                         }
+                        setIsLoading(false);
                     });
                 } else {
                     router.push(`/ending/?PROLIFIC_PID=${pId}`);
                 }
             });
+            // setIsLoading(false);
         } catch (error) {
             console.error(error);
             router.push(`/survey/?PROLIFIC_PID=${pId}`);
@@ -258,6 +267,11 @@ export default function Survey() {
             <div>
                 {
                     showPopup ? <PolarizationPopUp closePopUp={() => setShowPopup(false)}/> : null
+                }
+            </div>
+            <div>
+                {
+                    isLoading ? <LoadingMessage /> : null
                 }
             </div>
             <div id="text-areas">

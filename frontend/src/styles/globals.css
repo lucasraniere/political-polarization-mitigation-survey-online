@@ -34,6 +34,48 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.loading-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.loading-body {
+    position: relative;
+    align-content: center;
+    width: 60%;
+    top: 20%;
+    text-align: center;
+    margin: auto;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    border-radius: 15px;
+    border-color: black;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.loading-animation {
+    font-weight: bold;
+    display:inline-block;
+    clip-path: inset(0 1.3ch 0 0);
+    animation: l 1s steps(5) infinite;
+}
+
+@keyframes l {
+    to {
+        clip-path: inset(0 -1ch 0 0);
+    }
+}
+
 .div-p {
     margin-top: 10px;
     margin-bottom: 10px;

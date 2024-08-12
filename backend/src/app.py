@@ -6,7 +6,6 @@ import lib.db_utils as db
 
 os.chdir(os.path.dirname(__file__))
 app = Flask(__name__)
-#cors = CORS(app, origins='*')
 cors = CORS(app, origins=[
     '150.165.85.100'
 ])
