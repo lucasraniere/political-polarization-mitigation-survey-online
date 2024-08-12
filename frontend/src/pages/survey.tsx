@@ -148,6 +148,7 @@ export default function Survey() {
             alert("Por favor, responda todas as perguntas antes de prosseguir.");
         }
         else {
+            setIsLoading(true);
             if (tweetNumber === 4) {
                 setAnswers(participantId + 'T' + String(tweetNumber), getCurrentAnswers()).then(() => {
                     setParticipantStatus(participantId, 'answered').then(() => {
@@ -156,7 +157,6 @@ export default function Survey() {
                 });
             }
             else {
-                setIsLoading(true);
                 setAnswers(participantId + 'T' + String(tweetNumber), getCurrentAnswers()).
                 then(() => {
                     var nextState = "";
