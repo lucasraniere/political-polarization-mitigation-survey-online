@@ -182,16 +182,17 @@ export default function Survey() {
                                 setAnswerQ3(q3);
                                 setAnswerQ4(q4);
                                 setTimeSpent(data.time);
+                                setIsLoading(false);
                             } else {
                                 createAnswer(participantId, currentSessionId, currentTweet).then((data) => {
                                     setText1(data.text1);
                                     setText2(data.text2);
                                     resetAnswers();
+                                    setIsLoading(false);
                                 });
                             }
                         });
                     });
-                    setIsLoading(false);
                 });
             }
         }
@@ -233,21 +234,21 @@ export default function Survey() {
                             getTexts(data.text1, data.text2).then((data) => {
                                 setText1(data.text1);
                                 setText2(data.text2);
+                                setIsLoading(false);
                             });
                         } else {
                             createAnswer(pId, sId, currentTweet).then((data) => {
                                 setText1(data.text1);
                                 setText2(data.text2);
                                 setTimeSpent(0);
+                                setIsLoading(false);
                             });
                         }
-                        setIsLoading(false);
                     });
                 } else {
                     router.push(`/ending/?PROLIFIC_PID=${pId}`);
                 }
             });
-            // setIsLoading(false);
         } catch (error) {
             console.error(error);
             router.push(`/survey/?PROLIFIC_PID=${pId}`);
