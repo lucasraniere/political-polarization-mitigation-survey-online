@@ -5,8 +5,10 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from 'next/image';
 import exampleImg from '../figs/survey-example.jpg';
+import LoadingMessage from "@/components/survey/LoadingMessage";
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(false);
   const [participantId, setParticipantId] = useState<string>("");
   const [sessionId, setSessionId] = useState<string>("");
   const [participantLeaning, setParticipantLeaning] = useState<number>(0);
@@ -56,6 +58,7 @@ export default function Home() {
       alert("Por favor, selecione uma opção antes de prosseguir.");
     }
     else {
+      setIsLoading(true);
       try {
         setParticipantLeaningBack(participantId, participantLeaning).then(() => {
           router.push(`/survey/?PROLIFIC_PID=${participantId}&SESSION_ID=${sessionId}`);
@@ -108,6 +111,11 @@ export default function Home() {
 
   return (
     <main>
+      <div>
+          {
+            isLoading ? <LoadingMessage /> : null
+          }
+      </div>
       <h3>Introdução</h3>
       <div className="div-p">
         Olá! Você está participando de um experimento que tem como objetivo avaliar a percepção de usuários sobre características de polarização política presentes em textos de redes sociais. Serão apresentadas duas versões de quatro textos distintos, retirados de plataformas de redes sociais, onde as versões terão diferenças na escrita. Sua tarefa consiste em analisar ambas versões dos textos e responder à algumas questões, escolhendo, dentre as alternativas fornecidas, a opção que melhor se adequar às suas percepções.
