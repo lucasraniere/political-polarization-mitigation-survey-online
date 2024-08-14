@@ -1230,3 +1230,329 @@
 2024-08-02 17:30:05 -- Answer created for participant p000 and session s000
 2024-08-02 17:30:17 -- Answer p000T4 set: {'q1': 5, 'q2': 4, 'q3': 4, 'q4': 2, 'timeSpent': 11}
 2024-08-02 17:30:17 -- Participant p000 status set to answered
+2024-08-12 16:45:21 -- Checking participant testingLoading
+2024-08-12 16:45:29 -- Checking participant testingLoading
+2024-08-12 16:47:50 -- Checking participant testingLoading
+2024-08-12 16:48:08 -- Checking participant testingLoading
+2024-08-12 16:49:45 -- Checking participant testingLoading
+2024-08-12 16:49:45 -- Participant testingLoading added
+2024-08-12 16:49:45 -- Session testingLoaaaading added
+2024-08-12 16:49:51 -- Participant testingLoading leaning set to 3
+2024-08-12 16:49:52 -- Checking participant testingLoading
+2024-08-12 16:49:52 -- Checking answer testingLoadingT1
+2024-08-12 16:49:52 -- Answer created for participant testingLoading and session testingLoaaaading
+2024-08-12 17:03:03 -- Checking participant testingLoading
+2024-08-12 17:03:03 -- Checking answer testingLoadingT1
+2024-08-12 17:03:03 -- Getting texts for participants ML032 and L032
+2024-08-12 17:04:25 -- Checking participant testingLoading
+2024-08-12 17:04:26 -- Checking answer testingLoadingT1
+2024-08-12 17:04:26 -- Getting texts for participants ML032 and L032
+2024-08-12 17:05:01 -- Checking participant testingLoading
+2024-08-12 17:05:01 -- Checking answer testingLoadingT1
+2024-08-12 17:05:01 -- Getting texts for participants ML032 and L032
+2024-08-12 17:06:05 -- Checking participant testingLoading
+2024-08-12 17:06:05 -- Checking answer testingLoadingT1
+2024-08-12 17:06:05 -- Getting texts for participants ML032 and L032
+2024-08-12 17:06:46 -- Checking participant testingLoading
+2024-08-12 17:06:46 -- Checking answer testingLoadingT1
+2024-08-12 17:06:46 -- Getting texts for participants ML032 and L032
+2024-08-12 17:07:18 -- Checking participant testingLoading
+2024-08-12 17:07:18 -- Checking answer testingLoadingT1
+2024-08-12 17:07:18 -- Getting texts for participants ML032 and L032
+2024-08-12 17:07:48 -- Checking participant testingLoading
+2024-08-12 17:07:48 -- Checking answer testingLoadingT1
+2024-08-12 17:07:48 -- Getting texts for participants ML032 and L032
+2024-08-12 17:08:58 -- Checking participant testingLoading
+2024-08-12 17:08:58 -- Checking answer testingLoadingT1
+2024-08-12 17:08:58 -- Getting texts for participants ML032 and L032
+2024-08-12 17:09:02 -- Answer testingLoadingT1 set: {'q1': 1, 'q2': 1, 'q3': 1, 'q4': 1, 'timeSpent': 4}
+2024-08-12 17:09:02 -- Participant testingLoading status set to tweet_2
+2024-08-12 17:09:02 -- Getting answer testingLoadingT2 from Participant testingLoading
+2024-08-12 17:09:03 -- Answer created for participant testingLoading and session testingLoaaaading
+2024-08-12 17:09:07 -- Answer testingLoadingT2 set: {'q1': 3, 'q2': 3, 'q3': 3, 'q4': 2, 'timeSpent': 5}
+2024-08-12 17:09:07 -- Participant testingLoading status set to tweet_3
+2024-08-12 17:09:07 -- Getting answer testingLoadingT3 from Participant testingLoading
+2024-08-12 17:09:07 -- Answer created for participant testingLoading and session testingLoaaaading
+2024-08-12 17:12:43 -- Checking participant testingLoading
+2024-08-12 17:12:43 -- Checking answer testingLoadingT3
+2024-08-12 17:12:43 -- Getting texts for participants R050 and MR050
+2024-08-12 17:13:11 -- Answer testingLoadingT3 set: {'q1': 2, 'q2': 2, 'q3': 2, 'q4': 2, 'timeSpent': 28}
+2024-08-12 17:13:11 -- Participant testingLoading status set to tweet_4
+2024-08-12 17:13:11 -- Getting answer testingLoadingT4 from Participant testingLoading
+2024-08-12 17:13:11 -- Answer created for participant testingLoading and session testingLoaaaading
+2024-08-12 17:14:09 -- Checking participant testingLoading
+2024-08-12 17:14:09 -- Checking answer testingLoadingT4
+2024-08-12 17:14:09 -- Getting texts for participants ML040 and L040
+2024-08-12 17:17:09 -- Checking participant testingLoading
+2024-08-12 17:17:09 -- Checking answer testingLoadingT4
+2024-08-12 17:17:09 -- Getting texts for participants ML040 and L040
+2024-08-12 17:17:23 -- Checking participant testingLoading
+2024-08-12 17:17:23 -- Checking answer testingLoadingT4
+2024-08-12 17:17:23 -- Getting texts for participants ML040 and L040
+2024-08-12 17:17:56 -- Checking participant testingLoading
+2024-08-12 17:17:56 -- Checking answer testingLoadingT4
+2024-08-12 17:17:56 -- Getting texts for participants ML040 and L040
+2024-08-12 17:18:38 -- Checking participant testingLoading
+2024-08-12 17:18:38 -- Checking answer testingLoadingT4
+2024-08-12 17:18:38 -- Getting texts for participants ML040 and L040
+2024-08-12 17:20:55 -- Checking participant testingLoading
+2024-08-12 17:20:55 -- Checking answer testingLoadingT4
+2024-08-12 17:20:55 -- Getting texts for participants ML040 and L040
+2024-08-12 17:21:06 -- Checking participant testingLoading
+2024-08-12 17:21:06 -- Checking answer testingLoadingT4
+2024-08-12 17:21:06 -- Getting texts for participants ML040 and L040
+2024-08-12 17:21:20 -- Checking participant testingLoading
+2024-08-12 17:21:20 -- Checking answer testingLoadingT4
+2024-08-12 17:21:20 -- Getting texts for participants ML040 and L040
+2024-08-12 17:23:54 -- Checking participant testingLoading
+2024-08-12 17:23:54 -- Checking answer testingLoadingT4
+2024-08-12 17:23:54 -- Getting texts for participants ML040 and L040
+2024-08-12 17:24:38 -- Checking participant testingLoading
+2024-08-12 17:24:38 -- Checking answer testingLoadingT4
+2024-08-12 17:24:38 -- Getting texts for participants ML040 and L040
+2024-08-12 17:26:02 -- Checking participant testingLoading
+2024-08-12 17:26:02 -- Checking answer testingLoadingT4
+2024-08-12 17:26:02 -- Getting texts for participants ML040 and L040
+2024-08-12 17:26:17 -- Checking participant testingLoading
+2024-08-12 17:26:17 -- Checking answer testingLoadingT4
+2024-08-12 17:26:17 -- Getting texts for participants ML040 and L040
+2024-08-12 17:26:42 -- Checking participant testingLoading
+2024-08-12 17:26:43 -- Checking answer testingLoadingT4
+2024-08-12 17:26:43 -- Getting texts for participants ML040 and L040
+2024-08-12 17:27:06 -- Checking participant testingLoading
+2024-08-12 17:27:06 -- Checking answer testingLoadingT4
+2024-08-12 17:27:06 -- Getting texts for participants ML040 and L040
+2024-08-12 17:27:17 -- Checking participant testingLoading
+2024-08-12 17:27:17 -- Checking answer testingLoadingT4
+2024-08-12 17:27:17 -- Getting texts for participants ML040 and L040
+2024-08-12 17:27:36 -- Checking participant testingLoading
+2024-08-12 17:27:36 -- Checking answer testingLoadingT4
+2024-08-12 17:27:36 -- Getting texts for participants ML040 and L040
+2024-08-12 17:27:52 -- Checking participant testingLoading
+2024-08-12 17:27:53 -- Checking answer testingLoadingT4
+2024-08-12 17:27:53 -- Getting texts for participants ML040 and L040
+2024-08-12 17:29:34 -- Checking participant testingLoading
+2024-08-12 17:29:34 -- Checking answer testingLoadingT4
+2024-08-12 17:29:34 -- Getting texts for participants ML040 and L040
+2024-08-12 17:30:23 -- Checking participant testingLoading
+2024-08-12 17:30:23 -- Checking answer testingLoadingT4
+2024-08-12 17:30:23 -- Getting texts for participants ML040 and L040
+2024-08-12 17:30:35 -- Checking participant testingLoading
+2024-08-12 17:30:35 -- Checking answer testingLoadingT4
+2024-08-12 17:30:35 -- Getting texts for participants ML040 and L040
+2024-08-12 17:30:43 -- Checking participant testingLoading
+2024-08-12 17:30:43 -- Checking answer testingLoadingT4
+2024-08-12 17:30:43 -- Getting texts for participants ML040 and L040
+2024-08-12 17:31:04 -- Checking participant testingLoading
+2024-08-12 17:31:04 -- Checking answer testingLoadingT4
+2024-08-12 17:31:04 -- Getting texts for participants ML040 and L040
+2024-08-12 17:31:16 -- Checking participant testingLoading
+2024-08-12 17:31:16 -- Checking answer testingLoadingT4
+2024-08-12 17:31:16 -- Getting texts for participants ML040 and L040
+2024-08-12 17:31:23 -- Checking participant testingLoading
+2024-08-12 17:31:23 -- Checking answer testingLoadingT4
+2024-08-12 17:31:23 -- Getting texts for participants ML040 and L040
+2024-08-12 17:31:33 -- Checking participant testingLoading
+2024-08-12 17:31:33 -- Checking answer testingLoadingT4
+2024-08-12 17:31:33 -- Getting texts for participants ML040 and L040
+2024-08-12 17:31:42 -- Checking participant testingLoading
+2024-08-12 17:31:42 -- Checking answer testingLoadingT4
+2024-08-12 17:31:42 -- Getting texts for participants ML040 and L040
+2024-08-12 17:31:57 -- Checking participant testingLoading
+2024-08-12 17:31:57 -- Checking answer testingLoadingT4
+2024-08-12 17:31:57 -- Getting texts for participants ML040 and L040
+2024-08-12 17:32:10 -- Checking participant testingLoading
+2024-08-12 17:32:10 -- Checking answer testingLoadingT4
+2024-08-12 17:32:10 -- Getting texts for participants ML040 and L040
+2024-08-12 17:32:31 -- Checking participant testingLoading
+2024-08-12 17:32:31 -- Checking answer testingLoadingT4
+2024-08-12 17:32:31 -- Getting texts for participants ML040 and L040
+2024-08-12 17:32:43 -- Checking participant testingLoading
+2024-08-12 17:32:43 -- Checking answer testingLoadingT4
+2024-08-12 17:32:43 -- Getting texts for participants ML040 and L040
+2024-08-12 17:33:00 -- Checking participant testingLoading
+2024-08-12 17:33:00 -- Checking answer testingLoadingT4
+2024-08-12 17:33:00 -- Getting texts for participants ML040 and L040
+2024-08-12 17:33:17 -- Checking participant testingLoading
+2024-08-12 17:33:17 -- Checking answer testingLoadingT4
+2024-08-12 17:33:17 -- Getting texts for participants ML040 and L040
+2024-08-12 17:33:26 -- Checking participant testingLoading
+2024-08-12 17:33:26 -- Checking answer testingLoadingT4
+2024-08-12 17:33:26 -- Getting texts for participants ML040 and L040
+2024-08-12 17:33:41 -- Checking participant testingLoading
+2024-08-12 17:33:41 -- Checking answer testingLoadingT4
+2024-08-12 17:33:41 -- Getting texts for participants ML040 and L040
+2024-08-12 17:33:52 -- Checking participant testingLoading
+2024-08-12 17:33:52 -- Checking answer testingLoadingT4
+2024-08-12 17:33:52 -- Getting texts for participants ML040 and L040
+2024-08-12 17:34:36 -- Checking participant testingLoading
+2024-08-12 17:34:36 -- Checking answer testingLoadingT4
+2024-08-12 17:34:36 -- Getting texts for participants ML040 and L040
+2024-08-12 17:34:48 -- Checking participant testingLoading2
+2024-08-12 17:34:48 -- Checking answer testingLoading2T-1
+2024-08-12 17:35:01 -- Checking participant testingLoading2
+2024-08-12 17:35:01 -- Participant testingLoading2 added
+2024-08-12 17:35:01 -- Session testingLoaaaading2 added
+2024-08-12 17:35:04 -- Participant testingLoading2 leaning set to 6
+2024-08-12 17:35:04 -- Checking participant testingLoading2
+2024-08-12 17:35:04 -- Checking answer testingLoading2T1
+2024-08-12 17:35:04 -- Answer created for participant testingLoading2 and session testingLoaaaading2
+2024-08-12 17:37:13 -- Checking participant testingLoading2
+2024-08-12 17:37:13 -- Checking answer testingLoading2T1
+2024-08-12 17:37:13 -- Getting texts for participants PL063 and L063
+2024-08-12 17:37:31 -- Checking participant testingLoading2
+2024-08-12 17:37:31 -- Checking answer testingLoading2T1
+2024-08-12 17:37:31 -- Getting texts for participants PL063 and L063
+2024-08-12 17:38:46 -- Checking participant testingLoading2
+2024-08-12 17:38:46 -- Checking answer testingLoading2T1
+2024-08-12 17:38:46 -- Getting texts for participants PL063 and L063
+2024-08-12 17:38:52 -- Answer testingLoading2T1 set: {'q1': 1, 'q2': 1, 'q3': 2, 'q4': 2, 'timeSpent': 5}
+2024-08-12 17:38:52 -- Participant testingLoading2 status set to tweet_2
+2024-08-12 17:38:52 -- Getting answer testingLoading2T2 from Participant testingLoading2
+2024-08-12 17:38:52 -- Answer created for participant testingLoading2 and session testingLoaaaading2
+2024-08-12 17:38:57 -- Answer testingLoading2T2 set: {'q1': 3, 'q2': 3, 'q3': 3, 'q4': 3, 'timeSpent': 5}
+2024-08-12 17:38:57 -- Participant testingLoading2 status set to tweet_3
+2024-08-12 17:38:57 -- Getting answer testingLoading2T3 from Participant testingLoading2
+2024-08-12 17:38:57 -- Answer created for participant testingLoading2 and session testingLoaaaading2
+2024-08-12 17:38:59 -- Getting answer testingLoading2T2 from Participant testingLoading2
+2024-08-12 17:39:00 -- Answer testingLoading2T2 set: {'q1': 3, 'q2': 3, 'q3': 3, 'q4': 3, 'timeSpent': 6}
+2024-08-12 17:39:00 -- Participant testingLoading2 status set to tweet_3
+2024-08-12 17:39:00 -- Getting answer testingLoading2T3 from Participant testingLoading2
+2024-08-12 17:39:50 -- Checking participant testingLoading2
+2024-08-12 17:39:50 -- Checking answer testingLoading2T3
+2024-08-12 17:39:50 -- Getting texts for participants PR086 and R086
+2024-08-12 17:39:55 -- Getting answer testingLoading2T2 from Participant testingLoading2
+2024-08-12 17:41:33 -- Checking participant testingLoading2
+2024-08-12 17:41:33 -- Checking answer testingLoading2T3
+2024-08-12 17:41:33 -- Getting texts for participants PR086 and R086
+2024-08-12 17:41:39 -- Answer testingLoading2T3 set: {'q1': 2, 'q2': 2, 'q3': 2, 'q4': 2, 'timeSpent': 5}
+2024-08-12 17:41:39 -- Participant testingLoading2 status set to tweet_4
+2024-08-12 17:41:39 -- Getting answer testingLoading2T4 from Participant testingLoading2
+2024-08-12 17:41:39 -- Answer created for participant testingLoading2 and session testingLoaaaading2
+2024-08-12 17:41:40 -- Getting answer testingLoading2T3 from Participant testingLoading2
+2024-08-12 17:41:41 -- Answer testingLoading2T3 set: {'q1': 2, 'q2': 2, 'q3': 2, 'q4': 2, 'timeSpent': 6}
+2024-08-12 17:41:41 -- Getting answer testingLoading2T2 from Participant testingLoading2
+2024-08-12 17:41:41 -- Answer testingLoading2T2 set: {'q1': 3, 'q2': 3, 'q3': 3, 'q4': 3, 'timeSpent': 6}
+2024-08-12 17:41:41 -- Getting answer testingLoading2T1 from Participant testingLoading2
+2024-08-12 17:46:59 -- Answer testingLoading2T1 set: {'q1': 1, 'q2': 1, 'q3': 2, 'q4': 2, 'timeSpent': 323}
+2024-08-12 17:46:59 -- Participant testingLoading2 status set to tweet_4
+2024-08-12 17:46:59 -- Getting answer testingLoading2T2 from Participant testingLoading2
+2024-08-12 17:47:01 -- Answer testingLoading2T2 set: {'q1': 3, 'q2': 3, 'q3': 3, 'q4': 3, 'timeSpent': 7}
+2024-08-12 17:47:01 -- Getting answer testingLoading2T1 from Participant testingLoading2
+2024-08-12 17:47:02 -- Answer testingLoading2T1 set: {'q1': 1, 'q2': 1, 'q3': 2, 'q4': 2, 'timeSpent': 325}
+2024-08-12 17:47:02 -- Participant testingLoading2 status set to tweet_4
+2024-08-12 17:47:02 -- Getting answer testingLoading2T2 from Participant testingLoading2
+2024-08-12 17:47:03 -- Answer testingLoading2T2 set: {'q1': 3, 'q2': 3, 'q3': 3, 'q4': 3, 'timeSpent': 7}
+2024-08-12 17:47:03 -- Participant testingLoading2 status set to tweet_4
+2024-08-12 17:47:03 -- Getting answer testingLoading2T3 from Participant testingLoading2
+2024-08-12 17:55:24 -- Checking participant TestingLoadingP
+2024-08-12 17:55:24 -- Participant TestingLoadingP added
+2024-08-12 17:55:24 -- Session TestingLoadingS added
+2024-08-12 17:55:37 -- Participant TestingLoadingP leaning set to 2
+2024-08-12 17:55:38 -- Checking participant TestingLoadingP
+2024-08-12 17:55:38 -- Checking answer TestingLoadingPT1
+2024-08-12 17:55:38 -- Answer created for participant TestingLoadingP and session TestingLoadingS
+2024-08-12 17:55:43 -- Answer TestingLoadingPT1 set: {'q1': 1, 'q2': 2, 'q3': 2, 'q4': 2, 'timeSpent': 5}
+2024-08-12 17:55:43 -- Participant TestingLoadingP status set to tweet_2
+2024-08-12 17:55:43 -- Getting answer TestingLoadingPT2 from Participant TestingLoadingP
+2024-08-12 17:55:44 -- Answer created for participant TestingLoadingP and session TestingLoadingS
+2024-08-12 17:55:48 -- Answer TestingLoadingPT2 set: {'q1': 5, 'q2': 5, 'q3': 5, 'q4': 3, 'timeSpent': 4}
+2024-08-12 17:55:48 -- Participant TestingLoadingP status set to tweet_3
+2024-08-12 17:55:48 -- Getting answer TestingLoadingPT3 from Participant TestingLoadingP
+2024-08-12 17:55:48 -- Answer created for participant TestingLoadingP and session TestingLoadingS
+2024-08-12 17:55:53 -- Answer TestingLoadingPT3 set: {'q1': 3, 'q2': 3, 'q3': 3, 'q4': 3, 'timeSpent': 4}
+2024-08-12 17:55:53 -- Participant TestingLoadingP status set to tweet_4
+2024-08-12 17:55:53 -- Getting answer TestingLoadingPT4 from Participant TestingLoadingP
+2024-08-12 17:55:53 -- Answer created for participant TestingLoadingP and session TestingLoadingS
+2024-08-12 17:55:58 -- Answer TestingLoadingPT4 set: {'q1': 5, 'q2': 5, 'q3': 5, 'q4': 3, 'timeSpent': 4}
+2024-08-12 17:55:58 -- Participant TestingLoadingP status set to answered
+2024-08-12 18:13:05 -- Checking participant adasdasdasdasd
+2024-08-12 18:13:05 -- Participant adasdasdasdasd added
+2024-08-12 18:13:05 -- Session 1231k2j31kj3 added
+2024-08-12 18:13:09 -- Participant adasdasdasdasd leaning set to 3
+2024-08-12 18:13:11 -- Checking participant adasdasdasdasd
+2024-08-12 18:13:11 -- Checking answer adasdasdasdasdT1
+2024-08-12 18:13:11 -- Answer created for participant adasdasdasdasd and session 1231k2j31kj3
+2024-08-12 18:13:17 -- Answer adasdasdasdasdT1 set: {'q1': 1, 'q2': 2, 'q3': 2, 'q4': 2, 'timeSpent': 6}
+2024-08-12 18:13:17 -- Participant adasdasdasdasd status set to tweet_2
+2024-08-12 18:13:17 -- Getting answer adasdasdasdasdT2 from Participant adasdasdasdasd
+2024-08-12 18:13:17 -- Answer created for participant adasdasdasdasd and session 1231k2j31kj3
+2024-08-12 18:13:19 -- Getting answer adasdasdasdasdT1 from Participant adasdasdasdasd
+2024-08-12 18:13:21 -- Answer adasdasdasdasdT1 set: {'q1': 1, 'q2': 2, 'q3': 2, 'q4': 2, 'timeSpent': 8}
+2024-08-12 18:13:21 -- Participant adasdasdasdasd status set to tweet_2
+2024-08-12 18:13:21 -- Getting answer adasdasdasdasdT2 from Participant adasdasdasdasd
+2024-08-12 18:13:25 -- Getting answer adasdasdasdasdT1 from Participant adasdasdasdasd
+2024-08-12 18:13:27 -- Answer adasdasdasdasdT1 set: {'q1': 1, 'q2': 2, 'q3': 2, 'q4': 2, 'timeSpent': 10}
+2024-08-12 18:13:27 -- Participant adasdasdasdasd status set to tweet_2
+2024-08-12 18:13:27 -- Getting answer adasdasdasdasdT2 from Participant adasdasdasdasd
+2024-08-12 18:13:39 -- Getting answer adasdasdasdasdT1 from Participant adasdasdasdasd
+2024-08-12 18:13:41 -- Answer adasdasdasdasdT1 set: {'q1': 1, 'q2': 2, 'q3': 2, 'q4': 2, 'timeSpent': 11}
+2024-08-12 18:13:41 -- Participant adasdasdasdasd status set to tweet_2
+2024-08-12 18:13:41 -- Getting answer adasdasdasdasdT2 from Participant adasdasdasdasd
+2024-08-12 18:13:45 -- Answer adasdasdasdasdT2 set: {'q1': 5, 'q2': 5, 'q3': 5, 'q4': 3, 'timeSpent': 4}
+2024-08-12 18:13:45 -- Participant adasdasdasdasd status set to tweet_3
+2024-08-12 18:13:45 -- Getting answer adasdasdasdasdT3 from Participant adasdasdasdasd
+2024-08-12 18:13:45 -- Answer created for participant adasdasdasdasd and session 1231k2j31kj3
+2024-08-12 18:13:51 -- Answer adasdasdasdasdT3 set: {'q1': 2, 'q2': 2, 'q3': 2, 'q4': 2, 'timeSpent': 6}
+2024-08-12 18:13:51 -- Participant adasdasdasdasd status set to tweet_4
+2024-08-12 18:13:51 -- Getting answer adasdasdasdasdT4 from Participant adasdasdasdasd
+2024-08-12 18:13:52 -- Answer created for participant adasdasdasdasd and session 1231k2j31kj3
+2024-08-12 18:13:57 -- Answer adasdasdasdasdT4 set: {'q1': 5, 'q2': 5, 'q3': 5, 'q4': 3, 'timeSpent': 5}
+2024-08-12 18:13:57 -- Participant adasdasdasdasd status set to answered
+2024-08-13 16:41:03 -- Checking participant askdjakjiequwe123123123
+2024-08-13 16:41:47 -- Checking participant askdjakjiequwe123123123
+2024-08-13 16:41:47 -- Participant askdjakjiequwe123123123 added
+2024-08-13 16:41:47 -- Session 12312kj3kjkj added
+2024-08-13 16:43:25 -- Checking participant askdjakjiequwe123123123
+2024-08-13 16:43:25 -- Session 12312kj3kjkj added
+2024-08-13 16:43:30 -- Participant askdjakjiequwe123123123 leaning set to 4
+2024-08-13 16:43:31 -- Checking participant askdjakjiequwe123123123
+2024-08-13 16:43:31 -- Checking answer askdjakjiequwe123123123T1
+2024-08-13 16:43:31 -- Answer created for participant askdjakjiequwe123123123 and session 12312kj3kjkj
+2024-08-13 16:44:24 -- Checking participant askdjasdasdakjiequwe123123123
+2024-08-13 16:44:24 -- Participant askdjasdasdakjiequwe123123123 added
+2024-08-13 16:44:24 -- Session 1231asdasdasd2kj3kjkj added
+2024-08-13 16:44:28 -- Participant askdjasdasdakjiequwe123123123 leaning set to 6
+2024-08-13 16:44:28 -- Checking participant askdjasdasdakjiequwe123123123
+2024-08-13 16:44:28 -- Checking answer askdjasdasdakjiequwe123123123T1
+2024-08-13 16:44:36 -- Checking participant askdjasdasdakjiequwe123123123
+2024-08-13 16:44:36 -- Checking answer askdjasdasdakjiequwe123123123T1
+2024-08-13 16:44:59 -- Checking participant askdjasdasdakjiequwe123123123
+2024-08-13 16:44:59 -- Session 1231asdasdasd2kj3kjkj added
+2024-08-13 16:44:59 -- Checking participant askdjasdasdakjiequwe123123123
+2024-08-13 16:44:59 -- Checking answer askdjasdasdakjiequwe123123123T1
+2024-08-13 16:46:02 -- Checking participant awwskdjasdasdakjiequwe123123123
+2024-08-13 16:46:02 -- Session 123ww1asdasdasd2kj3kjkj added
+2024-08-13 16:46:06 -- Participant awwskdjasdasdakjiequwe123123123 leaning set to 3
+2024-08-13 16:46:06 -- Checking participant awwskdjasdasdakjiequwe123123123
+2024-08-13 16:46:06 -- Checking answer awwskdjasdasdakjiequwe123123123T-1
+2024-08-13 16:46:57 -- Checking participant awwskdjasdasdakjiequwe123123123
+2024-08-13 16:46:57 -- Session 123ww1asdasdasd2kj3kjkj added
+2024-08-13 16:47:02 -- Participant awwskdjasdasdakjiequwe123123123 leaning set to 3
+2024-08-13 16:47:02 -- Checking participant awwskdjasdasdakjiequwe123123123
+2024-08-13 16:47:02 -- Checking answer awwskdjasdasdakjiequwe123123123T-1
+2024-08-13 16:47:32 -- Checking participant awzzz6z6z6
+2024-08-13 16:47:33 -- Participant awzzz6z6z6 added
+2024-08-13 16:47:33 -- Session 12zmxncmxnc added
+2024-08-13 16:47:37 -- Participant awzzz6z6z6 leaning set to 3
+2024-08-13 16:47:37 -- Checking participant awzzz6z6z6
+2024-08-13 16:47:37 -- Checking answer awzzz6z6z6T1
+2024-08-13 16:47:37 -- Answer created for participant awzzz6z6z6 and session 12zmxncmxnc
+2024-08-13 16:49:08 -- Checking participant awdzz6z6z6
+2024-08-13 16:49:08 -- Participant awdzz6z6z6 added
+2024-08-13 16:49:08 -- Session 12zmxncmxncd added
+2024-08-13 16:49:13 -- Participant awdzz6z6z6 leaning set to 5
+2024-08-13 16:49:13 -- Checking participant awdzz6z6z6
+2024-08-13 16:49:13 -- Checking answer awdzz6z6z6T1
+2024-08-13 16:49:13 -- Answer created for participant awdzz6z6z6 and session 12zmxncmxncd
+2024-08-13 16:49:24 -- Answer awdzz6z6z6T1 set: {'q1': 2, 'q2': 3, 'q3': 2, 'q4': 2, 'timeSpent': 8}
+2024-08-13 16:49:24 -- Participant awdzz6z6z6 status set to tweet_2
+2024-08-13 16:49:24 -- Getting answer awdzz6z6z6T2 from Participant awdzz6z6z6
+2024-08-13 16:49:24 -- Answer created for participant awdzz6z6z6 and session 12zmxncmxncd
+2024-08-13 16:49:34 -- Checking participant aswdzz6z6z6
+2024-08-13 16:49:34 -- Participant aswdzz6z6z6 added
+2024-08-13 16:49:34 -- Session 12zmxsncmxncd added
+2024-08-13 16:49:37 -- Participant aswdzz6z6z6 leaning set to 7
+2024-08-13 16:49:37 -- Checking participant aswdzz6z6z6
+2024-08-13 16:49:38 -- Checking answer aswdzz6z6z6T1
+2024-08-13 16:49:38 -- Answer created for participant aswdzz6z6z6 and session 12zmxsncmxncd
