@@ -277,10 +277,10 @@ export default function Survey() {
             </div>
             <div id="text-areas">
                     <label htmlFor='text-1'>Texto 1:<br />
-                        <textarea id='text-1' readOnly value={text1}/>
+                        <textarea id='text-1' readOnly value={text1} rows={11} cols={53} />
                     </label>
                 <label htmlFor='text-2'>Texto 2:<br />
-                    <textarea id='text-2' readOnly value={text2}/>
+                    <textarea id='text-2' readOnly value={text2} rows={11} cols={53} />
                 </label>
             </div>
             <Questionnaire
