@@ -161,6 +161,14 @@ def get_participant_tweets(id):
         return cur.fetchone()
 
 
+def get_participant_group(id):
+    with get_connection() as con:
+        cur = con.cursor()
+        cur.execute("USE survey_db")
+        cur.execute("SELECT TreatmentGroup FROM Participants WHERE ParticipantId=%s", (id,))
+        return cur.fetchone()[0]
+
+
 def get_tweet(id):
     with get_connection() as con:
         cur = con.cursor()

@@ -46,6 +46,11 @@ def get_texts(id_1, id_2):
     return jsonify(db.get_texts(id_1, id_2))
 
 
+@app.route('/api/get_participant_group/<string:id>', methods=['GET'])
+def get_participant_group(id):
+    save_2_log(f'Getting participant {id} group')
+    return jsonify({'group':db.get_participant_group(id)})
+
 @app.route('/api/add_participant/', methods=['POST', 'GET'])
 def add_participant():
     id = request.json['pId']
