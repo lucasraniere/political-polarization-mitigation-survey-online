@@ -140,8 +140,12 @@ export default function Home() {
         <li>Qual dos dois textos você considera ter um maior grau de polarização?</li>
       </ol>
       <p>Você navegará entre as páginas utilizando os botões de navegação presentes na parte de baixo de cada uma das quatro páginas. Você só poderá prosseguir para os próximos textos após marcar sua opção de resposta para cada afirmação/questão.</p>
+      <h3>Consentimento</h3>
       <div className="div-p">
-        <strong>Você poderá ser exposto a textos que apresentem conteúdos e temas sensíveis. Prossiga para a próxima etapa apenas se concordar em participar do survey</strong>. Para iniciar o survey responda à questão abaixo e clique em seguir.
+        <strong>Você poderá ser exposto a textos que apresentem conteúdos e temas sensíveis.</strong> Antes de prosseguir, acesse o Formulário de Consentimento presente neste link: <a href="https://drive.google.com/file/d/13diSzU6gRZoAIctVAU07k3F0TGrhMPH4/view?usp=sharing" target="_blank">Formulário de Consentimento</a>.
+      </div>
+      <div>
+      Prossiga para a próxima etapa apenas se concordar em participar do survey. Caso você prossiga, estará atestando que leu o Formulário de Consentimento e consente em participar deste estudo. Você ainda poderá se remover do estudo a qualquer momento que desejar. Para iniciar o survey responda à questão abaixo e clique em seguir.
       </div>
       <div className="div-p">
         Qual das seguintes opções melhor define seu posicionamento político?
