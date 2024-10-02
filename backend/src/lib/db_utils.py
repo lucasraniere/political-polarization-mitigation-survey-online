@@ -24,7 +24,7 @@ TABLE_SQLS = {
         );''',
     'Tweets': '''CREATE TABLE IF NOT EXISTS Tweets (
         TweetId CHAR(4) NOT NULL,
-        TweetText VARCHAR(400) NOT NULL,
+        TweetText VARCHAR(4000) NOT NULL,
         PoliticalBias TINYINT(1) NOT NULL,
         TreatmentGroup VARCHAR(7) NOT NULL,
         Available TINYINT(1) NOT NULL,
@@ -35,7 +35,7 @@ TABLE_SQLS = {
     'RephrasedTweets': '''CREATE TABLE IF NOT EXISTS RephrasedTweets (
         RepTweetId CHAR(5) NOT NULL,
         FK_TweetId CHAR(4) NOT NULL,
-        RephrasedText VARCHAR(400) NOT NULL,
+        RephrasedText VARCHAR(4000) NOT NULL,
         TreatmentGroup VARCHAR(7) NOT NULL,
         PRIMARY KEY (RepTweetId),
         FOREIGN KEY (FK_TweetId) REFERENCES Tweets(TweetId)
