@@ -1526,3 +1526,26 @@
 2024-11-15 19:20:26 -- Participant 65b12168f1736582e24e18eb leaning set to 2
 2024-11-15 19:20:27 -- Checking answer 65b12168f1736582e24e18ebT-1
 2024-11-15 19:20:28 -- Answer created for participant 65b12168f1736582e24e18eb and session 67379ad2d5473813c7a5dd67
+2024-11-19 14:38:42 -- Checking participant 61557115001e33cd457a1230
+2024-11-19 14:38:42 -- Participant 61557115001e33cd457a1230 added
+2024-11-19 14:38:42 -- Session 673ca2e75dcbb2c5f8969dd1 added
+2024-11-19 14:40:53 -- Participant 61557115001e33cd457a1230 leaning set to 3
+2024-11-19 14:40:53 -- Checking participant 61557115001e33cd457a1230
+2024-11-19 14:40:53 -- Checking answer 61557115001e33cd457a1230T1
+2024-11-19 14:40:54 -- Answer created for participant 61557115001e33cd457a1230 and session 673ca2e75dcbb2c5f8969dd1
+2024-11-19 14:42:09 -- Answer 61557115001e33cd457a1230T1 set: {'q1': 4, 'q2': 3, 'q3': 5, 'q4': 1, 'timeSpent': 75}
+2024-11-19 14:42:09 -- Participant 61557115001e33cd457a1230 status set to tweet_2
+2024-11-19 14:42:09 -- Getting answer 61557115001e33cd457a1230T2 from Participant 61557115001e33cd457a1230
+2024-11-19 14:42:09 -- Answer created for participant 61557115001e33cd457a1230 and session 673ca2e75dcbb2c5f8969dd1
+2024-11-19 14:42:42 -- Answer 61557115001e33cd457a1230T2 set: {'q1': 1, 'q2': 1, 'q3': 5, 'q4': 3, 'timeSpent': 32}
+2024-11-19 14:42:42 -- Participant 61557115001e33cd457a1230 status set to tweet_3
+2024-11-19 14:42:42 -- Getting answer 61557115001e33cd457a1230T3 from Participant 61557115001e33cd457a1230
+2024-11-19 14:42:43 -- Answer created for participant 61557115001e33cd457a1230 and session 673ca2e75dcbb2c5f8969dd1
+2024-11-19 14:43:12 -- Answer 61557115001e33cd457a1230T3 set: {'q1': 1, 'q2': 5, 'q3': 2, 'q4': 2, 'timeSpent': 29}
+2024-11-19 14:43:13 -- Participant 61557115001e33cd457a1230 status set to tweet_4
+2024-11-19 14:43:13 -- Getting answer 61557115001e33cd457a1230T4 from Participant 61557115001e33cd457a1230
+2024-11-19 14:43:13 -- Answer created for participant 61557115001e33cd457a1230 and session 673ca2e75dcbb2c5f8969dd1
+2024-11-19 14:43:52 -- Answer 61557115001e33cd457a1230T4 set: {'q1': 1, 'q2': 4, 'q3': 2, 'q4': 2, 'timeSpent': 37}
+2024-11-19 14:43:52 -- Participant 61557115001e33cd457a1230 status set to answered
+2024-11-19 14:43:52 -- Getting participant 61557115001e33cd457a1230 group
+2024-11-19 14:43:55 -- Participant 61557115001e33cd457a1230 status set to finished
