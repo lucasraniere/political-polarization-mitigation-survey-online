@@ -1549,3 +1549,53 @@
 2024-11-19 14:43:52 -- Participant 61557115001e33cd457a1230 status set to answered
 2024-11-19 14:43:52 -- Getting participant 61557115001e33cd457a1230 group
 2024-11-19 14:43:55 -- Participant 61557115001e33cd457a1230 status set to finished
+2024-11-19 17:32:07 -- Checking participant 66e37f6a5a5359eb88ccd478
+2024-11-19 17:32:07 -- Participant 66e37f6a5a5359eb88ccd478 added
+2024-11-19 17:32:08 -- Session 673ccb79726e869341862390 added
+2024-11-19 17:33:39 -- Participant 66e37f6a5a5359eb88ccd478 leaning set to 6
+2024-11-19 17:33:40 -- Checking participant 66e37f6a5a5359eb88ccd478
+2024-11-19 17:33:41 -- Checking answer 66e37f6a5a5359eb88ccd478T1
+2024-11-19 17:33:44 -- Answer created for participant 66e37f6a5a5359eb88ccd478 and session 673ccb79726e869341862390
+2024-11-19 17:36:46 -- Answer 66e37f6a5a5359eb88ccd478T1 set: {'q1': 2, 'q2': 4, 'q3': 4, 'q4': 2, 'timeSpent': 174}
+2024-11-19 17:36:46 -- Participant 66e37f6a5a5359eb88ccd478 status set to tweet_2
+2024-11-19 17:36:46 -- Getting answer 66e37f6a5a5359eb88ccd478T2 from Participant 66e37f6a5a5359eb88ccd478
+2024-11-19 17:36:47 -- Answer created for participant 66e37f6a5a5359eb88ccd478 and session 673ccb79726e869341862390
+2024-11-19 17:37:35 -- Answer 66e37f6a5a5359eb88ccd478T2 set: {'q1': 3, 'q2': 3, 'q3': 4, 'q4': 1, 'timeSpent': 48}
+2024-11-19 17:37:36 -- Participant 66e37f6a5a5359eb88ccd478 status set to tweet_3
+2024-11-19 17:37:36 -- Getting answer 66e37f6a5a5359eb88ccd478T3 from Participant 66e37f6a5a5359eb88ccd478
+2024-11-19 17:37:36 -- Answer created for participant 66e37f6a5a5359eb88ccd478 and session 673ccb79726e869341862390
+2024-11-19 17:38:34 -- Answer 66e37f6a5a5359eb88ccd478T3 set: {'q1': 2, 'q2': 4, 'q3': 4, 'q4': 1, 'timeSpent': 57}
+2024-11-19 17:38:34 -- Participant 66e37f6a5a5359eb88ccd478 status set to tweet_4
+2024-11-19 17:38:34 -- Getting answer 66e37f6a5a5359eb88ccd478T4 from Participant 66e37f6a5a5359eb88ccd478
+2024-11-19 17:38:35 -- Answer created for participant 66e37f6a5a5359eb88ccd478 and session 673ccb79726e869341862390
+2024-11-19 17:38:37 -- Getting answer 66e37f6a5a5359eb88ccd478T3 from Participant 66e37f6a5a5359eb88ccd478
+2024-11-19 17:38:40 -- Answer 66e37f6a5a5359eb88ccd478T3 set: {'q1': 2, 'q2': 4, 'q3': 4, 'q4': 2, 'timeSpent': 60}
+2024-11-19 17:38:40 -- Participant 66e37f6a5a5359eb88ccd478 status set to tweet_4
+2024-11-19 17:38:40 -- Getting answer 66e37f6a5a5359eb88ccd478T4 from Participant 66e37f6a5a5359eb88ccd478
+2024-11-19 17:39:47 -- Answer 66e37f6a5a5359eb88ccd478T4 set: {'q1': 4, 'q2': 4, 'q3': 4, 'q4': 1, 'timeSpent': 66}
+2024-11-19 17:39:47 -- Participant 66e37f6a5a5359eb88ccd478 status set to answered
+2024-11-19 17:39:47 -- Getting participant 66e37f6a5a5359eb88ccd478 group
+2024-11-19 17:39:51 -- Participant 66e37f6a5a5359eb88ccd478 status set to finished
+2024-11-20 02:03:26 -- Checking participant 671fcf0fcd980b58b009f7dc
+2024-11-20 02:03:26 -- Participant 671fcf0fcd980b58b009f7dc added
+2024-11-20 02:03:27 -- Session 673d435ab5f796bb4da73ae9 added
+2024-11-20 02:04:09 -- Participant 671fcf0fcd980b58b009f7dc leaning set to 2
+2024-11-20 02:04:09 -- Checking participant 671fcf0fcd980b58b009f7dc
+2024-11-20 02:04:09 -- Checking answer 671fcf0fcd980b58b009f7dcT1
+2024-11-20 02:04:10 -- Answer created for participant 671fcf0fcd980b58b009f7dc and session 673d435ab5f796bb4da73ae9
+2024-11-20 02:05:38 -- Answer 671fcf0fcd980b58b009f7dcT1 set: {'q1': 4, 'q2': 4, 'q3': 4, 'q4': 3, 'timeSpent': 86}
+2024-11-20 02:05:38 -- Participant 671fcf0fcd980b58b009f7dc status set to tweet_2
+2024-11-20 02:05:38 -- Getting answer 671fcf0fcd980b58b009f7dcT2 from Participant 671fcf0fcd980b58b009f7dc
+2024-11-20 02:05:39 -- Answer created for participant 671fcf0fcd980b58b009f7dc and session 673d435ab5f796bb4da73ae9
+2024-11-20 02:06:33 -- Answer 671fcf0fcd980b58b009f7dcT2 set: {'q1': 4, 'q2': 4, 'q3': 4, 'q4': 3, 'timeSpent': 53}
+2024-11-20 02:06:34 -- Participant 671fcf0fcd980b58b009f7dc status set to tweet_3
+2024-11-20 02:06:34 -- Getting answer 671fcf0fcd980b58b009f7dcT3 from Participant 671fcf0fcd980b58b009f7dc
+2024-11-20 02:06:34 -- Answer created for participant 671fcf0fcd980b58b009f7dc and session 673d435ab5f796bb4da73ae9
+2024-11-20 02:07:06 -- Answer 671fcf0fcd980b58b009f7dcT3 set: {'q1': 4, 'q2': 4, 'q3': 4, 'q4': 3, 'timeSpent': 31}
+2024-11-20 02:07:06 -- Participant 671fcf0fcd980b58b009f7dc status set to tweet_4
+2024-11-20 02:07:07 -- Getting answer 671fcf0fcd980b58b009f7dcT4 from Participant 671fcf0fcd980b58b009f7dc
+2024-11-20 02:07:08 -- Answer created for participant 671fcf0fcd980b58b009f7dc and session 673d435ab5f796bb4da73ae9
+2024-11-20 02:07:26 -- Answer 671fcf0fcd980b58b009f7dcT4 set: {'q1': 4, 'q2': 4, 'q3': 4, 'q4': 3, 'timeSpent': 17}
+2024-11-20 02:07:26 -- Participant 671fcf0fcd980b58b009f7dc status set to answered
+2024-11-20 02:07:26 -- Getting participant 671fcf0fcd980b58b009f7dc group
+2024-11-20 02:07:29 -- Participant 671fcf0fcd980b58b009f7dc status set to finished
