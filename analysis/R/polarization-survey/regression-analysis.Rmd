@@ -1,0 +1,65 @@
+---
+title: Regression Analysis
+output: html_document
+---
+
+```{r include = FALSE}
+library(lmerTest)
+library(lme4)
+library(report)
+```
+
+```{r data}
+survey_data <- read.csv('../../../backend/data/database/survey_data.csv')
+sample(survey_data)
+```
+### **RQ1** Can LLMs mitigate textual polarization in social media texts?
+
+Logistic Regression for mitigation effect.
+
+```{r RQ1}
+m_rq1 = glmer(TreatedIsLessPolar ~ TreatmentGroup + ParticipantLeaning * TweetBias + (1 | FK_ParticipantId),
+              data=survey_data, family = "binomial")
+summary(m_rq1)
+```
+```{r}
+report(m_rq1)
+```
+## **RQ2** Can LLMs significantly reduce perceived polarization in social media texts?
+## **RQ3** Can LLMs mitigate textual polarization as good as humans?
+
+```{r}
+
+data_llm_vs_placebo <- subset(survey_data, TreatmentGroup %in% c("machine", "placebo"))
+model_rq2 <- lmer(DiffLikertTreatedOriginal ~ TreatmentGroup + TweetBias * ParticipantLeaning + 
+                  (1 | FK_ParticipantId), 
+                  data = data_llm_vs_placebo)
+summary(model_rq2)
+```
+```{r}
+report(model_rq2)
+```
+```{r}
+# Compare LLM vs. Human
+data_llm_vs_human <- subset(survey_data, TreatmentGroup %in% c("machine", "human"))
+model_rq3 <- lmer(DiffLikertTreatedOriginal ~ TreatmentGroup + TweetBias + ParticipantLeaning + 
+                  (1 | FK_ParticipantId), 
+                  data = data_llm_vs_human)
+summary(model_rq3)
+```
+```{r}
+report(model_rq3)
+```
+
+## **RQ4** Does political bias influence the participants' perception of textual polarization?
+
+```{r}
+model_rq4 <- lmer(OriginalLikertValue ~ TweetBias * ParticipantLeaning + 
+                  (1 | FK_ParticipantId), data = survey_data)
+summary(model_rq4)
+```
+
+```{r}
+report(model_rq4)
+```
+
