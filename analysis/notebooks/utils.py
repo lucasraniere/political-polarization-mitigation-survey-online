@@ -60,7 +60,6 @@ def get_tt_bias(id):
         return 'X'
 
 
-
 def get_treat_diff(row):
     text_1 = get_text_type(row['Text1'])
     text_2 = get_text_type(row['Text2'])
@@ -68,6 +67,28 @@ def get_treat_diff(row):
     if text_1 == 'treated' and text_2 == 'original':
         return int(row['AnswerQ1']) - int(row['AnswerQ2'])
     elif text_1 == 'original' and text_2 == 'treated':
-        return int(row['AnswerQ2']) - int(row['AnswerQ3'])
+        return int(row['AnswerQ2']) - int(row['AnswerQ1'])
     else:
         return 999
+
+def proc_participant_leaning(participant_leaning):
+    leanings = {
+        1: 'far-left',
+        2: 'left',
+        3:'center-left',
+        4:'center',
+        5:'center-right',
+        6:'right',
+        7:'far-right',
+        8: 'not informed'
+    }
+    return leanings[participant_leaning]
+
+
+def proc_tweet_bias(tweet_bias):
+    if tweet_bias == 'L':
+        return 'Left'
+    elif tweet_bias == 'R':
+        return 'Right'
+    else:
+        return 'Unknown'

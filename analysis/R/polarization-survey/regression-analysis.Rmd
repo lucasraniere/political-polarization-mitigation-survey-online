@@ -1,6 +1,8 @@
 ---
-title: Regression Analysis
-output: html_document
+title: "Regression Analysis"
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r include = FALSE}
@@ -11,45 +13,336 @@ library(report)
 
 ```{r data}
 survey_data <- read.csv('../../../backend/data/database/survey_data.csv')
-sample(survey_data)
+survey_data$TreatmentGroup <- as.factor(survey_data$TreatmentGroup)
+survey_data$TreatmentGroup <- relevel(survey_data$TreatmentGroup, ref = "machine")
+head(survey_data, n = 10)
 ```
+
+### General Result (all treatments)
+
+```{r General Results}
+m_general = glmer(TreatedIsLessPolar ~ TreatmentGroup + (1 | FK_ParticipantId),
+              data=survey_data, family = "binomial")
+summary(m_general)
+```
+
+```{r}
+report(m_general)
+```
+
+### Interpretation of Results
+
+We fitted a **generalized linear mixed model** (estimated using maximum likelihood and Laplace approximation) to predict whether the treated text was perceived as less polarized (`TreatedIsLessPolar`) based on the `TreatmentGroup`. The model included `FK_ParticipantId` as a random effect. The results are summarized as follows:
+
+#### Model Performance
+
+-   **AIC**: 283.8, indicating the relative quality of the model; lower values suggest a better fit.
+-   **BIC**: 298.3, providing a measure of fit penalized for the number of parameters.
+-   **Log-Likelihood**: -137.9, representing the likelihood of the observed data under the model.
+-   **Deviance**: 275.8, representing the likelihood of the observed data under the model.
+-   **Residual Degrees of Freedom**: 272
+-   The model's total explanatory power is substantial:
+    -   **Conditional R²**: 0.44 (includes random effects)
+    -   **Marginal R²**: 0.31 (fixed effects only)
+
+#### Fixed Effects
+
+The fixed effects correspond to the treatment groups, with the reference category being `machine`. The intercept represents the log-odds of the treated text being perceived as less polarized for the `machine` group.
+
+-   **Intercept (machine)**:
+    -   Estimate: 1.49 (log-odds)
+    -   95% CI: [0.81, 2.17]
+    -   **z = 4.31**, **p \< .001**
+    -   This indicates that, for the `machine` group, there is a statistically significant positive log-odds of the treated text being perceived as less polarized.
+-   **TreatmentGroup [human]**:
+    -   Estimate: 0.72 (log-odds)
+    -   95% CI: [-0.27, 1.70]
+    -   **z = 1.42**, **p = 0.156**
+    -   The effect of the `human` group is positive but not statistically significant, suggesting no clear evidence that the `human` group differs from the `machine` group in the perception of reduced polarization.
+-   **TreatmentGroup [placebo]**:
+    -   Estimate: -2.44 (log-odds)
+    -   95% CI: [-3.39, -1.50]
+    -   **z = -5.07**, **p \< .001**
+    -   The `placebo` group has a statistically significant and negative effect compared to the `machine` group, indicating that the treated text in the `placebo` group is much less likely to be perceived as less polarized.
+
+#### Random Effects
+
+-   **Participant Variance**: 0.73 (Std. Dev: 0.86)
+    -   This suggests moderate variability in participants' responses.
+
+#### Summary
+
+-   The `machine` group shows a significant positive log-odds of the treated text being perceived as less polarized.
+-   The `human` group does not significantly differ from the `machine` group in reducing perceived polarization.
+-   The `placebo` group is significantly less likely than the `machine` group to reduce perceived polarization.
+
+#### Notes
+
+-   Standardized estimates and 95% confidence intervals were calculated using a Wald z-distribution approximation.
+-   Random effects account for individual participant variability, which enhances the model's explanatory power.
+
 ### **RQ1** Can LLMs mitigate textual polarization in social media texts?
 
 Logistic Regression for mitigation effect.
 
 ```{r RQ1}
-m_rq1 = glmer(TreatedIsLessPolar ~ TreatmentGroup + ParticipantLeaning * TweetBias + (1 | FK_ParticipantId),
-              data=survey_data, family = "binomial")
-summary(m_rq1)
+machine_placebo <- subset(survey_data, TreatmentGroup %in% c("machine", "placebo"))
+model_rq1 = glmer(TreatedIsLessPolar ~ TreatmentGroup + (1 | FK_ParticipantId),
+              data=machine_placebo, family = "binomial")
+summary(model_rq1)
 ```
+
 ```{r}
-report(m_rq1)
+report(model_rq1)
 ```
+
+## **Model Interpretation**
+
+### **Model Overview**
+
+-   **Dependent Variable (`TreatedIsLessPolar`)**: A binary outcome (`0` or `1`), where `1` indicates that the treated text is perceived as less polarized than the original text.
+-   **Predictor (`TreatmentGroup`)**: Two groups (machine paraphrasing as the reference category, placebo).
+-   **Random Effects**:
+    -   A random intercept for each participant (`FK_ParticipantId`) accounts for individual variability in perceptions of polarization.
+
+------------------------------------------------------------------------
+
+### **Key Metrics**
+
+1.  **AIC and BIC**:
+    -   **AIC**: `216.0` and **BIC**: `225.7`. Lower values indicate better model fit when compared to alternative models.
+2.  **Log-Likelihood**: `-105.0`. Higher (less negative) values indicate better model fit.
+3.  **Deviance**: `210.0`. Lower values indicate a better fit.
+4.  **R² Values**:
+    -   **Conditional R²**: `0.41`, which represents the variance explained by both fixed and random effects.
+    -   **Marginal R²**: `0.27`, which represents the variance explained by the fixed effects alone.
+
+------------------------------------------------------------------------
+
+### **Random Effects**
+
+-   **Variance of Participant-Level Random Intercept**: `0.7648`, with a standard deviation of `0.8746`.
+    -   This indicates substantial variability in participants' baseline perceptions of polarization.
+
+------------------------------------------------------------------------
+
+### **Fixed Effects**
+
+#### **1. Intercept:**
+
+-   **Estimate**: `1.5035`
+-   **Interpretation**: When the treatment group is **machine paraphrasing** (the reference category), the log-odds of the treated text being perceived as less polarized are **1.50**.
+-   **Probability**: This corresponds to a probability of about **81.8%** (`plogis(1.5035)`).
+-   **Significance**: The intercept is highly significant (`p < 0.001`).
+
+#### **2. `TreatmentGroupplacebo`:**
+
+-   **Estimate**: `-2.4556`
+-   **Interpretation**: Compared to **machine paraphrasing**, the log-odds of the treated text being perceived as less polarized decrease significantly by **2.46** when the treatment is **placebo**.
+-   **Probability**: This corresponds to a probability of about **18.8%** (`plogis(1.5035 - 2.4556)`).
+-   **Significance**: The effect is highly significant (`p < 0.001`), indicating that the placebo treatment is substantially less effective than machine paraphrasing.
+
+------------------------------------------------------------------------
+
+### **Confidence Intervals**
+
+-   The **95% Confidence Interval** for each fixed effect provides the range of plausible values for the parameter estimates:
+    -   `Intercept`: `[0.80, 2.20]` (p \< 0.001) – very strong evidence for the baseline probability.
+    -   `TreatmentGroupplacebo`: `[-3.43, -1.48]` (p \< 0.001) – does not include zero, indicating a robust negative effect.
+
+------------------------------------------------------------------------
+
+### **Correlation of Fixed Effects**
+
+-   The correlation between the intercept and `TreatmentGroupplacebo` is `-0.779`, indicating a moderate negative relationship between these parameters.
+
+------------------------------------------------------------------------
+
+### **Summary of Findings**
+
+1.  **Treatment Effectiveness**:
+    -   **Machine paraphrasing** (LLM) is highly effective at mitigating perceived polarization, with an estimated probability of **81.8%** for the treated text being seen as less polarized than the original text.
+    -   **Placebo** is significantly less effective than machine paraphrasing, with a much lower probability of **18.8%**.
+2.  **Participant-Level Variability**:
+    -   There is substantial variability in how participants perceive the polarization of treated texts, as shown by the random intercept variance.
+3.  **Model Fit**:
+    -   Fixed effects explain **27%** of the variance (marginal R²), and the full model explains **41%** (conditional R²), indicating good explanatory power.
+
+------------------------------------------------------------------------
+
 ## **RQ2** Can LLMs significantly reduce perceived polarization in social media texts?
-## **RQ3** Can LLMs mitigate textual polarization as good as humans?
 
 ```{r}
-
-data_llm_vs_placebo <- subset(survey_data, TreatmentGroup %in% c("machine", "placebo"))
-model_rq2 <- lmer(DiffLikertTreatedOriginal ~ TreatmentGroup + TweetBias * ParticipantLeaning + 
-                  (1 | FK_ParticipantId), 
-                  data = data_llm_vs_placebo)
+#model_rq2 <- lmer(DiffLikertTreatedOriginal ~ TreatmentGroup + TweetBias * ParticipantLeaning + 
+#                  (1 | FK_ParticipantId), 
+#                  data = machine_placebo)
+model_rq2 <- lmer(DiffLikertTreatedOriginal ~ TreatmentGroup +(1 | FK_ParticipantId), 
+                  data = machine_placebo)
 summary(model_rq2)
 ```
+
 ```{r}
 report(model_rq2)
 ```
+
+## **Model Interpretation**
+
+### **Model Overview**
+
+-   **Dependent Variable (`DiffLikertTreatedOriginal`)**: The difference in polarization scores between the treated and original texts, measured on a Likert scale.
+-   **Predictor (`TreatmentGroup`)**: Two groups (machine paraphrasing as the reference category, placebo).
+-   **Random Effects**:
+    -   A random intercept for each participant (`FK_ParticipantId`) accounts for individual variability in score differences.
+
+------------------------------------------------------------------------
+
+### **Key Metrics**
+
+1.  **REML Criterion**: `591.8`. A lower REML value suggests a better model fit when comparing similar models.
+2.  **Residual Standard Deviation**: `1.06`, indicating the average deviation of observed values from predicted values after accounting for fixed and random effects.
+3.  **R² Values**:
+    -   **Conditional R²**: `0.46`, representing the variance explained by both fixed and random effects.
+    -   **Marginal R²**: `0.32`, representing the variance explained by the fixed effects alone.
+
+------------------------------------------------------------------------
+
+### **Random Effects**
+
+-   **Variance of Participant-Level Random Intercept**: `0.2927`, with a standard deviation of `0.5411`.
+    -   This suggests moderate variability in participants' baseline differences in polarization scores.
+-   **Residual Variance**: `1.1312`, with a standard deviation of `1.0636`.
+
+------------------------------------------------------------------------
+
+### **Fixed Effects**
+
+#### **1. Intercept:**
+
+-   **Estimate**: `-1.8021`
+-   **Interpretation**: When the treatment group is **machine paraphrasing** (the reference category), the mean difference in Likert scale polarization scores is **-1.80**.
+    -   This negative value indicates that machine paraphrasing significantly reduces polarization scores compared to the original texts.
+-   **Significance**: Highly significant (`p < 0.001`).
+
+#### **2. `TreatmentGroupplacebo`:**
+
+-   **Estimate**: `1.6173`
+-   **Interpretation**: Compared to **machine paraphrasing**, the mean difference in polarization scores increases by **1.62** when the treatment is **placebo**.
+    -   This positive value suggests that placebo treatment results in less reduction (or even an increase) in polarization compared to machine paraphrasing.
+-   **Significance**: Highly significant (`p < 0.001`).
+
+------------------------------------------------------------------------
+
+### **Confidence Intervals**
+
+-   The **95% Confidence Interval** for each fixed effect provides the range of plausible values for the parameter estimates:
+    -   `Intercept`: `[-2.11, -1.50]` – consistently negative, indicating a robust reduction in polarization scores for machine paraphrasing.
+    -   `TreatmentGroupplacebo`: `[1.18, 2.05]` – consistently positive, confirming placebo’s relative ineffectiveness compared to machine paraphrasing.
+
+------------------------------------------------------------------------
+
+### **Correlation of Fixed Effects**
+
+-   The correlation between the intercept and `TreatmentGroupplacebo` is `-0.700`, indicating a moderate negative relationship.
+
+------------------------------------------------------------------------
+
+### **Summary of Findings**
+
+1.  **Effectiveness of Treatments**:
+    -   **Machine paraphrasing** significantly reduces polarization scores, with a mean reduction of **1.80 points** on the Likert scale.
+    -   **Placebo** results in significantly less reduction (and possibly an increase) in polarization scores compared to machine paraphrasing, with a mean increase of **1.62 points** relative to the machine treatment.
+2.  **Participant-Level Variability**:
+    -   There is moderate variability in baseline score differences across participants, as indicated by the random effects.
+3.  **Model Fit**:
+    -   Fixed effects explain **32%** of the variance in polarization score differences (marginal R²), while the full model explains **46%** (conditional R²), suggesting good explanatory power.
+
+------------------------------------------------------------------------
+
+## **RQ3** Can LLMs mitigate textual polarization as good as humans?
+
 ```{r}
 # Compare LLM vs. Human
-data_llm_vs_human <- subset(survey_data, TreatmentGroup %in% c("machine", "human"))
-model_rq3 <- lmer(DiffLikertTreatedOriginal ~ TreatmentGroup + TweetBias + ParticipantLeaning + 
-                  (1 | FK_ParticipantId), 
-                  data = data_llm_vs_human)
+machine_human <- subset(survey_data, TreatmentGroup %in% c("machine", "human"))
+model_rq3 <- lmer(DiffLikertTreatedOriginal ~ TreatmentGroup + (1 | FK_ParticipantId), 
+                  data = machine_human)
 summary(model_rq3)
 ```
+
 ```{r}
 report(model_rq3)
 ```
+
+## **Model Interpretation**
+
+### **Model Overview**
+
+-   **Dependent Variable (`DiffLikertTreatedOriginal`)**: The difference in polarization scores between the treated and original texts, measured on a Likert scale.
+-   **Predictor (`TreatmentGroup`)**: Two groups (machine paraphrasing as the reference category, human paraphrasing).
+-   **Random Effects**:
+    -   A random intercept for each participant (`FK_ParticipantId`) accounts for individual variability in score differences.
+
+------------------------------------------------------------------------
+
+### **Key Metrics**
+
+1.  **REML Criterion**: `671.7`. A lower REML value suggests a better model fit when comparing similar models.
+2.  **Residual Standard Deviation**: `1.43`, indicating the average deviation of observed values from predicted values after accounting for fixed and random effects.
+3.  **R² Values**:
+    -   **Conditional R²**: `0.10`, representing the variance explained by both fixed and random effects.
+    -   **Marginal R²**: `0.006`, representing the variance explained by the fixed effects alone.
+
+------------------------------------------------------------------------
+
+### **Random Effects**
+
+-   **Variance of Participant-Level Random Intercept**: `0.208`, with a standard deviation of `0.4561`.
+    -   This suggests low variability in participants' baseline differences in polarization scores.
+-   **Residual Variance**: `2.056`, with a standard deviation of `1.4339`.
+
+------------------------------------------------------------------------
+
+### **Fixed Effects**
+
+#### **1. Intercept:**
+
+-   **Estimate**: `-1.8021`
+-   **Interpretation**: When the treatment group is **machine paraphrasing** (the reference category), the mean difference in Likert scale polarization scores is **-1.80**.
+    -   This negative value indicates that machine paraphrasing significantly reduces polarization scores compared to the original texts.
+-   **Significance**: Highly significant (`p < 0.001`).
+
+#### **2. `TreatmentGrouphuman`:**
+
+-   **Estimate**: `0.2339`
+-   **Interpretation**: Compared to **machine paraphrasing**, the mean difference in polarization scores increases slightly (by **0.23**) when the treatment is **human paraphrasing**.
+    -   However, this effect is **not statistically significant** (`p = 0.356`), suggesting no meaningful difference between the effects of human and machine paraphrasing.
+
+------------------------------------------------------------------------
+
+### **Confidence Intervals**
+
+-   The **95% Confidence Interval** for each fixed effect provides the range of plausible values for the parameter estimates:
+    -   `Intercept`: `[-2.14, -1.46]` – consistently negative, indicating a robust reduction in polarization scores for machine paraphrasing.
+    -   `TreatmentGrouphuman`: `[-0.26, 0.73]` – includes zero, confirming the non-significance of the effect.
+
+------------------------------------------------------------------------
+
+### **Correlation of Fixed Effects**
+
+-   The correlation between the intercept and `TreatmentGrouphuman` is `-0.692`, indicating a moderate negative relationship.
+
+------------------------------------------------------------------------
+
+### **Summary of Findings**
+
+1.  **Effectiveness of Treatments**:
+    -   **Machine paraphrasing** significantly reduces polarization scores, with a mean reduction of **1.80 points** on the Likert scale.
+    -   **Human paraphrasing** shows a slightly lesser reduction in polarization scores compared to machine paraphrasing, but the difference (**0.23 points**) is not statistically significant.
+2.  **Participant-Level Variability**:
+    -   There is low variability in baseline score differences across participants, as indicated by the random effects.
+3.  **Model Fit**:
+    -   Fixed effects explain only **0.6%** of the variance in polarization score differences (marginal R²), while the full model explains **10%** (conditional R²), suggesting weak explanatory power.
+
+------------------------------------------------------------------------
 
 ## **RQ4** Does political bias influence the participants' perception of textual polarization?
 
@@ -63,3 +356,168 @@ summary(model_rq4)
 report(model_rq4)
 ```
 
+## **Model Interpretation**
+
+### **Model Overview**
+
+-   **Dependent Variable (`OriginalLikertValue`)**: Participants' polarization ratings of original tweets on a Likert scale.
+-   **Predictors**:
+    -   **TweetBias**: Political bias of the tweet (Left vs. Right).
+    -   **ParticipantLeaning**: Participants' political orientation (seven categories: center, center-left, center-right, far-left, far-right, left, not informed, and right).
+    -   **Interaction**: Between TweetBias and ParticipantLeaning.
+-   **Random Effects**:
+    -   A random intercept for each participant (`FK_ParticipantId`) accounts for individual differences in baseline polarization ratings.
+
+------------------------------------------------------------------------
+
+### **Key Metrics**
+
+1.  **REML Criterion**: `744.8`. A lower REML value suggests a better fit when comparing similar models.
+2.  **Residual Standard Deviation**: `0.89`, indicating the average deviation of observed values from predicted values after accounting for fixed and random effects.
+3.  **R² Values**:
+    -   **Conditional R²**: `0.19`, representing the variance explained by both fixed and random effects.
+    -   **Marginal R²**: `0.08`, representing the variance explained by fixed effects alone.
+
+------------------------------------------------------------------------
+
+### **Random Effects**
+
+-   **Variance of Participant-Level Random Intercept**: `0.11`, with a standard deviation of `0.33`.
+    -   Suggests moderate variability in participants' baseline ratings of polarization.
+-   **Residual Variance**: `0.80`, with a standard deviation of `0.89`.
+
+------------------------------------------------------------------------
+
+### **Fixed Effects**
+
+#### **1. Intercept:**
+
+-   **Estimate**: `4.25`
+-   **Interpretation**: For tweets with **Left bias** and participants with **center** political orientation, the mean polarization score is **4.25**.
+-   **Significance**: Highly significant (`p < 0.001`).
+
+#### **2. Main Effects**:
+
+-   **TweetBias (Right)**:
+    -   **Estimate**: `-0.25`
+    -   Interpretation: Tweets with a **Right bias** are rated slightly less polarized than Left-biased tweets, but this difference is **not significant** (`p = 0.493`).
+-   **ParticipantLeaning**:
+    -   Most ParticipantLeaning categories show **non-significant effects**, indicating their baseline polarization ratings are not markedly different from the **center** orientation.
+    -   **Exception**: Participants with a **far-left orientation** rate tweets as significantly less polarized compared to the center group (beta = `-1.25`, `p = 0.034`).
+
+#### **3. Interaction Effects**:
+
+-   **TweetBias × ParticipantLeaning**:
+    -   **Significant Interaction**:
+        -   **TweetBias [Right] × ParticipantLeaning [far-left]**: Far-left participants perceive Right-biased tweets as significantly more polarized compared to Left-biased tweets (beta = `2.00`, `p = 0.007`).
+    -   **Marginally Significant Interaction**:
+        -   **TweetBias [Right] × ParticipantLeaning [far-right]**: Far-right participants perceive Right-biased tweets as less polarized than Left-biased tweets, but the effect is marginally significant (beta = `-1.75`, `p = 0.071`).
+    -   Other interaction terms are **not significant**, indicating no notable differences between Left and Right tweet bias ratings across other participant orientations.
+
+------------------------------------------------------------------------
+
+### **Confidence Intervals**
+
+-   The **95% Confidence Interval** for each fixed effect indicates plausible parameter values:
+    -   **Intercept**: `[3.68, 4.82]` – robustly positive.
+    -   **TweetBias (Right)**: `[-0.97, 0.47]` – includes zero, confirming non-significance.
+    -   **ParticipantLeaning (far-left)**: `[-2.40, -0.10]` – significant, entirely negative.
+    -   **Interaction (TweetBias × ParticipantLeaning [far-left])**: `[0.56, 3.44]` – significant, entirely positive.
+
+------------------------------------------------------------------------
+
+### **Summary of Findings**
+
+1.  **Main Effects**:
+    -   **TweetBias**: No significant difference in polarization ratings between Left and Right-biased tweets on average.
+    -   **ParticipantLeaning**: Far-left participants generally rate tweets as less polarized compared to the center group.
+2.  **Interaction Effects**:
+    -   Far-left participants perceive Right-biased tweets as significantly more polarized than Left-biased tweets.
+    -   Far-right participants tend to perceive Right-biased tweets as less polarized, but the effect is marginally significant.
+3.  **Participant-Level Variability**:
+    -   Moderate variability in participants' baseline ratings, as captured by the random effects.
+4.  **Model Fit**:
+    -   Fixed effects explain **8%** of the variance in polarization ratings, and the full model explains **19%**, suggesting moderate explanatory power.
+
+------------------------------------------------------------------------
+
+### Textual Cohesion
+
+```{r}
+survey_data$IsCoherent <- ifelse(survey_data$AnswerQ3 > 3, 1, 0)
+model_cohesion <- lmer(IsCoherent ~ TreatmentGroup + (1 | FK_ParticipantId),
+                       data=survey_data)
+summary(model_cohesion)
+```
+
+```{r}
+report(model_cohesion)
+```
+
+## **Model Interpretation**
+
+### **Model Overview**
+
+-   **Dependent Variable (`IsCoherent`)**: Perceived coherence of the text, measured on a scale from 0 to 1.
+-   **Predictor**:
+    -   `TreatmentGroup`: Three levels—**machine**, **human**, and **placebo**.
+-   **Random Effects**:
+    -   Random intercept for participants (`FK_ParticipantId`) accounts for individual variability in coherence ratings.
+
+------------------------------------------------------------------------
+
+### **Key Metrics**
+
+1.  **REML Criterion**: `255.8`. This value indicates model fit; lower values suggest a better fit.
+2.  **Residual Standard Deviation**: `0.35`, indicating the spread of residuals around the predicted values.
+3.  **R² Values**:
+    -   **Conditional R²**: `0.23`, meaning the model explains 23% of the variance in perceived coherence.
+    -   **Marginal R²**: `0.06`, indicating that fixed effects alone explain only 6% of the variance.
+
+------------------------------------------------------------------------
+
+### **Random Effects**
+
+-   **Participant-Level Variance**: `0.03` (SD = `0.16`), showing that individual differences in perceived coherence are relatively low.
+-   **Residual Variance**: `0.12` (SD = `0.35`), indicating some unexplained variability in the data.
+
+------------------------------------------------------------------------
+
+### **Fixed Effects**
+
+#### **1. Intercept**:
+
+-   **Estimate**: `0.80`
+-   **Interpretation**: The mean coherence score for the **machine** treatment group.
+-   **Significance**: Highly significant (`p < 0.001`).
+
+#### **2. TreatmentGroup Effects**:
+
+-   **`TreatmentGroup` [human]**:
+    -   **Estimate**: `-0.11` (non-significant, `p = 0.129`).
+    -   Interpretation: The **human** treatment group’s coherence score is slightly lower than the **machine** treatment group, but the difference is not statistically significant.
+-   **`TreatmentGroup` [placebo]**:
+    -   **Estimate**: `0.12` (marginally significant, `p = 0.086`).
+    -   Interpretation: The **placebo** treatment group shows a small positive effect on coherence compared to the **machine** group, but this effect is marginally non-significant.
+
+------------------------------------------------------------------------
+
+### **Confidence Intervals**
+
+-   **95% CIs** for parameter estimates confirm the non-significance of:
+    -   The effect of `TreatmentGroup` [human] (`[-0.25, 0.03]`).
+    -   The effect of `TreatmentGroup` [placebo] (`[-0.02, 0.26]`).
+
+------------------------------------------------------------------------
+
+### **Summary of Findings**
+
+1.  **Baseline Perception of Coherence**:
+    -   The **machine** treatment group has an average coherence rating of **0.80**.
+2.  **Impact of Treatment Groups**:
+    -   **Human** and **placebo** treatments do not show significant effects on perceived coherence compared to the **machine** treatment.
+    -   The **placebo** treatment marginally increases perceived coherence, but this result is not statistically significant at the conventional 0.05 level.
+3.  **Model Fit**:
+    -   Fixed effects explain a modest portion of the variance in coherence ratings, suggesting other factors may contribute to perceived coherence.
+
+------------------------------------------------------------------------
