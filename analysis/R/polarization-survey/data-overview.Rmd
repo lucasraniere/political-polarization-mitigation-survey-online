@@ -9,35 +9,50 @@ output:
 library(tidyverse)
 library(ggplot2)
 library(plotly)
+library(dplyr)
 ```
 
 ```{r data loadig}
 survey_data <- read.csv('../../../backend/data/database/survey_data.csv')
-dim(survey_data)
+#dim(survey_data)
 glimpse(survey_data)
 ```
 ```{r treatment groups count}
-#counts_df <- as.data.frame(table(survey_data$TreatmentGroup))
-#colnames(counts_df) <- c("TreatmentGroup", "Count")
-#print(counts_df)
-```
-
-
-```{r participant political leaning count}
-counts_df <- as.data.frame(table(survey_data$ParticipantLeaning))
-colnames(counts_df) <- c("ParticipantLeaning", "Count")
-print(counts_df)
+participants_data <- survey_data %>% distinct(FK_ParticipantId, ParticipantLeaning, TreatmentGroup)
+glimpse(participants_data)
 ```
 
 ```{r participant leaning plot}
+# Use the Okabe-Ito color-blind-friendly palette
+okabe_ito_palette <- c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
 
+# Plot with color-blind-friendly colors
+participant_leaning = ggplot(leaning_fact, aes(x = ParticipantLeaning, fill = TreatmentGroup)) +
+  geom_bar(position = "stack", color = "black", width = 0.5) +
+  geom_text(
+    aes(label = after_stat(count)),
+    stat = "count",
+    position = position_stack(vjust = 0.5), # Places the label inside each stacked segment
+    size = 3
+  ) +
+  scale_fill_manual(values = okabe_ito_palette) + # Apply the Okabe-Ito palette
+  labs(title = "Participant Leaning Count by Treatment Group",
+       x = "Participant Leaning",
+       y = "Count",
+       fill = "Treatment Group") +
+  theme_grey()
 
+participant_leaning
+
+ggsave("participant_leaning_count.png", 
+      plot = participant_leaning,   # Use the last plot created
+      device = "png",       # Specify PNG format
+      width = 8,            # Set width of the PNG (in inches)
+      height = 5,           # Set height of the PNG (in inches)
+      units = "in",         # Units for width and height
+      bg = "white",
+      dpi = 300)
 ```
-```{r}
-head(counts_df)
-```
-
-
 
 
 
