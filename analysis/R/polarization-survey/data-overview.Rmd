@@ -1,0 +1,46 @@
+---
+title: "Data Overview Analysis"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r include = False}
+library(tidyverse)
+library(ggplot2)
+library(plotly)
+```
+
+```{r data loadig}
+survey_data <- read.csv('../../../backend/data/database/survey_data.csv')
+dim(survey_data)
+glimpse(survey_data)
+```
+```{r treatment groups count}
+#counts_df <- as.data.frame(table(survey_data$TreatmentGroup))
+#colnames(counts_df) <- c("TreatmentGroup", "Count")
+#print(counts_df)
+```
+
+
+```{r participant political leaning count}
+counts_df <- as.data.frame(table(survey_data$ParticipantLeaning))
+colnames(counts_df) <- c("ParticipantLeaning", "Count")
+print(counts_df)
+```
+
+```{r participant leaning plot}
+
+
+```
+```{r}
+head(counts_df)
+```
+
+
+
+
+
+
+
+
