@@ -17,6 +17,7 @@ survey_data <- read.csv('../../../backend/data/database/survey_data.csv')
 #dim(survey_data)
 glimpse(survey_data)
 ```
+
 ```{r treatment groups count}
 participants_data <- survey_data %>% distinct(FK_ParticipantId, ParticipantLeaning, TreatmentGroup)
 glimpse(participants_data)
@@ -53,6 +54,34 @@ ggsave("participant_leaning_count.png",
       bg = "white",
       dpi = 300)
 ```
+```{r}
+box_plot = ggplot(survey_data, aes(x = TreatmentGroup, y = DiffLikertTreatedOriginal, fill = TreatmentGroup)) +
+  geom_boxplot() +
+  labs(title = "Boxplot of DiffLikertTreatedOriginal by Treatment Group",
+       x = "Treatment Group",
+       y = "DiffLikertTreatedOriginal") +
+  scale_fill_manual(values = c("human" = "#E69F00", "machine" = "#56B4E9", "placebo" = "#009E73")) +  # Optional custom colors
+  theme_grey() +
+  theme(
+    plot.title = element_text(size = 18, face = "bold"),   # Larger title
+    axis.title = element_text(size = 14),                  # Larger axis titles
+    axis.text = element_text(size = 12),                   # Larger axis labels
+    legend.title = element_text(size = 14),                # Larger legend title
+    legend.text = element_text(size = 12)                  # Larger legend text
+  )
+box_plot
+```
+```{r}
+ggsave("boxplot_diff_likert_treated_original.pdf", 
+       plot = box_plot,  # Use the last plot created
+       device = "pdf",      # Specify PDF format
+       width = 8,           # Set width of the PDF (in inches)
+       height = 6,          # Set height of the PDF (in inches)
+       units = "in",        # Units for width and height
+       dpi = 300)
+```
+
+
 
 
 
