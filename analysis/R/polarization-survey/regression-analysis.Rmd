@@ -278,7 +278,7 @@ report(model_rq2)
 # Compare LLM vs. Human
 machine_human <- subset(survey_data, TreatmentGroup %in% c("machine", "human"))
 model_rq3 <- lmer(DiffLikertTreatedOriginal ~ TreatmentGroup + (1 | FK_ParticipantId), 
-                  data = machine_human)
+                  data = survey_data)
 summary(model_rq3)
 
 report(model_rq3)
@@ -289,7 +289,7 @@ report(model_rq3)
 ### **Model Overview**
 
 -   **Dependent Variable (DiffLikertTreatedOriginal)**: The difference in polarization scores between the treated and original texts, measured on a Likert scale.
--   **Predictor (TreatmentGroup)**: Two treatment groups: **machine paraphrasing** (reference category) and **human paraphrasing**.
+-   **Predictor (TreatmentGroup)**: Two groups (machine paraphrasing as the reference category, human paraphrasing).
 -   **Random Effects**:
     -   A random intercept for each participant (FK_ParticipantId) accounts for individual variability in score differences.
 
@@ -297,19 +297,19 @@ report(model_rq3)
 
 ### **Key Metrics**
 
-1.  **REML Criterion**: 713.9. A lower REML value suggests a better model fit when comparing similar models.
-2.  **Residual Standard Deviation**: 1.4148, indicating the average deviation of observed values from predicted values after accounting for fixed and random effects.
+1.  **REML Criterion**: 977.6. A lower REML value suggests a better model fit when comparing similar models.
+2.  **Residual Standard Deviation**: 1.2210, indicating the average deviation of observed values from predicted values after accounting for fixed and random effects.
 3.  **R² Values**:
-    -   **Conditional R²**: 0.12, representing the variance explained by both fixed and random effects.
-    -   **Marginal R²**: 0.0039, representing the variance explained by the fixed effects alone.
+    -   **Conditional R²**: 0.31, representing the variance explained by both fixed and random effects.
+    -   **Marginal R²**: 0.22, representing the variance explained by the fixed effects alone.
 
 ------------------------------------------------------------------------
 
 ### **Random Effects**
 
--   **Variance of Participant-Level Random Intercept**: 0.2588, with a standard deviation of 0.5087.
-    -   This indicates low variability in participants' baseline differences in polarization scores.
--   **Residual Variance**: 2.0017, with a standard deviation of 1.4148.
+-   **Variance of Participant-Level Random Intercept**: 0.1861, with a standard deviation of 0.4314.
+    -   This suggests some variability in participants' baseline differences in polarization scores.
+-   **Residual Variance**: 1.4909, with a standard deviation of 1.2210.
 
 ------------------------------------------------------------------------
 
@@ -318,41 +318,50 @@ report(model_rq3)
 #### **1. Intercept:**
 
 -   **Estimate**: -1.7400
--   **Interpretation**: When the treatment group is **machine paraphrasing** (reference category), the mean difference in Likert scale polarization scores is **-1.74**.
+-   **Interpretation**: When the treatment group is **machine paraphrasing** (the reference category), the mean difference in Likert scale polarization scores is **-1.74**.
     -   This negative value indicates that machine paraphrasing significantly reduces polarization scores compared to the original texts.
 -   **Significance**: Highly significant (p \< 0.001).
 
 #### **2. TreatmentGrouphuman:**
 
 -   **Estimate**: 0.1879
--   **Interpretation**: Compared to **machine paraphrasing**, the mean difference in polarization scores increases slightly (by **0.19**) when the treatment is **human paraphrasing**.
-    -   However, this effect is **not statistically significant** (p = 0.451), suggesting no meaningful difference between machine and human paraphrasing in reducing polarization.
+-   **Interpretation**: Compared to **machine paraphrasing**, the mean difference in polarization scores increases slightly (by **+0.19**) when the treatment is **human paraphrasing**.
+    -   However, this effect is **not statistically significant** (p = 0.382), suggesting no meaningful difference between the effects of human paraphrasing and machine paraphrasing.
+
+#### **3. TreatmentGroupplacebo:**
+
+-   **Estimate**: 1.5629
+-   **Interpretation**: Compared to **machine paraphrasing**, the mean difference in polarization scores increases significantly (by **+1.56**) when the treatment is **placebo**.
+    -   This effect is **highly significant** (p \< 0.001), indicating that the placebo treatment leads to a large increase in polarization scores compared to machine paraphrasing.
 
 ------------------------------------------------------------------------
 
 ### **Confidence Intervals**
 
 -   The **95% Confidence Interval** for each fixed effect provides the range of plausible values for the parameter estimates:
-    -   Intercept: [-2.08, -1.40] – consistently negative, indicating a robust reduction in polarization scores for machine paraphrasing.
-    -   TreatmentGrouphuman: [-0.30, 0.68] – includes zero, confirming the non-significance of the effect.
+    -   Intercept: [-2.03, -1.45] – consistently negative, indicating a robust reduction in polarization scores for machine paraphrasing.
+    -   TreatmentGrouphuman: [-0.23, 0.61] – includes zero, confirming the non-significance of the effect.
+    -   TreatmentGroupplacebo: [1.14, 1.98] – consistently positive, indicating a robust increase in polarization scores for placebo.
 
 ------------------------------------------------------------------------
 
 ### **Correlation of Fixed Effects**
 
--   The correlation between the intercept and **TreatmentGrouphuman** is -0.700, indicating a moderate negative relationship.
+-   The correlation between the intercept and TreatmentGrouphuman is -0.700, indicating a moderate negative relationship.
+-   The correlation between the intercept and TreatmentGroupplacebo is -0.700, also indicating a moderate negative relationship.
 
 ------------------------------------------------------------------------
 
 ### **Summary of Findings**
 
 1.  **Effectiveness of Treatments**:
-    -   **Machine paraphrasing** significantly reduces polarization scores, with a mean reduction of **1.74 points** on the Likert scale.
-    -   **Human paraphrasing** does not significantly reduce polarization scores compared to machine paraphrasing, with a non-significant mean increase of **0.19 points**.
+    -   **Machine paraphrasing** significantly reduces polarization scores with a mean reduction of **-1.74 points** on the Likert scale.
+    -   **Human paraphrasing** has a slightly positive but **non-significant** effect on polarization scores (an increase of **+0.19 points**).
+    -   **Placebo** treatment leads to a **significant** and substantial increase in polarization scores (an increase of **+1.56 points**).
 2.  **Participant-Level Variability**:
-    -   There is low variability in baseline score differences across participants, as indicated by the random effects.
+    -   There is **some variability** in baseline score differences across participants, as indicated by the random effects.
 3.  **Model Fit**:
-    -   Fixed effects explain only **0.39%** of the variance in polarization score differences (marginal R²), while the full model explains **12%** (conditional R²), suggesting weak explanatory power.
+    -   The fixed effects explain **22%** of the variance in polarization score differences (marginal R²), while the full model explains **31%** (conditional R²), suggesting moderate explanatory power.
 
 ------------------------------------------------------------------------
 
@@ -463,55 +472,81 @@ summary(model_cohesion)
 report(model_cohesion)
 ```
 
-## Linear Mixed Model Results: Predicting **IsCoherent** with **TreatmentGroup**
+## **Model Interpretation**
 
-### Model Formula: IsCoherent \~ TreatmentGroup + (1 \| FK_ParticipantId)
+### **Model Overview**
 
--   **Random Effect**: **FK_ParticipantId** (participant-level random intercept).
--   **Fixed Effect**: **TreatmentGroup** as a predictor of **IsCoherent**.
+-   **Dependent Variable (IsCoherent)**: A measure of text coherence, potentially scored on a Likert scale.
+-   **Predictor (TreatmentGroup)**: Three groups (machine paraphrasing as the reference category, human paraphrasing, and placebo).
+-   **Random Effects**:
+    -   A random intercept for each participant (FK_ParticipantId) accounts for individual variability in coherence ratings.
 
-### Model Fit:
+------------------------------------------------------------------------
 
--   **REML criterion at convergence**: 270.1
--   **Scaled Residuals**:
-    -   Min: -2.40, 1st Quartile: 0.13, Median: 0.31, 3rd Quartile: 0.46, Max: 1.43
--   **Number of Observations**: 292
--   **Number of Groups**: 73 participants
+### **Key Metrics**
 
-### Random Effects:
+1.  **REML Criterion**: 270.1. A lower REML value suggests a better model fit when comparing similar models.
+2.  **Residual Standard Deviation**: 0.3495, indicating the average deviation of observed values from predicted values after accounting for fixed and random effects.
+3.  **R² Values**:
+    -   **Conditional R²**: 0.21, representing the variance explained by both fixed and random effects.
+    -   **Marginal R²**: 0.04, representing the variance explained by the fixed effects alone.
 
--   **Participant-Level Intercept**:
-    -   Variance: 0.02657
-    -   Std. Dev.: 0.163
--   **Residual**:
-    -   Variance: 0.12215
-    -   Std. Dev.: 0.3495
+------------------------------------------------------------------------
 
-### Fixed Effects:
+### **Random Effects**
 
-1.  **Intercept (Machine Group)**:
-    -   **Estimate**: 0.80
-    -   **95% CI**: [0.71, 0.89]
-    -   **t-value**: 16.74, **p** \< 0.001
-    -   Interpretation: The baseline coherence score for the **machine** group is statistically significant.
-2.  **Human Treatment**:
-    -   **Estimate**: -0.08
-    -   **95% CI**: [-0.22, 0.05]
-    -   **t-value**: -1.19, **p** = 0.238
-    -   Interpretation: No significant difference between **human** and **machine** groups.
-3.  **Placebo Treatment**:
-    -   **Estimate**: 0.12
-    -   **95% CI**: [-0.02, 0.25]
-    -   **t-value**: 1.71, **p** = 0.089
-    -   Interpretation: The **placebo treatment** shows a weak positive effect, but it is not statistically significant at the 0.05 level.
+-   **Variance of Participant-Level Random Intercept**: 0.02657, with a standard deviation of 0.1630.
+    -   This suggests low variability in participants' baseline coherence ratings.
+-   **Residual Variance**: 0.12215, with a standard deviation of 0.3495.
 
-### Model's R²:
+------------------------------------------------------------------------
 
--   **Conditional R²** (total explanatory power): 0.21
--   **Marginal R²** (fixed effects alone): 0.04
+### **Fixed Effects**
 
-### Summary Interpretation:
+#### **1. Intercept:**
 
--   The **machine group** has a significantly higher baseline coherence score than the **human** and **placebo** groups.
+-   **Estimate**: 0.8000
+-   **Interpretation**: When the treatment group is **machine paraphrasing** (the reference category), the mean coherence rating is **0.80**.
+    -   This high positive value suggests that machine paraphrasing leads to substantial perceived coherence.
+-   **Significance**: Highly significant (p \< 0.001).
 
--   Both **human** and **placebo** treatments do not show strong evidence of affecting coherence, though the placebo treatment suggests a slight positive trend (p = 0.092).
+#### **2. TreatmentGrouphuman:**
+
+-   **Estimate**: -0.0813
+-   **Interpretation**: Compared to **machine paraphrasing**, the mean coherence rating decreases slightly (by **-0.08**) when the treatment is **human paraphrasing**.
+    -   This effect is **not statistically significant** (p = 0.238), suggesting no meaningful difference in coherence between machine and human paraphrasing.
+
+#### **3. TreatmentGroupplacebo:**
+
+-   **Estimate**: 0.1167
+-   **Interpretation**: Compared to **machine paraphrasing**, the mean coherence rating increases slightly (by **+0.12**) when the treatment is **placebo**.
+    -   This effect is **marginally significant** (p = 0.092), suggesting a potential but inconclusive improvement in coherence for the placebo group.
+
+------------------------------------------------------------------------
+
+### **Confidence Intervals**
+
+-   The **95% Confidence Interval** for each fixed effect provides the range of plausible values for the parameter estimates:
+    -   Intercept: [0.71, 0.89] – consistently positive, indicating robust coherence ratings for machine paraphrasing.
+    -   TreatmentGrouphuman: [-0.22, 0.05] – includes zero, confirming the non-significance of the effect.
+    -   TreatmentGroupplacebo: [-0.02, 0.25] – barely excludes zero, supporting the marginal significance of the placebo effect.
+
+------------------------------------------------------------------------
+
+### **Correlation of Fixed Effects**
+
+-   The correlation between the intercept and TreatmentGrouphuman is -0.700, indicating a moderate negative relationship.
+-   The correlation between the intercept and TreatmentGroupplacebo is -0.700, also indicating a moderate negative relationship.
+
+------------------------------------------------------------------------
+
+### **Summary of Findings**
+
+1.  **Effectiveness of Treatments**:
+    -   **Machine paraphrasing** results in high coherence ratings (**0.80 points**) and serves as the benchmark for comparisons.
+    -   **Human paraphrasing** shows a slight decrease in coherence ratings compared to machine paraphrasing, but this effect is not statistically significant (**-0.08 points**).
+    -   **Placebo** treatment shows a slight increase in coherence ratings compared to machine paraphrasing (**+0.12 points**), but the effect is only marginally significant.
+2.  **Participant-Level Variability**:
+    -   There is low variability in baseline coherence ratings across participants, as indicated by the random effects.
+3.  **Model Fit**:
+    -   The fixed effects explain **4%** of the variance in coherence ratings (marginal R²), while the full model explains **21%** (conditional R²), suggesting moderate explanatory power.
