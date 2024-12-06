@@ -61,6 +61,7 @@ ggsave("participant_leaning_count.pdf",
       bg = "white",
       dpi = 300)
 ```
+
 ```{r}
 box_plot = ggplot(survey_data, aes(x = TreatmentGroup, y = DiffLikertTreatedOriginal, fill = TreatmentGroup)) +
   geom_boxplot() +
@@ -79,6 +80,7 @@ box_plot = ggplot(survey_data, aes(x = TreatmentGroup, y = DiffLikertTreatedOrig
   )
 box_plot
 ```
+
 ```{r}
 ggsave("boxplot_diff_likert_treated_original.pdf", 
        plot = box_plot,  # Use the last plot created
@@ -92,7 +94,7 @@ ggsave("boxplot_diff_likert_treated_original.pdf",
 ```{r}
 box_plot2 = ggplot(survey_data, aes(x = TreatmentGroup, y = DiffLikertTreatedOriginal, fill = TreatmentGroup)) +
   geom_violin(alpha = 0.6, width = 1.3, color = "black") +  # Violin plot with transparency
-  geom_boxplot(alpha = 0.4, width = 0.4, color = "black") +  # Boxplot properly aligned to fit inside the violin
+  geom_boxplot(alpha = 0.6, width = 0.15, color = "black") +  # Boxplot properly aligned to fit inside the violin
   labs(title = "DiffLikertTreatedOriginal by Intervention Group",
        x = "Intervention Group",
        y = "DiffLikertTreatedOriginal",
@@ -171,6 +173,7 @@ ggsave("treat_less_polar.pdf",
 
 treat_less_polar
 ```
+
 ```{r}
 library(ggplot2)
 
@@ -215,7 +218,6 @@ ggsave("treat_less_polar.pdf",
 treat_less_polar
 ```
 
-
 ```{r}
 # Calculate counts and percentages
 summary_data <- survey_data %>%
@@ -228,8 +230,3 @@ summary_data <- survey_data %>%
 # Print the result
 print(summary_data)
 ```
-
-
-
-
-
