@@ -6,7 +6,7 @@ output:
 ---
 
 ```{r include = False}
-library(tidyverse)
+# library(tidyverse)
 library(ggplot2)
 library(plotly)
 library(dplyr)
@@ -37,7 +37,7 @@ participant_leaning = ggplot(leaning_fact, aes(x = ParticipantLeaning, fill = Tr
     size = 3
   ) +
   scale_fill_manual(values = okabe_ito_palette) + # Apply the Okabe-Ito palette
-  labs(title = "Participant Leaning Count by Intervention Group",
+  labs(#title = "Participant Leaning Count by Intervention Group",
        x = "Participant Leaning",
        y = "Count",
        fill = "Intervention") +
@@ -45,9 +45,10 @@ participant_leaning = ggplot(leaning_fact, aes(x = ParticipantLeaning, fill = Tr
   theme(
     plot.title = element_text(size = 18, face = "bold"),  # Title font size and style
     axis.title = element_text(size = 14),               # Axis title font size
-    axis.text = element_text(size = 12),                # Axis text font size
-    legend.title = element_text(size = 14),             # Legend title font size
-    legend.text = element_text(size = 12)               # Legend text font size
+    axis.text = element_text(size = 18),                # Axis text font size
+    axis.text.x = element_text(angle = 40, hjust = 1),
+    legend.title = element_text(size = 18),             # Legend title font size
+    legend.text = element_text(size = 16)               # Legend text font size
   )
 
 participant_leaning
@@ -93,11 +94,16 @@ ggsave("boxplot_diff_likert_treated_original.pdf",
 
 ```{r}
 box_plot2 = ggplot(survey_data, aes(x = TreatmentGroup, y = DiffLikertTreatedOriginal, fill = TreatmentGroup)) +
-  geom_violin(alpha = 0.6, width = 1.3, color = "black") +  # Violin plot with transparency
+  geom_violin(alpha = 0.5, width = 1.3, color = "black")+#, draw_quantiles = c(0.25, 0.5, 0.75)) +  # Violin plot with transparency
   geom_boxplot(alpha = 0.6, width = 0.15, color = "black") +  # Boxplot properly aligned to fit inside the violin
-  labs(title = "DiffLikertTreatedOriginal by Intervention Group",
+  #stat_summary(
+   # fun = "median",
+    #geom = "point",
+    #color = "red"
+  #)+
+  labs(#title = "DiffLikertTreatedOriginal by Intervention Group",
        x = "Intervention Group",
-       y = "DiffLikertTreatedOriginal",
+       y = "DiffTreatedOriginal",
        fill = "Intervention") +
   scale_fill_manual(values = c("human" = "#E69F00", "machine" = "#56B4E9", "placebo" = "#009E73")) +  # Custom color palette
   theme_grey() +
@@ -142,10 +148,10 @@ treat_less_polar = ggplot(survey_data, aes(x = TreatmentGroup, fill = GroupPolar
     color = "black"  # Black text color for counts
   ) +
   labs(
-    title = "TreatmentIsLessPolar by Treatment Group",
+    #title = "TreatmentIsLessPolar by Treatment Group",
     x = "Treatment Group",
     y = "Count",
-    fill = "Treatment is\nLess Polar"
+    fill = "Treatment is\nLess Polarized"
   ) +
   scale_fill_manual(
     values = colors,  # Use the custom color palette
